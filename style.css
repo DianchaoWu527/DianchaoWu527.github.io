@@ -155,3 +155,64 @@ ul {
         display: none;
     }
 }
+.content h2 {
+    font-size: 34px;
+    font-weight: 600;
+    margin-top: 42px;
+    margin-bottom: 16px;
+}
+
+.content h3 {
+    font-size: 27px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 14px;
+}
+
+.section-intro {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.advisor-list {
+    margin-top: 10px;
+    margin-bottom: 36px;
+    padding-left: 30px;
+}
+
+.advisor-list li {
+    font-size: 20px;
+    line-height: 1.55;
+    margin-bottom: 12px;
+}
+
+.notes-list {
+    margin-top: 8px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+
+.notes-list li {
+    font-size: 20px;
+    line-height: 1.55;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.notes-list a {
+    margin-left: 6px;
+    font-size: 0.95em;
+    text-decoration: none;
+}
+
+.course-list {
+    margin-top: 8px;
+    padding-left: 30px;
+}
+
+.course-list li {
+    font-size: 20px;
+    line-height: 1.55;
+    margin-bottom: 8px;
+}
