@@ -1,154 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dianchao Wu</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 36px 24px 60px 24px;
-            line-height: 1.7;
-            color: #111;
-            background: #fff;
-        }
-        a {
-            text-decoration: none;
-            color: #222;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .nav {
-            margin-bottom: 42px;
-            font-size: 16px;
-        }
-        .nav a {
-            margin-right: 20px;
-        }
-        .hero {
-            display: flex;
-            align-items: center;
-            gap: 42px;
-            margin-bottom: 50px;
-            flex-wrap: wrap;
-        }
-        .hero-image img {
-            width: 220px;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 18px;
-        }
-        .hero-text {
-            flex: 1;
-            min-width: 280px;
-        }
-        h1 {
-            font-size: 52px;
-            margin: 0 0 10px 0;
-        }
-        .subtitle {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 18px;
-        }
-        .buttons {
-            margin-top: 22px;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 16px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #222;
-            border-radius: 8px;
-            font-size: 15px;
-        }
-        .button:hover {
-            background: #f5f5f5;
-            text-decoration: none;
-        }
-        h2 {
-            font-size: 28px;
-            margin-top: 38px;
-            margin-bottom: 12px;
-        }
-        ul {
-            padding-left: 22px;
-        }
-        .footer {
-            margin-top: 56px;
-            font-size: 15px;
-            color: #444;
-        }
-        @media (max-width: 700px) {
-            h1 {
-                font-size: 40px;
-            }
-            .subtitle {
-                font-size: 20px;
-            }
-            .hero-image img {
-                width: 180px;
-                height: 180px;
-            }
-        }
-    </style>
+    <title>Dianchao Wu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div class="nav">
-        <a href="index.html">Home</a>
-        <a href="academic.html">Academic</a>
-        <a href="golf.html">Golf</a>
-        <a href="awards.html">Awards & Honors</a>
-        <a href="cv.pdf" target="_blank">CV</a>
+<header class="topbar">
+    <div class="nav-container">
+        <div class="site-title">Dianchao Wu</div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="academic.html">Academic</a>
+            <a href="golf.html">Golf</a>
+            <a href="awards.html">Awards</a>
+            <a href="cv.pdf" target="_blank">CV</a>
+        </nav>
     </div>
+</header>
 
-    <div class="hero">
-        <div class="hero-image">
-            <img src="profile.jpg" alt="Profile photo of Dianchao Wu">
+<main class="page">
+
+    <aside class="sidebar">
+        <img src="profile.jpg" alt="Profile photo of Dianchao Wu" class="profile-img">
+
+        <h1>Dianchao Wu</h1>
+        <div class="subtitle">Mathematics Student</div>
+        <div class="institution">Iowa State University</div>
+        <div class="institution">Student-Athlete, Men's Golf</div>
+    </aside>
+
+    <section class="content">
+        <h1>Home</h1>
+
+        <p>
+            I am an undergraduate mathematics student at Iowa State University.
+            My academic interests include probability, stochastic processes,
+            stochastic partial differential equations, random matrix theory,
+            and financial mathematics.
+        </p>
+
+        <p>
+            I am also a student-athlete on the Iowa State men's golf team.
+            My work combines mathematical training, independent study,
+            research notes, and long-term athletic development.
+        </p>
+
+        <p>
+            <a href="cv.pdf" target="_blank">My curriculum vitae.</a>
+        </p>
+
+        <div class="button-row">
+            <a href="academic.html">Academic Work</a>
+            <a href="golf.html">Golf</a>
+            <a href="awards.html">Awards & Honors</a>
         </div>
 
-        <div class="hero-text">
-            <h1>Dianchao Wu</h1>
-            <div class="subtitle">Undergraduate Mathematics Student at Iowa State University</div>
+        <div class="two-column">
 
-            <p>
-                I am interested in probability, stochastic processes, stochastic partial differential equations,
-                and financial mathematics. I am also a student-athlete on the Iowa State golf team.
-            </p>
-
-            <div class="buttons">
-                <a class="button" href="academic.html">Academic</a>
-                <a class="button" href="golf.html">Golf</a>
-                <a class="button" href="awards.html">Awards & Honors</a>
-                <a class="button" href="cv.pdf" target="_blank">Download CV</a>
+            <div>
+                <h2>Research Interests</h2>
+                <ul>
+                    <li>Probability and stochastic analysis</li>
+                    <li>Stochastic partial differential equations</li>
+                    <li>Random matrix theory</li>
+                    <li>Financial mathematics</li>
+                </ul>
             </div>
+
+            <div>
+                <h2>Contact</h2>
+                <p>
+                    dianchao@iastate.edu
+                </p>
+                <p>
+                    dv527f@outlook.com
+                </p>
+            </div>
+
         </div>
-    </div>
 
-    <h2>About</h2>
-    <p>
-        I am currently studying mathematics at Iowa State University and developing research interests
-        in probability, stochastic analysis, and stochastic partial differential equations.
-        My current work includes research and independent study in stochastic processes,
-        SPDEs, random matrix theory, and measure theory.
-    </p>
+        <h2>Current Work</h2>
 
-    <h2>Current Interests</h2>
-    <ul>
-        <li>Probability and stochastic processes</li>
-        <li>Stochastic partial differential equations</li>
-        <li>Random matrix theory</li>
-        <li>Financial mathematics</li>
-    </ul>
+        <p>
+            I am currently developing research notes and reading notes in
+            stochastic processes, SPDEs, and random matrix theory.
+        </p>
 
-    <div class="footer">
-        Email: dianchao@iastate.edu | dv527f@outlook.com
-    </div>
+    </section>
+
+</main>
 
 </body>
 </html>
