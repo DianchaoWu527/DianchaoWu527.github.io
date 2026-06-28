@@ -33,105 +33,171 @@
         <div class="institution">Student-Athlete, Men's Golf</div>
     </aside>
 
-    <section class="content" id="academic-work">
-  <h1>Academic Work</h1>
+    <section class="content academic-profile" id="academic-work">
+        <h1>Academic Profile</h1>
 
-  <h2>Research Positions and Projects</h2>
-  <ul>
-    <li>
-      <strong>Student Researcher, Self-Diffusion Project</strong><br>
-      Mentor: Dr. David Herzog, Department of Mathematics, Iowa State University<br>
-      Summer 2026 – Present<br>
-      Selected to join Dr. Herzog’s self-diffusion project as a Student Researcher,
-      focusing on stochastic modeling, simulation, and related analytical questions.
-    </li>
+        <p class="section-intro">
+            My current mathematical interests center on stochastic processes,
+            diffusion limits, quantitative convergence, partial differential
+            equations, measure theory, and mathematical finance. My main research
+            direction is finite-time error and quantitative convergence for
+            self-diffusion limits in Metropolized Langevin dynamics.
+        </p>
 
-    <li>
-      <strong>ISmART Research Project: Random Matrix Theory and Quantum Expanders</strong><br>
-      Iowa State University<br>
-      Spring 2026 – Present<br>
-      Exploring random matrix models arising from Haar-distributed unitary matrices,
-      with a focus on malnormal matrices, commutator lower bounds, and non-normal
-      spectral behavior. This work connects probabilistic matrix models with quantum
-      expanders and uses numerical simulations to investigate asymptotic conjectures
-      in finite-dimensional operator theory.
-    </li>
-  </ul>
+        <h2>Research</h2>
 
-  <h2>Independent Study</h2>
-  <ul>
-    <li>
-      <strong>Stochastic Processes and Stochastic Analysis</strong> — MATH 554 and
-      MATH 645, advised by Dr. David Herzog.
-    </li>
+        <div class="profile-card feature-card">
+            <p class="eyebrow">Current Research Project</p>
+            <h3>Finite-Time Error in Self-Diffusion Limits</h3>
+            <p>
+                This project studies finite-time convergence rates for the
+                self-diffusion limit in Metropolized Langevin dynamics. Starting
+                from the weak convergence theorem to Brownian motion, I study how
+                fast the rescaled displacement approaches its Gaussian limit in
+                Kolmogorov distance. The main idea is to use a
+                Poisson-equation/Itô decomposition to split the error into a
+                bounded corrector term, an ergodic-average term, and a martingale
+                CLT term. The current goal is to understand and numerically test
+                the expected T<sup>-1/2</sup> convergence rate.
+            </p>
+            <p class="project-background">
+                Background: based on the self-diffusion problem for Metropolized
+                Langevin dynamics studied by Fathi, Homman, and Stoltz.
+            </p>
+            <div class="link-list project-links">
+                <a href="finite_time_self_diffusion_note.pdf" target="_blank">Working Note (PDF)</a>
+                <a href="https://github.com/DianchaoWu527/self-diffusion-finite-time-error" target="_blank">Code Repository</a>
+                <a href="kolmogorov_distance_rate.png" target="_blank">Simulation Results</a>
+            </div>
+            <img
+                class="research-figure"
+                src="kolmogorov_distance_rate.png"
+                alt="Simulation plot showing Kolmogorov distance convergence rate and final-time Gaussian comparison"
+            >
+        </div>
 
-    <li>
-      <strong>Partial Differential Equations</strong> — Independent reading of
-      Evans’ <em>Partial Differential Equations</em>, with emphasis on fundamental
-      solutions, distributions, the Dirac delta, and analytical methods for classical PDEs, advised by Dr. Rana Parshad.
-    </li>
+        <div class="card-grid single-card">
+            <div class="profile-card">
+                <p class="eyebrow">Random Matrix Theory / ISMaRT</p>
+                <h3>Haar Random Unitaries and Operator-Theoretic Questions</h3>
+                <p>
+                    Reading and computational notes related to Haar random unitaries,
+                    matrix models, and operator-theoretic questions.
+                </p>
+                <div class="note-entry">
+                    <h4>A Note on Haar Random Unitaries, Non-Normality, and Commutator Bounds</h4>
+                    <p>
+                        Notes on random unitary matrix models, non-normal behavior,
+                        and commutator lower bounds.
+                    </p>
+                    <a class="note-link" href="Conj_1 (2).pdf" target="_blank">PDF</a>
+                </div>
+            </div>
+        </div>
 
-    <li>
-      <strong>Measure Theory</strong> — Independent study of measure, integration,
-      convergence, and the analytic foundations needed for probability theory,
-      stochastic processes, and PDE, advised by Dr. Rouyu Wu.
-    </li>
-  </ul>
+        <h2>Class Notes and Reading Notes</h2>
 
+        <div class="notes-section">
+            <div class="note-group">
+                <h3>PDE</h3>
+                <p>
+                    Notes and selected exercises from PDE, including transport,
+                    Laplace, heat, and wave equations.
+                </p>
+                <div class="note-entry">
+                    <h4>Derivations of Solution Formulas for the Transport and Laplace Equations</h4>
+                    <p>
+                        Expository derivations of classical solution formulas for
+                        transport and Laplace equations.
+                    </p>
+                    <a class="note-link" href="655_note.pdf" target="_blank">PDF</a>
+                </div>
+                <div class="note-entry">
+                    <h4>Wave Equation: D'Alembert Formula and Circular Means</h4>
+                    <p>
+                        Expository notes on the wave equation, including D'Alembert's
+                        formula, circular means, the Euler-Poisson-Darboux equation,
+                        and energy equipartition.
+                    </p>
+                    <a class="note-link" href="wave_equation_dalembert_circular_means_energy.pdf" target="_blank">PDF</a>
+                </div>
+            </div>
 
-   <h2>Research and Reading Notes</h2>
+            <div class="note-group">
+                <h3>Stochastic Processes and Stochastic Analysis</h3>
+                <p>
+                    Notes on Markov processes, Brownian motion, Itô calculus,
+                    martingales, and diffusion generators.
+                </p>
+                <div class="note-entry">
+                    <h4>Notes on Stochastic Dynamics and Real Analysis</h4>
+                    <p>
+                        Reading notes connecting stochastic dynamics with analytic
+                        background used in diffusion problems.
+                    </p>
+                    <a class="note-link" href="David's Note.pdf" target="_blank">PDF</a>
+                </div>
+                <div class="note-entry">
+                    <h4>The Infinitesimal Generator of an Itô Diffusion</h4>
+                    <p>
+                        A step-by-step proof of the generator formula for Itô
+                        diffusions.
+                    </p>
+                    <a class="note-link" href="P of Thm 15.8.pdf" target="_blank">PDF</a>
+                </div>
+            </div>
 
-<p class="section-intro">
-  I am currently developing research notes and reading notes on stochastic
-  processes, SPDEs, random matrix theory, and partial differential equations.
-</p>
+            <div class="note-group">
+                <h3>Measure Theory and Real Analysis</h3>
+                <p>
+                    Selected notes and qualifying-exam style problems in measure
+                    theory and real analysis.
+                </p>
+                <div class="note-entry">
+                    <h4>Selected Measure Theory Qualifying Exam Problems</h4>
+                    <p>
+                        Worked solutions to qualifying-exam style problems on outer
+                        measures, limiting outer measures, and open or closed sets
+                        of full measure.
+                    </p>
+                    <a class="note-link" href="measure_theory_qe_problems.pdf" target="_blank">PDF</a>
+                </div>
+            </div>
 
-<p class="note-category">Stochastic Processes, SPDEs, and Stochastic Analysis</p>
+            <div class="note-group">
+                <h3>Mathematical Finance</h3>
+                <p>
+                    Expository notes connecting stochastic calculus, hedging
+                    arguments, and financial PDEs.
+                </p>
+                <div class="note-entry">
+                    <h4>A Derivation of the Black-Scholes Equation via Hedging</h4>
+                    <p>
+                        A derivation of the Black-Scholes PDE from a hedging
+                        argument in a stochastic-calculus setting.
+                    </p>
+                    <a class="note-link" href="1858.pdf" target="_blank">PDF</a>
+                </div>
+            </div>
+        </div>
 
-<ul class="notes-list">
-  <li>
-    A Derivation of the Black-Scholes Equation via Hedging
-    <a href="1858.pdf" target="_blank">[PDF]</a>
-  </li>
+        <h2>Mathematical Preparation</h2>
 
-  <li>
-    Notes on Stochastic Dynamics and Real Analysis
-    <a href="David's Note.pdf" target="_blank">[PDF]</a>
-  </li>
-
-  <li>
-    The Infinitesimal Generator of an Itô Diffusion: A Step-by-Step Proof
-    <a href="P of Thm 15.8.pdf" target="_blank">[PDF]</a>
-  </li>
-</ul>
-
-<p class="note-category">Random Matrix Theory and Operator Theory</p>
-
-<ul class="notes-list">
-  <li>
-    A Note on Haar Random Unitaries, Non-Normality, and Commutator Bounds
-    <a href="Conj_1 (2).pdf" target="_blank">[PDF]</a>
-  </li>
-</ul>
-
-<p class="note-category">Partial Differential Equations</p>
-
-<ul class="notes-list">
-  <li>
-    Derivations of Solution Formulas for the Transport and Laplace Equations
-    <a href="655_note.pdf" target="_blank">[PDF]</a>
-  </li>
-</ul>
-
-        <h2>Selected Coursework and Preparation</h2>
-
-        <ul class="course-list">
-            <li>Stochastic processes and stochastic dynamics</li>
-            <li>Real analysis and measure-theoretic foundations</li>
-            <li>Partial differential equations</li>
-            <li>Random matrix theory and spectral methods</li>
-            <li>Financial mathematics and portfolio theory</li>
+        <ul class="course-list preparation-list">
+            <li><strong>Measure theory and real analysis:</strong> outer measure, Lebesgue integration, convergence theorems, L<sup>p</sup> spaces</li>
+            <li><strong>Stochastic processes:</strong> Markov chains, martingales, Brownian motion, Itô calculus</li>
+            <li><strong>PDE:</strong> transport, Laplace, heat, wave equations, Sobolev-space background</li>
+            <li><strong>Random matrix theory:</strong> Haar unitaries, spectral methods, operator estimates</li>
+            <li><strong>Computational work:</strong> Python, NumPy, Matplotlib simulations for Langevin dynamics</li>
         </ul>
+
+        <h2>CV and Contact</h2>
+
+        <div class="button-row">
+            <a href="cv.pdf" target="_blank">Curriculum Vitae</a>
+            <a href="mailto:dianchao@iastate.edu">dianchao@iastate.edu</a>
+            <a href="mailto:dv527f@outlook.com">dv527f@outlook.com</a>
+        </div>
 
     </section>
 
