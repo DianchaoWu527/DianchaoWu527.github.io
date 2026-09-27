@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Research by Dianchao Wu in periodic Langevin dynamics, quantitative limit theorems, nonlinear MBS pricing models, and stochastic sensitivity."
+    >
+    <title>Research | Dianchao Wu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="nav-container">
+        <div class="site-title">Dianchao Wu</div>
+        <nav class="nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="academic.html">Academic</a>
+            <a href="research.html" aria-current="page">Research</a>
+            <a href="golf.html">Golf</a>
+            <a href="awards.html">Awards</a>
+            <a href="cv.pdf" target="_blank">CV</a>
+        </nav>
+    </div>
+</header>
+
+<main class="page research-page">
+
+    <aside class="sidebar research-sidebar">
+        <img src="profile.jpg" alt="Profile photo of Dianchao Wu" class="profile-img">
+
+        <h1>Dianchao Wu</h1>
+        <div class="subtitle">Mathematics Student</div>
+        <div class="institution">Iowa State University</div>
+
+        <nav class="research-jump" aria-label="Research projects">
+            <a href="#langevin"><span>01</span> Langevin dynamics</a>
+            <a href="#mbs"><span>02</span> MBS pricing models</a>
+        </nav>
+    </aside>
+
+    <section class="content research-content">
+        <header class="research-hero">
+            <p class="eyebrow">Probability · Stochastic dynamics · Financial mathematics</p>
+            <h1>Research</h1>
+            <p class="research-lead">
+                I study quantitative questions in stochastic dynamics and
+                mathematical finance. My current work connects finite-time
+                probability bounds, nonlinear partial differential equations,
+                numerical experiments, and model validation against real data.
+            </p>
+        </header>
+
+        <article class="research-project" id="langevin">
+            <div class="project-heading">
+                <div>
+                    <p class="project-number">Research 01</p>
+                    <h2>Berry–Esseen Bounds for Periodic Langevin Dynamics</h2>
+                </div>
+                <span class="status-badge">Working manuscript</span>
+            </div>
+
+            <p class="project-summary">
+                How long must a periodic Langevin system be observed before its
+                unwrapped displacement is accurately approximated by a Gaussian
+                distribution? This project develops quantitative bounds for that
+                finite-time error, with particular attention to the singular
+                low-friction regime.
+            </p>
+
+            <section class="result-panel" aria-labelledby="langevin-result">
+                <p class="result-label">Core contribution · Proposition 11.1</p>
+                <h3 id="langevin-result">The relaxation scale is γT</h3>
+                <div class="display-equation" role="img" aria-label="Kolmogorov distance is bounded by C divided by the square root of gamma T">
+                    d<sub>K</sub>(Law(Y<sub>T</sub><sup>γ</sup>), N(0, σ<sub>γ</sub><sup>2</sup>))
+                    <span>≤</span>
+                    <span class="fraction"><span>C</span><span>√(γT)</span></span>
+                </div>
+                <p>
+                    In one dimension, I proved a Berry–Esseen estimate with a
+                    constant that explicitly tracks the friction parameter. The
+                    bound shows that the effective number of relaxation periods is
+                    γT, rather than the observation time T alone.
+                </p>
+            </section>
+
+            <h3>Proof architecture</h3>
+            <ol class="method-steps">
+                <li>
+                    <span>01</span>
+                    <div>
+                        <strong>Sample at the relaxation scale.</strong>
+                        Partition the process into blocks of length comparable to
+                        γ<sup>-1</sup> and form a discrete skeleton chain.
+                    </div>
+                </li>
+                <li>
+                    <span>02</span>
+                    <div>
+                        <strong>Recover uniform mixing.</strong>
+                        Rescale the continuous-time semigroup estimate so the
+                        sampled chain has a spectral gap uniform in small γ.
+                    </div>
+                </li>
+                <li>
+                    <span>03</span>
+                    <div>
+                        <strong>Control moments and variance.</strong>
+                        Establish a uniform fourth-moment bound for block-averaged
+                        velocity and use a one-dimensional diffusion lower bound to
+                        prevent variance degeneration.
+                    </div>
+                </li>
+                <li>
+                    <span>04</span>
+                    <div>
+                        <strong>Apply a uniform Berry–Esseen theorem.</strong>
+                        The Markov-additive formulation then yields the
+                        C/√(γT) Kolmogorov-distance estimate.
+                    </div>
+                </li>
+            </ol>
+
+            <div class="project-columns">
+                <section>
+                    <h3>Additional contributions</h3>
+                    <ul class="compact-list">
+                        <li>Developed the Berry–Esseen framework for the displacement problem.</li>
+                        <li>Proved the projected overdamped result.</li>
+                        <li>Developed the direct Markov-additive treatment of underdamped displacement.</li>
+                        <li>Carried out the original numerical illustration and drafted Part I.</li>
+                    </ul>
+                </section>
+                <section class="project-meta">
+                    <h3>Project details</h3>
+                    <dl>
+                        <div><dt>Topics</dt><dd>Markov additive processes, hypocoercivity, quantitative CLT</dd></div>
+                        <div><dt>Metric</dt><dd>Kolmogorov distance</dd></div>
+                        <div><dt>Setting</dt><dd>Periodic overdamped and underdamped Langevin dynamics</dd></div>
+                        <div><dt>Collaborators</dt><dd>David Herzog, Owen Smith, and Akshat Sachin Valse</dd></div>
+                    </dl>
+                </section>
+            </div>
+        </article>
+
+        <article class="research-project" id="mbs">
+            <div class="project-heading">
+                <div>
+                    <p class="project-number">Research 02</p>
+                    <h2>Prediction, Model Risk, and Stochastic Sensitivity in Nonlinear MBS Pricing Models</h2>
+                </div>
+                <span class="status-badge status-ongoing">Ongoing research</span>
+            </div>
+
+            <p class="project-summary">
+                This project asks whether stochastic perturbations and nonlinear
+                p-Laplacian diffusion can improve the predictive performance of an
+                existing PDE model for mortgage-backed security prices.
+            </p>
+
+            <blockquote class="research-question">
+                <p>How much predictive improvement do the proposed changes deliver when the model is evaluated against real market data?</p>
+            </blockquote>
+
+            <h3>Research trajectory</h3>
+            <p>
+                I initially proposed introducing stochastic noise into the pricing
+                equation to study how market uncertainty affects model predictions.
+                Through discussions with my advisor, the project expanded to include
+                a p-Laplacian operator as a nonlinear diffusion mechanism. The
+                resulting research program connects analytical foundations,
+                empirical backtesting, and stochastic model-risk analysis.
+            </p>
+
+            <div class="work-grid">
+                <section class="work-card">
+                    <p class="work-index">Completed · Analytical foundation</p>
+                    <h3>Literature reconstruction</h3>
+                    <p>
+                        I organized papers provided by my advisor into technical
+                        sessions and presentations, reconstructing the main
+                        derivations rather than treating the models as black boxes.
+                    </p>
+                    <ul class="compact-list">
+                        <li>Reduction of a nonlinear MBS pricing equation to a semilinear heat equation.</li>
+                        <li>Lipschitz control of the nonlinear mapping.</li>
+                        <li>Fixed-point proof of existence and uniqueness of weak solutions.</li>
+                        <li>Derivation of a p-diffusion extension of the Black–Scholes operator.</li>
+                    </ul>
+                </section>
+
+                <section class="work-card">
+                    <p class="work-index">Completed · Empirical investigation</p>
+                    <h3>Market backtesting and numerical analysis</h3>
+                    <p>
+                        I built an initial market-backtesting workflow using real
+                        transaction data, conducted numerical experiments, and
+                        examined the financial interpretation of the model in
+                        selected parameter regimes and special cases.
+                    </p>
+                    <p>
+                        The central objective was to determine whether the stochastic
+                        and nonlinear extensions produced a measurable improvement
+                        over the original equation.
+                    </p>
+                </section>
+            </div>
+
+            <section class="finding-panel" aria-labelledby="initial-finding">
+                <p class="result-label">Initial empirical finding</p>
+                <h3 id="initial-finding">An informative inconclusive result</h3>
+                <p>
+                    The initial backtests did not yet yield a stable and economically
+                    interpretable improvement over the baseline model. Instead, they
+                    exposed important questions involving parameter identification,
+                    alignment between model outputs and transaction observations,
+                    and the separation of nonlinear-diffusion effects from other
+                    market mechanisms. These limitations now help define the next
+                    stage of the project.
+                </p>
+            </section>
+
+            <h3>Next stage: stochastic analysis</h3>
+            <div class="next-stage-grid">
+                <section>
+                    <span class="stage-number">01</span>
+                    <h4>Mean-square sensitivity</h4>
+                    <p>
+                        Quantify how perturbations in model inputs and coefficients
+                        propagate through the pricing solution, using estimates of
+                        the form E||u<sup>ε</sup>(t) − u<sup>0</sup>(t)||<sup>2</sup>.
+                    </p>
+                </section>
+                <section>
+                    <span class="stage-number">02</span>
+                    <h4>Noise-driven simulation</h4>
+                    <p>
+                        Compare theoretical sensitivity estimates with numerical
+                        behavior across noise levels, nonlinear-diffusion parameters,
+                        and financially meaningful regimes.
+                    </p>
+                </section>
+                <section>
+                    <span class="stage-number">03</span>
+                    <h4>Model risk and interpretation</h4>
+                    <p>
+                        Study whether nonlinear diffusion dampens or amplifies
+                        uncertainty, and identify which mechanisms are responsible
+                        for changes in predictive performance.
+                    </p>
+                </section>
+            </div>
+
+            <p class="finance-note">
+                <strong>Financial perspective.</strong> The PDE analysis serves a
+                pricing and model-risk question: prediction under uncertainty,
+                sensitivity to assumptions, and economically interpretable behavior
+                under changing market conditions.
+            </p>
+        </article>
+
+        <section class="research-contact">
+            <p class="eyebrow">Research materials</p>
+            <h2>Working papers and technical notes</h2>
+            <p>
+                Manuscripts, derivation notes, and presentation materials are
+                available upon request while the projects remain in progress.
+            </p>
+            <div class="button-row">
+                <a href="mailto:dianchao@iastate.edu">Contact me</a>
+                <a href="cv.pdf" target="_blank">Curriculum Vitae</a>
+            </div>
+        </section>
+    </section>
+
+</main>
+
+</body>
+</html>
