@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Dianchao Wu 的研究：周期 Langevin 动力学、定量极限定理、非线性 MBS 定价模型、随机矩阵理论与随机敏感性。"
+    >
+    <title>科研 | Dianchao Wu</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../language-switch.css?v=20260927-1">
+    <script src="../language-switch.js" defer></script>
+    <link rel="alternate" hreflang="en" href="../research.html">
+    <link rel="alternate" hreflang="zh-CN" href="research.html">
+    <link rel="alternate" hreflang="x-default" href="../research.html">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="nav-container">
+        <div class="site-title">Dianchao Wu</div>
+        <nav class="nav" aria-label="主导航">
+            <a href="index.html">首页</a>
+            <a href="academic.html">学术</a>
+            <a href="research.html" aria-current="page">科研</a>
+            <a href="golf.html">高尔夫</a>
+            <a href="cv/">简历</a>
+        </nav>
+        <nav class="language-switch" aria-label="语言切换">
+            <a href="../research.html" lang="en" hreflang="en">EN</a>
+            <span aria-hidden="true">/</span>
+            <a href="research.html" lang="zh-CN" hreflang="zh-CN" aria-current="true">中文</a>
+        </nav>
+    </div>
+</header>
+
+<main class="page research-page">
+
+    <aside class="sidebar research-sidebar">
+        <h1>Dianchao Wu</h1>
+        <div class="subtitle">数学专业本科生</div>
+        <div class="institution">爱荷华州立大学</div>
+
+        <nav class="research-jump" aria-label="研究项目">
+            <a href="#langevin"><span>01</span> Langevin 动力学</a>
+            <a href="#mbs"><span>02</span> MBS 定价模型</a>
+            <a href="#random-matrix"><span>03</span> 随机矩阵理论</a>
+        </nav>
+    </aside>
+
+    <section class="content research-content">
+        <header class="research-hero">
+            <p class="eyebrow">概率论 · 随机动力学 · 金融数学</p>
+            <h1>科研</h1>
+            <p class="research-lead">
+                我关注随机动力学与金融数学中的定量问题。目前的工作涉及有限时间概率误差界、非线性偏微分方程、数值实验，以及基于真实数据的模型检验。
+            </p>
+        </header>
+
+        <article class="research-project" id="langevin">
+            <div class="project-heading">
+                <div>
+                    <p class="project-number">研究 01</p>
+                    <h2>Berry–Esseen Bounds for Periodic Langevin Dynamics</h2>
+                </div>
+                <span class="status-badge">论文撰写中</span>
+            </div>
+
+            <p class="project-summary">
+                周期 Langevin 系统需要演化多长时间，其展开到实空间的位移才能由高斯分布准确近似？本项目为这一有限时间误差建立定量界，尤其关注低摩擦参数下的奇异极限。
+            </p>
+
+            <p class="project-funding">
+                美国国家科学基金会（NSF）资助 ·
+                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2246491" target="_blank" rel="noopener noreferrer">项目编号 DMS-2246491</a>
+            </p>
+
+            <p class="research-foundation-note">
+                <strong>分析基础。</strong> 这项研究贯穿了测度论概率的方法，并运用 L<sup>p</sup> 矩估计、条件期望、遍历平均和弱收敛论证。这些工具使我在测度论指导研修中积累的知识直接服务于 Langevin 动力学研究。
+            </p>
+
+            <section class="result-panel" aria-labelledby="langevin-result">
+                <p class="result-label">核心贡献 · 命题 11.1</p>
+                <h3 id="langevin-result">以 γT 刻画弛豫尺度</h3>
+                <div class="display-equation">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="Y 下标 T 上标 γ 的分布与均值为零、方差为 σ 下标 γ 平方的正态分布之间的 Kolmogorov 距离，不超过 C 除以 γT 的平方根">
+                        <mrow>
+                            <msub><mi>d</mi><mi>K</mi></msub>
+                            <mo>(</mo>
+                            <mi>ℒ</mi><mo>(</mo><msubsup><mi>Y</mi><mi>T</mi><mi>γ</mi></msubsup><mo>)</mo>
+                            <mo>,</mo>
+                            <mi>𝒩</mi><mo>(</mo><mn>0</mn><mo>,</mo><msubsup><mi>σ</mi><mi>γ</mi><mn>2</mn></msubsup><mo>)</mo>
+                            <mo>)</mo>
+                            <mo>≤</mo>
+                            <mfrac><mi>C</mi><msqrt><mrow><mi>γ</mi><mi>T</mi></mrow></msqrt></mfrac>
+                            <mo>.</mo>
+                        </mrow>
+                    </math>
+                </div>
+                <p class="equation-equivalence">
+                    等价地，依赖摩擦参数的 Berry–Esseen 常数可选为满足
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="C 下标 γ 不超过 C 乘以 γ 的负二分之一次方">
+                        <mrow>
+                            <msub><mi>C</mi><mi>γ</mi></msub>
+                            <mo>≤</mo>
+                            <mi>C</mi>
+                            <msup><mi>γ</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup>
+                            <mo>.</mo>
+                        </mrow>
+                    </math>
+                </p>
+                <p>
+                    在一维情形下，我证明了一个显式刻画摩擦参数依赖关系的 Berry–Esseen 估计。该界表明，有效弛豫周期数由 γT 决定，不能仅用观测时间 T 来衡量。
+                </p>
+            </section>
+
+            <h3>证明思路</h3>
+            <ol class="method-steps">
+                <li>
+                    <span>01</span>
+                    <div>
+                        <strong>按弛豫尺度采样。</strong>
+                        将过程划分为长度与 γ<sup>-1</sup> 同阶的时间块，构造离散骨架链。
+                    </div>
+                </li>
+                <li>
+                    <span>02</span>
+                    <div>
+                        <strong>建立一致混合估计。</strong>
+                        对连续时间半群估计进行尺度变换，使采样链的谱隙在小 γ 范围内具有一致下界。
+                    </div>
+                </li>
+                <li>
+                    <span>03</span>
+                    <div>
+                        <strong>控制矩与方差。</strong>
+                        为分块平均速度建立一致四阶矩界，并利用一维扩散系数的下界排除方差退化。
+                    </div>
+                </li>
+                <li>
+                    <span>04</span>
+                    <div>
+                        <strong>应用一致 Berry–Esseen 定理。</strong>
+                        在 Markov 加性过程框架下，得到 Kolmogorov 距离的 C/√(γT) 误差界。
+                    </div>
+                </li>
+            </ol>
+
+            <div class="project-columns">
+                <section>
+                    <h3>其他工作</h3>
+                    <ul class="compact-list">
+                        <li>为位移问题建立 Berry–Esseen 分析框架。</li>
+                        <li>证明过阻尼情形下的投影结果。</li>
+                        <li>在 Markov 加性过程框架下直接处理欠阻尼位移问题。</li>
+                        <li>完成最初的数值示例，并撰写第一部分初稿。</li>
+                    </ul>
+                </section>
+                <section class="project-meta">
+                    <h3>项目概况</h3>
+                    <dl>
+                        <div><dt>研究主题</dt><dd>Markov 加性过程、次强制性（hypocoercivity）、定量中心极限定理</dd></div>
+                        <div><dt>误差度量</dt><dd>Kolmogorov 距离</dd></div>
+                        <div><dt>研究对象</dt><dd>周期过阻尼与欠阻尼 Langevin 动力学</dd></div>
+                        <div><dt>指导教师</dt><dd>David P. Herzog 教授</dd></div>
+                    </dl>
+                </section>
+            </div>
+        </article>
+
+        <article class="research-project" id="mbs">
+            <div class="project-heading">
+                <div>
+                    <p class="project-number">研究 02</p>
+                    <h2>Prediction, Model Risk, and Stochastic Sensitivity in Nonlinear MBS Pricing Models</h2>
+                </div>
+                <span class="status-badge status-ongoing">研究进行中</span>
+            </div>
+
+            <p class="project-summary">
+                本项目研究：在现有抵押贷款支持证券（MBS）定价偏微分方程中引入随机扰动与非线性 p-Laplacian 扩散，能否提高模型的预测能力？
+            </p>
+
+            <blockquote class="research-question">
+                <p>用真实市场数据检验时，这些修改究竟能带来多大的预测改进？</p>
+            </blockquote>
+
+            <h3>问题的提出与研究进展</h3>
+            <p>
+                我最初提出在定价方程中引入随机噪声，以考察市场不确定性如何影响模型预测。在与导师讨论后，项目进一步加入 p-Laplacian 算子，用以描述非线性扩散。由此形成的研究思路，将理论分析、市场回测与随机模型风险分析联系起来。
+            </p>
+
+            <div class="work-grid">
+                <section class="work-card">
+                    <p class="work-index">已完成 · 理论基础</p>
+                    <h3>文献研读与推导梳理</h3>
+                    <p>
+                        我将导师提供的论文拆解为专题研读与汇报，逐步复现其中的关键推导，理解模型背后的数学结构。
+                    </p>
+                    <ul class="compact-list">
+                        <li>将非线性 MBS 定价方程化为半线性热方程。</li>
+                        <li>建立非线性映射的 Lipschitz 估计。</li>
+                        <li>利用不动点方法证明弱解的存在唯一性。</li>
+                        <li>推导 Black–Scholes 算子的 p-扩散推广。</li>
+                    </ul>
+                </section>
+
+                <section class="work-card">
+                    <p class="work-index">已完成 · 实证探索</p>
+                    <h3>市场回测与数值分析</h3>
+                    <p>
+                        我使用真实交易数据搭建了初步的市场回测流程，开展数值实验，并讨论了特定参数区间和特殊情形下模型的金融含义。
+                    </p>
+                    <p>
+                        核心目标是检验：相较原方程，随机与非线性扩展是否带来了可量化的改进。
+                    </p>
+                </section>
+            </div>
+
+            <section class="finding-panel" aria-labelledby="initial-finding">
+                <p class="result-label">初步实证结果</p>
+                <h3 id="initial-finding">尚未得出明确结论，但识别了关键问题</h3>
+                <p>
+                    初步回测尚未显示出相较基准模型稳定、且具有清晰经济解释的改进。实验揭示了若干关键问题：参数识别、模型输出与实际交易观测的对齐，以及如何区分非线性扩散与其他市场机制的影响。这些局限也为下一阶段的研究提供了方向。
+                </p>
+            </section>
+
+            <h3>下一阶段：随机分析</h3>
+            <div class="next-stage-grid">
+                <section>
+                    <span class="stage-number">01</span>
+                    <h4>均方敏感性</h4>
+                    <p>
+                        通过如下形式的均方估计，量化模型输入与系数的扰动如何传递到定价解：E||u<sup>ε</sup>(t) − u<sup>0</sup>(t)||<sup>2</sup>.
+                    </p>
+                </section>
+                <section>
+                    <span class="stage-number">02</span>
+                    <h4>噪声驱动的数值模拟</h4>
+                    <p>
+                        在不同噪声强度、非线性扩散参数及具有金融意义的参数区间下，对比理论敏感性估计与数值结果。
+                    </p>
+                </section>
+                <section>
+                    <span class="stage-number">03</span>
+                    <h4>模型风险及其解释</h4>
+                    <p>
+                        研究非线性扩散会抑制还是放大不确定性，并辨识导致预测表现变化的具体机制。
+                    </p>
+                </section>
+            </div>
+
+            <p class="finance-note">
+                <strong>金融视角。</strong> 偏微分方程分析服务于定价与模型风险问题：不确定性下的预测、对模型假设的敏感性，以及市场环境变化时模型行为的经济解释。
+            </p>
+
+            <section class="project-meta">
+                <h3>项目概况</h3>
+                <dl>
+                    <div><dt>指导教师</dt><dd>Rana Parshad 教授</dd></div>
+                </dl>
+            </section>
+        </article>
+
+        <article class="research-project" id="random-matrix">
+            <div class="project-heading">
+                <div>
+                    <p class="project-number">研究 03</p>
+                    <h2>Random Matrix Theory and Quantum Expanders</h2>
+                </div>
+                <span class="status-badge">ISmART 研究项目</span>
+            </div>
+
+            <p class="project-summary">
+                本项目研究 Haar 分布酉矩阵所引出的算子理论问题，重点关注非正规性、交换子下界，以及与量子扩张子相关的有限维模型。
+            </p>
+
+            <div class="work-grid">
+                <section class="work-card">
+                    <p class="work-index">理论研究</p>
+                    <h3>Haar 酉矩阵与交换子界</h3>
+                    <p>
+                        我研究了 Haar 分布酉矩阵、malnormal 矩阵及交换子下界，并考察它们与量子扩张子构造之间的联系。
+                    </p>
+                </section>
+
+                <section class="work-card">
+                    <p class="work-index">计算工作</p>
+                    <h3>非正规谱与伪谱</h3>
+                    <p>
+                        我设计数值实验，考察非正规矩阵的谱行为与伪谱，并完成技术报告，将计算结果与相关算子理论问题相联系。
+                    </p>
+                </section>
+            </div>
+
+            <section class="project-meta random-matrix-meta">
+                <h3>项目概况</h3>
+                <dl>
+                    <div><dt>所属项目</dt><dd>ISmART Research Project</dd></div>
+                    <div><dt>指导教师</dt><dd>Jananan Arulseelan 博士</dd></div>
+                    <div><dt>研究时间</dt><dd>2026 年春季至今</dd></div>
+                    <div><dt>研究方法</dt><dd>随机矩阵模拟、谱分析、伪谱</dd></div>
+                </dl>
+            </section>
+        </article>
+
+        <section class="research-contact">
+            <p class="eyebrow">研究资料</p>
+            <h2>论文草稿与技术笔记</h2>
+            <p>
+                项目仍在进行中。如需论文草稿、推导笔记或汇报材料，欢迎联系我。
+            </p>
+            <div class="button-row">
+                <a href="mailto:dianchao@iastate.edu">联系我</a>
+                <a href="cv/">个人简历</a>
+            </div>
+        </section>
+    </section>
+
+</main>
+
+</body>
+</html>
