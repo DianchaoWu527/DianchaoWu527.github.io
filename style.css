@@ -416,6 +416,56 @@ li {
     margin-bottom: 10px;
 }
 
+.independent-study-intro {
+    max-width: 760px;
+    margin-bottom: 18px;
+}
+
+.study-grid {
+    margin-top: 0;
+}
+
+.study-card {
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid #294d68;
+    box-shadow: 0 8px 22px rgba(42, 55, 68, 0.06);
+}
+
+.study-card h3 {
+    min-height: 2.7em;
+    margin-bottom: 14px;
+}
+
+.study-details {
+    margin: 0;
+}
+
+.study-details > div {
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+}
+
+.study-details dt {
+    margin-bottom: 3px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.study-details dd {
+    margin: 0;
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.study-focus {
+    margin: 14px 0 0;
+}
+
 .credential-card {
     overflow: hidden;
     margin: 30px 0 8px;
