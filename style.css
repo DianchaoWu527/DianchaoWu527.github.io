@@ -77,6 +77,207 @@ body {
     outline: none;
 }
 
+.home-page {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto 80px;
+}
+
+.home-hero {
+    min-height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 88px 7%;
+    border-bottom: 1px solid var(--line);
+}
+
+.home-affiliation {
+    margin: 0 0 22px;
+    color: var(--accent);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.home-hero h1 {
+    max-width: 850px;
+    margin: 0;
+    color: #1e2e3b;
+    font-size: clamp(58px, 8vw, 92px);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 0.98;
+}
+
+.home-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 13px;
+    margin: 30px 0 0;
+    color: #294d68;
+    font-size: clamp(20px, 2.5vw, 27px);
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.home-fields span {
+    color: #ae8359;
+}
+
+.home-introduction {
+    max-width: 760px;
+    margin: 25px 0 0;
+    color: #4d5d6b;
+    font-size: 21px;
+    line-height: 1.62;
+}
+
+.home-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 34px;
+}
+
+.home-actions a {
+    min-width: 112px;
+    padding: 12px 20px;
+    border: 1px solid #9eb2c2;
+    border-radius: 6px;
+    color: #173f5f;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.home-actions a:first-child,
+.home-actions a:hover,
+.home-actions a:focus-visible {
+    border-color: var(--nav);
+    background: var(--nav);
+    color: white;
+    outline: none;
+}
+
+.home-section {
+    padding: 70px 7%;
+}
+
+.home-section-heading {
+    display: grid;
+    grid-template-columns: minmax(150px, 0.34fr) minmax(0, 1fr);
+    gap: 28px;
+    align-items: end;
+    margin-bottom: 28px;
+}
+
+.home-section .eyebrow {
+    margin: 0 0 6px;
+}
+
+.home-section h2 {
+    margin: 0;
+    color: #233746;
+    font-size: clamp(34px, 5vw, 48px);
+    line-height: 1.08;
+}
+
+.home-research-list {
+    border-top: 1px solid #bac6cf;
+}
+
+.home-research-list a {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 34px;
+    gap: 20px;
+    align-items: center;
+    padding: 28px 4px;
+    border-bottom: 1px solid #bac6cf;
+    color: #243847;
+    text-decoration: none;
+    transition: color 160ms ease, padding 160ms ease;
+}
+
+.home-research-list a:hover,
+.home-research-list a:focus-visible {
+    padding-left: 12px;
+    color: #0c5798;
+    outline: none;
+}
+
+.home-research-list a > span:first-child {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.home-research-list strong {
+    font-size: clamp(20px, 2.5vw, 27px);
+    line-height: 1.35;
+}
+
+.home-arrow {
+    font-size: 24px;
+    text-align: right;
+}
+
+.home-beyond {
+    padding-top: 34px;
+}
+
+.home-beyond > h2 {
+    margin-bottom: 24px;
+    font-size: 30px;
+}
+
+.golf-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 35px 38px;
+    border-radius: 8px;
+    background: linear-gradient(120deg, #24384a 0%, #315b76 100%);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.golf-banner h3 {
+    margin: 0 0 10px;
+    color: white;
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.golf-banner p {
+    max-width: 720px;
+    margin: 0;
+    color: #d9e6ef;
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+.golf-banner > a {
+    flex: 0 0 auto;
+    padding: 11px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    border-radius: 6px;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.golf-banner > a:hover,
+.golf-banner > a:focus-visible {
+    border-color: white;
+    background: white;
+    color: var(--nav);
+    outline: none;
+}
+
 .page {
     width: min(1120px, calc(100% - 40px));
     margin: 56px auto 72px;
@@ -1311,6 +1512,17 @@ li {
         font-size: 16px;
     }
 
+    .home-hero {
+        min-height: 500px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .home-section-heading {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
     .page {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -1404,6 +1616,106 @@ li {
     .cv-page {
         width: min(100% - 28px, 1120px);
         margin-top: 30px;
+    }
+
+    .home-page {
+        width: min(100% - 28px, 1120px);
+        margin-bottom: 48px;
+    }
+
+    .home-hero {
+        min-height: 0;
+        padding: 58px 6px;
+    }
+
+    .home-affiliation {
+        margin-bottom: 17px;
+        font-size: 16px;
+    }
+
+    .home-hero h1 {
+        font-size: 53px;
+    }
+
+    .home-fields {
+        display: block;
+        margin-top: 24px;
+        font-size: 20px;
+        line-height: 1.55;
+    }
+
+    .home-fields span {
+        margin: 0 3px;
+    }
+
+    .home-introduction {
+        font-size: 18px;
+    }
+
+    .home-actions {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 7px;
+        margin-top: 28px;
+    }
+
+    .home-actions a {
+        min-width: 0;
+        padding: 10px 7px;
+        font-size: 15px;
+    }
+
+    .home-section {
+        padding: 50px 6px;
+    }
+
+    .home-section h2 {
+        font-size: 34px;
+    }
+
+    .home-research-list a {
+        grid-template-columns: 30px minmax(0, 1fr) 20px;
+        gap: 10px;
+        padding: 23px 0;
+    }
+
+    .home-research-list a:hover,
+    .home-research-list a:focus-visible {
+        padding-left: 5px;
+    }
+
+    .home-research-list strong {
+        font-size: 19px;
+    }
+
+    .home-arrow {
+        font-size: 19px;
+    }
+
+    .home-beyond {
+        padding-top: 18px;
+    }
+
+    .home-beyond > h2 {
+        font-size: 27px;
+    }
+
+    .golf-banner {
+        display: block;
+        padding: 28px 24px;
+    }
+
+    .golf-banner h3 {
+        font-size: 22px;
+    }
+
+    .golf-banner p {
+        font-size: 17px;
+    }
+
+    .golf-banner > a {
+        display: inline-flex;
+        margin-top: 22px;
     }
 
     .site-title {
