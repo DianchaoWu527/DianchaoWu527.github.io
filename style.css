@@ -702,6 +702,12 @@ li {
     padding-top: 2px;
 }
 
+.equation-bound {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .method-steps {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -890,6 +896,346 @@ li {
     margin-top: 6px;
 }
 
+.research-foundation-note {
+    margin: 24px 0 30px;
+    padding: 18px 20px;
+    border-left: 4px solid #526f84;
+    background: #eef4f7;
+    color: #3f5261;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.random-matrix-meta {
+    margin-top: 24px;
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #f8fafb;
+}
+
+.cv-page {
+    width: min(1120px, calc(100% - 40px));
+    margin: 56px auto 80px;
+}
+
+.cv-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 38px 44px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #24384a 0%, #315b76 100%);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.cv-header .eyebrow {
+    color: #f0c48b;
+}
+
+.cv-header h1 {
+    margin: 0;
+    color: white;
+    font-size: 50px;
+    line-height: 1.05;
+}
+
+.cv-updated {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 15px 0 0;
+    color: #d9e6ef;
+    font-size: 17px;
+}
+
+.cv-header a {
+    color: white;
+    font-weight: 700;
+}
+
+.cv-contact {
+    display: grid;
+    gap: 7px;
+    justify-items: end;
+    font-size: 16px;
+}
+
+.cv-layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+    align-items: start;
+}
+
+.cv-rail {
+    position: sticky;
+    top: 96px;
+}
+
+.cv-toc {
+    display: grid;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: white;
+    box-shadow: 0 10px 26px rgba(42, 55, 68, 0.08);
+}
+
+.cv-toc a {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--line);
+    color: #294d68;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.25;
+    text-decoration: none;
+}
+
+.cv-toc a:last-child {
+    border-bottom: 0;
+}
+
+.cv-toc a:hover,
+.cv-toc a:focus-visible {
+    background: #eef4f7;
+    outline: none;
+}
+
+.cv-download {
+    display: block;
+    margin-top: 14px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: var(--accent);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+.cv-download:hover {
+    background: #734820;
+    text-decoration: none;
+}
+
+.cv-document {
+    padding: 44px 48px 54px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.cv-section {
+    scroll-margin-top: 104px;
+}
+
+.cv-section + .cv-section {
+    margin-top: 46px;
+    padding-top: 38px;
+    border-top: 1px solid var(--line);
+}
+
+.cv-section h2 {
+    margin: 0 0 24px;
+    color: #253746;
+    font-size: 30px;
+    line-height: 1.15;
+}
+
+.cv-section h3 {
+    margin: 0;
+    color: #263847;
+    font-size: 21px;
+    line-height: 1.32;
+}
+
+.cv-section p,
+.cv-section li,
+.cv-section dd {
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+.cv-item-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.cv-item-head p {
+    margin: 5px 0 0;
+    color: var(--muted);
+}
+
+.cv-item-head > p {
+    flex: 0 0 auto;
+    margin-top: 2px;
+    color: #475867;
+    font-weight: 700;
+    text-align: right;
+}
+
+.cv-gpa {
+    margin: 16px 0 24px;
+    padding: 13px 16px;
+    border-left: 4px solid var(--accent);
+    background: #fffaf4;
+}
+
+.cv-gpa span {
+    margin: 0 7px;
+    color: #ac8d6e;
+}
+
+.coursework-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.coursework-block {
+    padding: 18px 20px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #f8fafb;
+}
+
+.cv-label {
+    margin: 0 0 9px;
+    color: var(--accent);
+    font-size: 14px !important;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.coursework-block ul,
+.completed-coursework ul,
+.cv-entry ul,
+.cv-section > ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.completed-coursework {
+    margin-top: 20px;
+}
+
+.course-chip-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 22px;
+}
+
+.course-chip-list li {
+    margin-bottom: 3px;
+}
+
+.cv-entry + .cv-entry {
+    margin-top: 30px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+}
+
+.cv-entry ul {
+    margin-top: 13px;
+}
+
+.cv-entry li {
+    margin-bottom: 8px;
+}
+
+.cv-funding {
+    width: fit-content;
+    margin: 12px 0 0;
+    padding: 7px 10px;
+    border-radius: 6px;
+    background: var(--accent-soft);
+    color: #71451f;
+    font-weight: 700;
+}
+
+.cv-section-intro {
+    margin: -10px 0 22px;
+    color: #52616f;
+}
+
+.cv-study-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.cv-study-card {
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-top: 4px solid #294d68;
+    border-radius: 8px;
+    background: #fbfcfd;
+}
+
+.cv-study-card h3 {
+    min-height: 2.65em;
+    margin-bottom: 12px;
+}
+
+.cv-study-card p {
+    margin: 9px 0 0;
+}
+
+.cv-honor-list {
+    display: grid;
+}
+
+.cv-honor-list > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+.cv-honor-list > div:first-child {
+    padding-top: 0;
+}
+
+.cv-honor-list span {
+    flex: 0 0 auto;
+    color: var(--muted);
+}
+
+.skills-list {
+    display: grid;
+    gap: 0;
+    margin: 0;
+}
+
+.skills-list > div {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 18px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.skills-list dt {
+    color: #31495c;
+    font-weight: 700;
+}
+
+.skills-list dd {
+    margin: 0;
+}
+
 @media (max-width: 1050px) {
     .research-page {
         grid-template-columns: 220px minmax(0, 1fr);
@@ -987,12 +1333,38 @@ li {
     .work-grid {
         grid-template-columns: 1fr;
     }
+
+    .cv-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-rail {
+        position: static;
+    }
+
+    .cv-toc {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .cv-toc a {
+        border-right: 1px solid var(--line);
+        text-align: center;
+    }
+
+    .cv-download {
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 560px) {
     .nav-container,
     .page {
         width: min(100% - 28px, 1120px);
+    }
+
+    .cv-page {
+        width: min(100% - 28px, 1120px);
+        margin-top: 30px;
     }
 
     .site-title {
@@ -1076,6 +1448,16 @@ li {
         padding: 22px 20px;
     }
 
+    .display-equation {
+        display: grid;
+        gap: 8px;
+        font-size: 16px;
+    }
+
+    .equation-expression {
+        white-space: nowrap;
+    }
+
     .research-sidebar {
         grid-template-columns: 82px 1fr;
         column-gap: 15px;
@@ -1108,5 +1490,59 @@ li {
     .research-sidebar .research-jump a {
         padding: 7px 5px;
         font-size: 13px;
+    }
+
+    .cv-header {
+        display: block;
+        padding: 27px 22px;
+    }
+
+    .cv-header h1 {
+        font-size: 38px;
+    }
+
+    .cv-contact {
+        justify-items: start;
+        margin-top: 22px;
+    }
+
+    .cv-toc {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cv-document {
+        padding: 30px 22px 38px;
+    }
+
+    .cv-item-head {
+        display: block;
+    }
+
+    .cv-item-head > p {
+        text-align: left;
+    }
+
+    .coursework-grid,
+    .course-chip-list,
+    .cv-study-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-study-card h3 {
+        min-height: 0;
+    }
+
+    .cv-honor-list > div {
+        display: block;
+    }
+
+    .cv-honor-list span {
+        display: block;
+        margin-top: 3px;
+    }
+
+    .skills-list > div {
+        grid-template-columns: 1fr;
+        gap: 4px;
     }
 }
