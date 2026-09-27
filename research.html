@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
         name="description"
-        content="Research by Dianchao Wu in periodic Langevin dynamics, quantitative limit theorems, nonlinear MBS pricing models, and stochastic sensitivity."
+        content="Research by Dianchao Wu in periodic Langevin dynamics, quantitative limit theorems, nonlinear MBS pricing models, random matrix theory, and stochastic sensitivity."
     >
     <title>Research | Dianchao Wu</title>
     <link rel="stylesheet" href="style.css">
@@ -22,7 +22,7 @@
             <a href="research.html" aria-current="page">Research</a>
             <a href="golf.html">Golf</a>
             <a href="awards.html">Awards</a>
-            <a href="cv.pdf" target="_blank">CV</a>
+            <a href="cv/">CV</a>
         </nav>
     </div>
 </header>
@@ -39,6 +39,7 @@
         <nav class="research-jump" aria-label="Research projects">
             <a href="#langevin"><span>01</span> Langevin dynamics</a>
             <a href="#mbs"><span>02</span> MBS pricing models</a>
+            <a href="#random-matrix"><span>03</span> Random matrix theory</a>
         </nav>
     </aside>
 
@@ -71,13 +72,20 @@
                 low-friction regime.
             </p>
 
+            <p class="research-foundation-note">
+                <strong>Analytical foundation.</strong> Measure-theoretic probability
+                is used throughout this work, together with L<sup>p</sup> moment
+                estimates, conditional expectations, ergodic averages, and weak
+                convergence arguments. These tools connect my independent study in
+                measure theory directly to the Langevin research problem.
+            </p>
+
             <section class="result-panel" aria-labelledby="langevin-result">
                 <p class="result-label">Core contribution · Proposition 11.1</p>
                 <h3 id="langevin-result">The relaxation scale is γT</h3>
                 <div class="display-equation" role="img" aria-label="Kolmogorov distance is bounded by C divided by the square root of gamma T">
-                    d<sub>K</sub>(Law(Y<sub>T</sub><sup>γ</sup>), N(0, σ<sub>γ</sub><sup>2</sup>))
-                    <span>≤</span>
-                    <span class="fraction"><span>C</span><span>√(γT)</span></span>
+                    <span class="equation-expression">d<sub>K</sub>(Law(Y<sub>T</sub><sup>γ</sup>), N(0, σ<sub>γ</sub><sup>2</sup>))</span>
+                    <span class="equation-bound"><span>≤</span><span class="fraction"><span>C</span><span>√(γT)</span></span></span>
                 </div>
                 <p>
                     In one dimension, I proved a Berry–Esseen estimate with a
@@ -262,6 +270,56 @@
             </p>
         </article>
 
+        <article class="research-project" id="random-matrix">
+            <div class="project-heading">
+                <div>
+                    <p class="project-number">Research 03</p>
+                    <h2>Random Matrix Theory and Quantum Expanders</h2>
+                </div>
+                <span class="status-badge">ISmART research</span>
+            </div>
+
+            <p class="project-summary">
+                This project studies operator-theoretic questions arising from
+                Haar-distributed unitary matrices, with particular attention to
+                non-normal behavior, commutator lower bounds, and finite-dimensional
+                models related to quantum expanders.
+            </p>
+
+            <div class="work-grid">
+                <section class="work-card">
+                    <p class="work-index">Analytical focus</p>
+                    <h3>Haar unitaries and commutator bounds</h3>
+                    <p>
+                        I studied Haar-distributed unitary matrices, malnormal
+                        matrices, commutator lower bounds, and their relationship to
+                        quantum-expander constructions.
+                    </p>
+                </section>
+
+                <section class="work-card">
+                    <p class="work-index">Computational contribution</p>
+                    <h3>Non-normal spectra and pseudospectra</h3>
+                    <p>
+                        I developed numerical experiments to investigate non-normal
+                        spectral behavior and pseudospectra, and produced a final
+                        technical note connecting the computations with the
+                        operator-theoretic questions.
+                    </p>
+                </section>
+            </div>
+
+            <section class="project-meta random-matrix-meta">
+                <h3>Project details</h3>
+                <dl>
+                    <div><dt>Program</dt><dd>ISmART Research Project</dd></div>
+                    <div><dt>Advisor</dt><dd>Jananan Arulseelan</dd></div>
+                    <div><dt>Period</dt><dd>Spring 2026–Present</dd></div>
+                    <div><dt>Methods</dt><dd>Random matrix simulation, spectral analysis, pseudospectra</dd></div>
+                </dl>
+            </section>
+        </article>
+
         <section class="research-contact">
             <p class="eyebrow">Research materials</p>
             <h2>Working papers and technical notes</h2>
@@ -271,7 +329,7 @@
             </p>
             <div class="button-row">
                 <a href="mailto:dianchao@iastate.edu">Contact me</a>
-                <a href="cv.pdf" target="_blank">Curriculum Vitae</a>
+                <a href="cv/">Curriculum Vitae</a>
             </div>
         </section>
     </section>
