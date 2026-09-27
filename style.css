@@ -923,15 +923,32 @@ li {
 }
 
 .display-equation {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
+    display: block;
+    overflow-x: auto;
     margin: 21px 0 24px;
     color: #182b3a;
     font-family: "Times New Roman", serif;
     font-size: clamp(21px, 3.5vw, 31px);
     line-height: 1.3;
+}
+
+.display-equation math {
+    margin: 0 auto;
+    font-size: 1em;
+}
+
+.equation-equivalence {
+    margin: -4px 0 24px;
+    color: #263d4f;
+    font-family: "Times New Roman", serif;
+    font-size: 19px;
+    font-style: italic;
+    text-align: center;
+}
+
+.equation-equivalence math {
+    margin-left: 0.3em;
+    font-size: 1.08em;
 }
 
 .fraction {
@@ -2224,13 +2241,11 @@ li {
     }
 
     .display-equation {
-        display: grid;
-        gap: 8px;
         font-size: 16px;
     }
 
-    .equation-expression {
-        white-space: nowrap;
+    .equation-equivalence {
+        font-size: 16px;
     }
 
     .research-sidebar {

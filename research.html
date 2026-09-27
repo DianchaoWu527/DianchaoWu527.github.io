@@ -85,10 +85,33 @@
             <section class="result-panel" aria-labelledby="langevin-result">
                 <p class="result-label">Core contribution · Proposition 11.1</p>
                 <h3 id="langevin-result">The relaxation scale is γT</h3>
-                <div class="display-equation" role="img" aria-label="Kolmogorov distance is bounded by C divided by the square root of gamma T">
-                    <span class="equation-expression">d<sub>K</sub>(Law(Y<sub>T</sub><sup>γ</sup>), N(0, σ<sub>γ</sub><sup>2</sup>))</span>
-                    <span class="equation-bound"><span>≤</span><span class="fraction"><span>C</span><span>√(γT)</span></span></span>
+                <div class="display-equation">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="d sub K of script L of Y sub T superscript gamma, script N of zero comma sigma sub gamma squared, is at most C divided by the square root of gamma T">
+                        <mrow>
+                            <msub><mi>d</mi><mi>K</mi></msub>
+                            <mo>(</mo>
+                            <mi>ℒ</mi><mo>(</mo><msubsup><mi>Y</mi><mi>T</mi><mi>γ</mi></msubsup><mo>)</mo>
+                            <mo>,</mo>
+                            <mi>𝒩</mi><mo>(</mo><mn>0</mn><mo>,</mo><msubsup><mi>σ</mi><mi>γ</mi><mn>2</mn></msubsup><mo>)</mo>
+                            <mo>)</mo>
+                            <mo>≤</mo>
+                            <mfrac><mi>C</mi><msqrt><mrow><mi>γ</mi><mi>T</mi></mrow></msqrt></mfrac>
+                            <mo>.</mo>
+                        </mrow>
+                    </math>
                 </div>
+                <p class="equation-equivalence">
+                    Equivalently, the friction-dependent Berry–Esseen constant may be chosen so that
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="C sub gamma is at most C gamma to the power negative one half">
+                        <mrow>
+                            <msub><mi>C</mi><mi>γ</mi></msub>
+                            <mo>≤</mo>
+                            <mi>C</mi>
+                            <msup><mi>γ</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup>
+                            <mo>.</mo>
+                        </mrow>
+                    </math>
+                </p>
                 <p>
                     In one dimension, I proved a Berry–Esseen estimate with a
                     constant that explicitly tracks the friction parameter. The
