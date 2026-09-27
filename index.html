@@ -13,7 +13,7 @@
     <div class="nav-container">
         <div class="site-title">Dianchao Wu</div>
         <nav class="nav" aria-label="Primary navigation">
-            <a href="index.html">Home</a>
+            <a href="index.html" aria-current="page">Home</a>
             <a href="academic.html">Academic</a>
             <a href="research.html">Research</a>
             <a href="golf.html">Golf</a>
@@ -22,77 +22,59 @@
     </div>
 </header>
 
-<main class="page">
-
-    <aside class="sidebar">
-        <img src="profile.jpg" alt="Profile photo of Dianchao Wu" class="profile-img">
-
-        <h1>Dianchao Wu</h1>
-        <div class="subtitle">Mathematics Student</div>
-        <div class="institution">Iowa State University</div>
-        <div class="institution">Student-Athlete, Men's Golf</div>
-    </aside>
-
-    <section class="content">
-        <h1>Home</h1>
-
-        <p>
-            I am an undergraduate mathematics student at Iowa State University.
-            My academic interests include probability, stochastic processes,
-            stochastic partial differential equations, random matrix theory,
-            and financial mathematics.
+<main class="home-page">
+    <section class="home-hero" aria-labelledby="home-title">
+        <p class="home-affiliation">Mathematics @ Iowa State University</p>
+        <h1 id="home-title">Dianchao Wu</h1>
+        <p class="home-fields">
+            Probability <span aria-hidden="true">·</span>
+            Stochastic Analysis <span aria-hidden="true">·</span>
+            Stochastic Control
         </p>
-
-        <p>
-            I am also a student-athlete on the Iowa State men's golf team.
-            My work combines mathematical training, independent study,
-            research notes, and long-term athletic development.
+        <p class="home-introduction">
+            Undergraduate researcher interested in stochastic dynamics,
+            quantitative probability, and mathematical models in finance and control.
         </p>
-
-        <p>
-            <a href="cv/">View my curriculum vitae.</a>
-        </p>
-
-        <div class="button-row">
+        <nav class="home-actions" aria-label="Featured pages">
             <a href="research.html">Research</a>
-            <a href="academic.html">Academic Work</a>
-            <a href="golf.html">Golf</a>
-        </div>
-
-        <div class="two-column">
-
-            <div>
-                <h2>Research Interests</h2>
-                <ul>
-                    <li>Probability and stochastic analysis</li>
-                    <li>Stochastic partial differential equations</li>
-                    <li>Stochastic differential equations</li>
-                    <li>Financial mathematics</li>
-                </ul>
-            </div>
-
-            <div>
-                <h2>Contact</h2>
-                <p>
-                    dianchao@iastate.edu
-                </p>
-                <p>
-                    dv527f@outlook.com
-                </p>
-            </div>
-
-        </div>
-
-        <h2>Current Work</h2>
-
-        <p>
-            I am currently studying quantitative Gaussian approximation for
-            periodic Langevin dynamics and stochastic sensitivity in nonlinear
-            mortgage-backed security pricing models.
-        </p>
-
+            <a href="cv/">CV</a>
+            <a href="academic.html">Academic</a>
+        </nav>
     </section>
 
+    <section class="home-section home-research" aria-labelledby="current-research">
+        <div class="home-section-heading">
+            <p class="eyebrow">Selected projects</p>
+            <h2 id="current-research">Current Research</h2>
+        </div>
+
+        <div class="home-research-list">
+            <a href="research.html#langevin">
+                <span>01</span>
+                <strong>Berry–Esseen Bounds for Periodic Langevin Dynamics</strong>
+                <span class="home-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="research.html#mbs">
+                <span>02</span>
+                <strong>Prediction, Model Risk, and Stochastic Sensitivity in Nonlinear MBS Pricing Models</strong>
+                <span class="home-arrow" aria-hidden="true">↗</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="home-section home-beyond" aria-labelledby="beyond-mathematics">
+        <h2 id="beyond-mathematics">Beyond Mathematics</h2>
+        <div class="golf-banner">
+            <div>
+                <h3>NCAA Division I Golf — Iowa State University</h3>
+                <p>
+                    Competitive golf has been a central part of my undergraduate
+                    career alongside mathematics and research.
+                </p>
+            </div>
+            <a href="golf.html">Golf <span aria-hidden="true">→</span></a>
+        </div>
+    </section>
 </main>
 
 </body>
