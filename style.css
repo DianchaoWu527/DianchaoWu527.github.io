@@ -645,6 +645,18 @@ li {
     line-height: 1.66;
 }
 
+.project-funding {
+    width: fit-content;
+    margin: 20px 0 0 !important;
+    padding: 8px 11px;
+    border-radius: 6px;
+    background: var(--accent-soft);
+    color: #71451f;
+    font-size: 15px !important;
+    font-weight: 700;
+    line-height: 1.4 !important;
+}
+
 .result-panel,
 .finding-panel {
     margin: 36px 0;
@@ -1160,6 +1172,33 @@ li {
     background: var(--accent-soft);
     color: #71451f;
     font-weight: 700;
+}
+
+.manuscript-list {
+    display: grid;
+    gap: 14px;
+}
+
+.manuscript-entry {
+    padding: 18px 20px;
+    border: 1px solid var(--line);
+    border-left: 4px solid #294d68;
+    border-radius: 8px;
+    background: #fbfcfd;
+}
+
+.manuscript-entry h3 {
+    margin-top: 7px;
+}
+
+.manuscript-status {
+    width: fit-content;
+    margin: 0;
+    color: var(--accent);
+    font-size: 13px !important;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
 .cv-section-intro {
