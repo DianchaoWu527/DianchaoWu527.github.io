@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 :root {
     --bg: #eef2f5;
     --panel: #ffffff;
@@ -1476,6 +1477,364 @@ li {
     margin: 0;
 }
 
+.golf-page {
+    width: min(1180px, calc(100% - 40px));
+    margin: 48px auto 84px;
+}
+
+.golf-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(380px, 0.88fr);
+    min-height: 620px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.golf-hero-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 62px 58px;
+}
+
+.golf-hero .eyebrow,
+.golf-section-heading .eyebrow,
+.golf-mindset .eyebrow,
+.golf-closing .eyebrow {
+    margin: 0 0 14px;
+}
+
+.golf-hero h1 {
+    max-width: 660px;
+    margin: 0;
+    color: #1f303d;
+    font-size: clamp(50px, 6vw, 72px);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+}
+
+.golf-hero-lead {
+    max-width: 650px;
+    margin: 28px 0 0;
+    color: #4b5c69;
+    font-size: 20px;
+    line-height: 1.68;
+}
+
+.golf-hero-facts {
+    display: grid;
+    gap: 11px;
+    margin-top: 34px;
+    padding-top: 25px;
+    border-top: 1px solid var(--line);
+    color: #54626e;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.golf-hero-facts strong {
+    display: inline-block;
+    width: 60px;
+    color: var(--accent);
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.golf-hero-figure {
+    position: relative;
+    min-height: 620px;
+    margin: 0;
+    overflow: hidden;
+    background: #dfe6e9;
+}
+
+.golf-hero-figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 48%;
+}
+
+.golf-hero-figure figcaption {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    left: 18px;
+    padding: 11px 14px;
+    border-radius: 6px;
+    background: rgba(23, 42, 56, 0.86);
+    color: white;
+    font-size: 14px;
+    line-height: 1.35;
+    backdrop-filter: blur(5px);
+}
+
+.golf-introduction {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+    padding: 72px 6%;
+    border-bottom: 1px solid var(--line);
+}
+
+.golf-introduction p {
+    margin: 0;
+    color: #40515f;
+    font-size: 19px;
+    line-height: 1.72;
+}
+
+.golf-journey {
+    padding: 76px 6% 80px;
+}
+
+.golf-section-heading {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 24px;
+    align-items: end;
+    margin-bottom: 42px;
+}
+
+.golf-section-heading h2,
+.golf-mindset h2,
+.golf-closing h2 {
+    margin: 0;
+    color: #223644;
+    font-size: clamp(36px, 5vw, 52px);
+    line-height: 1.08;
+}
+
+.golf-timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+    max-width: none;
+    margin: 0 0 52px;
+    padding: 0;
+    list-style: none;
+}
+
+.golf-timeline::before {
+    position: absolute;
+    top: 50px;
+    right: 2%;
+    left: 2%;
+    height: 1px;
+    background: #aab9c4;
+    content: "";
+}
+
+.golf-timeline li {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
+.timeline-year {
+    display: block;
+    color: var(--accent);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.timeline-dot {
+    display: block;
+    width: 13px;
+    height: 13px;
+    margin: 20px 0;
+    border: 3px solid white;
+    border-radius: 50%;
+    background: #294d68;
+    box-shadow: 0 0 0 1px #294d68;
+}
+
+.golf-timeline p {
+    margin: 0;
+    color: #4c5d6a;
+    font-size: 15px;
+    line-height: 1.52;
+}
+
+.golf-photo-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.35fr 0.9fr;
+    gap: 16px;
+}
+
+.golf-photo-grid figure {
+    position: relative;
+    min-height: 315px;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #dde4e8;
+    box-shadow: 0 10px 28px rgba(42, 55, 68, 0.1);
+}
+
+.golf-photo-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.golf-photo-grid figcaption {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 10px 12px;
+    border-radius: 5px;
+    background: rgba(25, 42, 55, 0.86);
+    color: white;
+    font-size: 14px;
+    line-height: 1.35;
+    backdrop-filter: blur(4px);
+}
+
+.golf-photo-grid figcaption span {
+    color: #dce7ee;
+    text-align: right;
+}
+
+.golf-results {
+    margin: 0;
+    padding: 76px 6% 82px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #203446 0%, #315b76 100%);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.golf-results .eyebrow {
+    color: #efc28a;
+}
+
+.golf-results .golf-section-heading h2 {
+    color: white;
+}
+
+.golf-results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.golf-results-grid section {
+    padding: 25px 23px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.golf-results-grid h3 {
+    min-height: 2.4em;
+    margin: 0 0 14px;
+    color: white;
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+.golf-results-grid a {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 14px;
+    align-items: center;
+    padding: 14px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    color: #e9f0f4;
+    font-size: 16px;
+    line-height: 1.38;
+    text-decoration: none;
+}
+
+.golf-results-grid a:hover,
+.golf-results-grid a:focus-visible {
+    color: white;
+    outline: none;
+}
+
+.golf-results-grid a strong {
+    color: #f0c48b;
+    font-size: 19px;
+}
+
+.golf-mindset {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1.3fr);
+    gap: 70px;
+    padding: 90px 6%;
+    border-bottom: 1px solid var(--line);
+}
+
+.golf-mindset h2 {
+    max-width: 430px;
+}
+
+.golf-mindset-copy p {
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+    color: #41515f;
+    font-size: 19px;
+    line-height: 1.68;
+}
+
+.golf-mindset-copy p:first-child {
+    padding-top: 0;
+}
+
+.golf-mindset-copy p:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.golf-closing {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(330px, 0.95fr);
+    margin-top: 76px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.golf-closing img {
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+.golf-closing > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 54px 48px;
+}
+
+.golf-closing h2 {
+    font-size: clamp(32px, 4vw, 45px);
+}
+
+.golf-closing > div > p:last-child {
+    margin: 24px 0 0;
+    color: #4b5c69;
+    font-size: 20px;
+    line-height: 1.62;
+}
+
 @media (max-width: 1050px) {
     .research-page {
         grid-template-columns: 220px minmax(0, 1fr);
@@ -1895,5 +2254,195 @@ li {
     .skills-list > div {
         grid-template-columns: 1fr;
         gap: 4px;
+    }
+}
+
+@media (max-width: 920px) {
+    .golf-page {
+        margin-top: 30px;
+    }
+
+    .golf-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .golf-hero-copy {
+        padding: 52px 42px;
+    }
+
+    .golf-hero-figure {
+        min-height: 560px;
+    }
+
+    .golf-introduction,
+    .golf-mindset {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .golf-section-heading {
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+
+    .golf-timeline {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding-left: 25px;
+    }
+
+    .golf-timeline::before {
+        top: 8px;
+        right: auto;
+        bottom: 8px;
+        left: 5px;
+        width: 1px;
+        height: auto;
+    }
+
+    .golf-timeline li {
+        padding: 0 0 26px 18px;
+    }
+
+    .timeline-dot {
+        position: absolute;
+        top: 5px;
+        left: -25px;
+        margin: 0;
+    }
+
+    .golf-timeline p {
+        margin-top: 6px;
+        font-size: 16px;
+    }
+
+    .golf-photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .golf-photo-grid figure:nth-child(2) {
+        grid-column: span 2;
+        grid-row: 1;
+    }
+
+    .golf-results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .golf-results-grid h3 {
+        min-height: 0;
+    }
+
+    .golf-closing {
+        grid-template-columns: 1fr;
+    }
+
+    .golf-closing img {
+        max-height: 580px;
+    }
+}
+
+@media (max-width: 560px) {
+    .golf-page {
+        width: min(100% - 28px, 1180px);
+        margin-bottom: 50px;
+    }
+
+    .golf-hero-copy {
+        padding: 40px 24px 44px;
+    }
+
+    .golf-hero h1 {
+        font-size: 47px;
+    }
+
+    .golf-hero-lead {
+        margin-top: 22px;
+        font-size: 18px;
+    }
+
+    .golf-hero-facts strong {
+        display: block;
+        width: auto;
+        margin-bottom: 2px;
+    }
+
+    .golf-hero-figure {
+        min-height: 470px;
+    }
+
+    .golf-introduction {
+        gap: 24px;
+        padding: 48px 6px;
+    }
+
+    .golf-introduction p,
+    .golf-mindset-copy p {
+        font-size: 18px;
+    }
+
+    .golf-journey {
+        padding: 54px 6px 60px;
+    }
+
+    .golf-section-heading {
+        margin-bottom: 32px;
+    }
+
+    .golf-section-heading h2,
+    .golf-mindset h2,
+    .golf-closing h2 {
+        font-size: 35px;
+    }
+
+    .golf-photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .golf-photo-grid figure,
+    .golf-photo-grid figure:nth-child(2) {
+        grid-column: auto;
+        grid-row: auto;
+        min-height: 280px;
+    }
+
+    .golf-photo-grid figcaption {
+        display: block;
+    }
+
+    .golf-photo-grid figcaption span {
+        display: block;
+        margin-top: 2px;
+        text-align: left;
+    }
+
+    .golf-results {
+        padding: 54px 22px 58px;
+    }
+
+    .golf-results-grid section {
+        padding: 22px 18px;
+    }
+
+    .golf-mindset {
+        gap: 30px;
+        padding: 62px 6px;
+    }
+
+    .golf-closing {
+        margin-top: 55px;
+    }
+
+    .golf-closing img {
+        min-height: 290px;
+        max-height: 370px;
+    }
+
+    .golf-closing > div {
+        padding: 38px 24px 42px;
+    }
+
+    .golf-closing > div > p:last-child {
+        font-size: 18px;
     }
 }
