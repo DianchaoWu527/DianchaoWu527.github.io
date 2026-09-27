@@ -1722,7 +1722,7 @@ li {
 
 .golf-photo-grid figure {
     position: relative;
-    min-height: 315px;
+    height: 315px;
     margin: 0;
     overflow: hidden;
     border-radius: 8px;
@@ -2468,7 +2468,7 @@ li {
     .golf-photo-grid figure:nth-child(2) {
         grid-column: auto;
         grid-row: auto;
-        min-height: 280px;
+        height: 280px;
     }
 
     .golf-photo-grid figcaption {
