@@ -54,9 +54,7 @@
         <header class="research-hero">
             <p class="eyebrow">概率论 · 随机动力学 · 金融数学</p>
             <h1>科研</h1>
-            <p class="research-lead">
-                我关注随机动力学与金融数学中的定量问题。目前的工作涉及有限时间概率误差界、非线性偏微分方程、数值实验，以及基于真实数据的模型检验。
-            </p>
+            <p class="research-lead">我的主要研究是周期 Langevin 动力学的 Berry–Esseen 界；另一项进行中的研究关注非线性 MBS 定价模型的预测能力与随机敏感性。</p>
         </header>
 
         <article class="research-project" id="langevin">
@@ -68,6 +66,8 @@
                 <span class="status-badge">论文撰写中</span>
             </div>
 
+            <p class="project-authorship">O. Smith、A. Valse、D. Wu（按姓氏字母顺序排列）。论文撰写中。指导教师：David P. Herzog 教授。</p>
+
             <p class="project-summary">
                 周期 Langevin 系统需要演化多长时间，其展开到实空间的位移才能由高斯分布准确近似？本项目为这一有限时间误差建立定量界，尤其关注低摩擦参数下的奇异极限。
             </p>
@@ -77,9 +77,27 @@
                 <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2246491" target="_blank" rel="noopener noreferrer">项目编号 DMS-2246491</a>
             </p>
 
-            <p class="research-foundation-note">
-                <strong>分析基础。</strong> 这项研究贯穿了测度论概率的方法，并运用 L<sup>p</sup> 矩估计、条件期望、遍历平均和弱收敛论证。这些工具使我在测度论指导研修中积累的知识直接服务于 Langevin 动力学研究。
-            </p>
+            <div class="project-columns">
+                <section>
+                    <h3>我的贡献</h3>
+                    <ul class="compact-list">
+                        <li>为展开位移建立 Berry–Esseen 分析框架，并证明过阻尼情形下的结果。</li>
+                        <li>通过直接将位移作为 Markov 加性过程处理，证明欠阻尼情形下的主要定理及相关命题；其中假设 (A2) 的验证由 O. Smith 完成。</li>
+                        <li>证明命题 11.1 中的一维低摩擦估计 d<sub>K</sub> ≤ C/√(γT)，刻画以 γT 衡量的有效弛豫尺度。</li>
+                        <li>完成最初的数值示例，并撰写第一部分初稿。</li>
+                    </ul>
+                    <p>低摩擦区间的数值研究由 A. Valse 完成。</p>
+                </section>
+                <section class="project-meta">
+                    <h3>项目概况</h3>
+                    <dl>
+                        <div><dt>研究主题</dt><dd>Markov 加性过程、次强制性（hypocoercivity）、定量中心极限定理</dd></div>
+                        <div><dt>误差度量</dt><dd>Kolmogorov 距离</dd></div>
+                        <div><dt>研究对象</dt><dd>周期过阻尼与欠阻尼 Langevin 动力学</dd></div>
+                        <div><dt>指导教师</dt><dd>David P. Herzog 教授</dd></div>
+                    </dl>
+                </section>
+            </div>
 
             <section class="result-panel" aria-labelledby="langevin-result">
                 <p class="result-label">核心贡献 · 命题 11.1</p>
@@ -148,26 +166,7 @@
                 </li>
             </ol>
 
-            <div class="project-columns">
-                <section>
-                    <h3>其他工作</h3>
-                    <ul class="compact-list">
-                        <li>为位移问题建立 Berry–Esseen 分析框架。</li>
-                        <li>证明过阻尼情形下的投影结果。</li>
-                        <li>在 Markov 加性过程框架下直接处理欠阻尼位移问题。</li>
-                        <li>完成最初的数值示例，并撰写第一部分初稿。</li>
-                    </ul>
-                </section>
-                <section class="project-meta">
-                    <h3>项目概况</h3>
-                    <dl>
-                        <div><dt>研究主题</dt><dd>Markov 加性过程、次强制性（hypocoercivity）、定量中心极限定理</dd></div>
-                        <div><dt>误差度量</dt><dd>Kolmogorov 距离</dd></div>
-                        <div><dt>研究对象</dt><dd>周期过阻尼与欠阻尼 Langevin 动力学</dd></div>
-                        <div><dt>指导教师</dt><dd>David P. Herzog 教授</dd></div>
-                    </dl>
-                </section>
-            </div>
+
         </article>
 
         <article class="research-project" id="mbs">
@@ -192,39 +191,17 @@
                 我最初提出在定价方程中引入随机噪声，以考察市场不确定性如何影响模型预测。在与导师讨论后，项目进一步加入 p-Laplacian 算子，用以描述非线性扩散。由此形成的研究思路，将理论分析、市场回测与随机模型风险分析联系起来。
             </p>
 
-            <div class="work-grid">
-                <section class="work-card">
-                    <p class="work-index">已完成 · 理论基础</p>
-                    <h3>文献研读与推导梳理</h3>
-                    <p>
-                        我将导师提供的论文拆解为专题研读与汇报，逐步复现其中的关键推导，理解模型背后的数学结构。
-                    </p>
-                    <ul class="compact-list">
-                        <li>将非线性 MBS 定价方程化为半线性热方程。</li>
-                        <li>建立非线性映射的 Lipschitz 估计。</li>
-                        <li>利用不动点方法证明弱解的存在唯一性。</li>
-                        <li>推导 Black–Scholes 算子的 p-扩散推广。</li>
-                    </ul>
-                </section>
+            <p>前期准备包括研读并汇报 MBS 定价文献，梳理其中的分析推导。</p>
 
-                <section class="work-card">
-                    <p class="work-index">已完成 · 实证探索</p>
-                    <h3>市场回测与数值分析</h3>
-                    <p>
-                        我使用真实交易数据搭建了初步的市场回测流程，开展数值实验，并讨论了特定参数区间和特殊情形下模型的金融含义。
-                    </p>
-                    <p>
-                        核心目标是检验：相较原方程，随机与非线性扩展是否带来了可量化的改进。
-                    </p>
-                </section>
-            </div>
+            <section class="work-card">
+                <h3>市场回测与数值分析</h3>
+                <p>我使用真实交易数据搭建初步回测流程，开展数值实验，并分析特定参数区间及特殊情形下模型的金融含义，以检验随机与非线性扩展能否改善原方程的预测。</p>
+            </section>
 
             <section class="finding-panel" aria-labelledby="initial-finding">
                 <p class="result-label">初步实证结果</p>
                 <h3 id="initial-finding">尚未得出明确结论，但识别了关键问题</h3>
-                <p>
-                    初步回测尚未显示出相较基准模型稳定、且具有清晰经济解释的改进。实验揭示了若干关键问题：参数识别、模型输出与实际交易观测的对齐，以及如何区分非线性扩散与其他市场机制的影响。这些局限也为下一阶段的研究提供了方向。
-                </p>
+                <p>初步回测尚未显示出稳定且具有清晰经济解释的改进。参数识别、模型输出与交易观测的对齐，以及非线性扩散效应的辨识，仍是下一阶段需要解决的问题。</p>
             </section>
 
             <h3>下一阶段：随机分析</h3>
@@ -267,43 +244,12 @@
         <article class="research-project" id="random-matrix">
             <div class="project-heading">
                 <div>
-                    <p class="project-number">研究 03</p>
+                    <p class="project-number">过往项目</p>
                     <h2>Random Matrix Theory and Quantum Expanders</h2>
                 </div>
-                <span class="status-badge">ISmART 研究项目</span>
+                <span class="status-badge">已结束 · 探索性研究</span>
             </div>
-
-            <p class="project-summary">
-                本项目研究 Haar 分布酉矩阵所引出的算子理论问题，重点关注非正规性、交换子下界，以及与量子扩张子相关的有限维模型。
-            </p>
-
-            <div class="work-grid">
-                <section class="work-card">
-                    <p class="work-index">理论研究</p>
-                    <h3>Haar 酉矩阵与交换子界</h3>
-                    <p>
-                        我研究了 Haar 分布酉矩阵、malnormal 矩阵及交换子下界，并考察它们与量子扩张子构造之间的联系。
-                    </p>
-                </section>
-
-                <section class="work-card">
-                    <p class="work-index">计算工作</p>
-                    <h3>非正规谱与伪谱</h3>
-                    <p>
-                        我设计数值实验，考察非正规矩阵的谱行为与伪谱，并完成技术报告，将计算结果与相关算子理论问题相联系。
-                    </p>
-                </section>
-            </div>
-
-            <section class="project-meta random-matrix-meta">
-                <h3>项目概况</h3>
-                <dl>
-                    <div><dt>所属项目</dt><dd>ISmART Research Project</dd></div>
-                    <div><dt>指导教师</dt><dd>Jananan Arulseelan 博士</dd></div>
-                    <div><dt>研究时间</dt><dd>2026 年春季至今</dd></div>
-                    <div><dt>研究方法</dt><dd>随机矩阵模拟、谱分析、伪谱</dd></div>
-                </dl>
-            </section>
+            <p class="project-summary">2026 年春季至夏季，在 Jananan Arulseelan 博士指导下，通过 ISmART 项目探索 Haar 分布酉矩阵与量子扩张子。</p>
         </article>
 
         <section class="research-contact">

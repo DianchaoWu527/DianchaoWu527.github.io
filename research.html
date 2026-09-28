@@ -54,12 +54,7 @@
         <header class="research-hero">
             <p class="eyebrow">Probability · Stochastic dynamics · Financial mathematics</p>
             <h1>Research</h1>
-            <p class="research-lead">
-                I study quantitative questions in stochastic dynamics and
-                mathematical finance. My current work connects finite-time
-                probability bounds, nonlinear partial differential equations,
-                numerical experiments, and model validation against real data.
-            </p>
+            <p class="research-lead">My primary research concerns Berry–Esseen bounds for periodic Langevin dynamics. A second ongoing project studies prediction and stochastic sensitivity in nonlinear MBS pricing models.</p>
         </header>
 
         <article class="research-project" id="langevin">
@@ -70,6 +65,8 @@
                 </div>
                 <span class="status-badge">Working manuscript</span>
             </div>
+
+            <p class="project-authorship">O. Smith, A. Valse, D. Wu (alphabetical). Manuscript in preparation. Mentor: Professor David P. Herzog.</p>
 
             <p class="project-summary">
                 How long must a periodic Langevin system be observed before its
@@ -84,13 +81,27 @@
                 <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2246491" target="_blank" rel="noopener noreferrer">Award DMS-2246491</a>
             </p>
 
-            <p class="research-foundation-note">
-                <strong>Analytical foundation.</strong> Measure-theoretic probability
-                is used throughout this work, together with L<sup>p</sup> moment
-                estimates, conditional expectations, ergodic averages, and weak
-                convergence arguments. These tools connect my independent study in
-                measure theory directly to the Langevin research problem.
-            </p>
+            <div class="project-columns">
+                <section>
+                    <h3>My contributions</h3>
+                    <ul class="compact-list">
+                        <li>Formulated the Berry–Esseen framework for the unwrapped displacement and proved the overdamped results.</li>
+                        <li>Proved the main underdamped theorem and supporting propositions via a direct Markov-additive treatment of the displacement; verification of Assumption (A2) was carried out by O. Smith.</li>
+                        <li>Proved the one-dimensional low-friction estimate d<sub>K</sub> ≤ C/√(γT) in Proposition 11.1, identifying γT as the effective relaxation scale.</li>
+                        <li>Carried out the original numerical illustration and drafted Part I.</li>
+                    </ul>
+                    <p>Numerical study of the low-friction regime: A. Valse.</p>
+                </section>
+                <section class="project-meta">
+                    <h3>Project details</h3>
+                    <dl>
+                        <div><dt>Topics</dt><dd>Markov additive processes, hypocoercivity, quantitative CLT</dd></div>
+                        <div><dt>Metric</dt><dd>Kolmogorov distance</dd></div>
+                        <div><dt>Setting</dt><dd>Periodic overdamped and underdamped Langevin dynamics</dd></div>
+                        <div><dt>Mentor</dt><dd>Professor David P. Herzog</dd></div>
+                    </dl>
+                </section>
+            </div>
 
             <section class="result-panel" aria-labelledby="langevin-result">
                 <p class="result-label">Core contribution · Proposition 11.1</p>
@@ -167,26 +178,7 @@
                 </li>
             </ol>
 
-            <div class="project-columns">
-                <section>
-                    <h3>Additional contributions</h3>
-                    <ul class="compact-list">
-                        <li>Developed the Berry–Esseen framework for the displacement problem.</li>
-                        <li>Proved the projected overdamped result.</li>
-                        <li>Developed the direct Markov-additive treatment of underdamped displacement.</li>
-                        <li>Carried out the original numerical illustration and drafted Part I.</li>
-                    </ul>
-                </section>
-                <section class="project-meta">
-                    <h3>Project details</h3>
-                    <dl>
-                        <div><dt>Topics</dt><dd>Markov additive processes, hypocoercivity, quantitative CLT</dd></div>
-                        <div><dt>Metric</dt><dd>Kolmogorov distance</dd></div>
-                        <div><dt>Setting</dt><dd>Periodic overdamped and underdamped Langevin dynamics</dd></div>
-                        <div><dt>Mentor</dt><dd>Professor David P. Herzog</dd></div>
-                    </dl>
-                </section>
-            </div>
+
         </article>
 
         <article class="research-project" id="mbs">
@@ -218,52 +210,17 @@
                 empirical backtesting, and stochastic model-risk analysis.
             </p>
 
-            <div class="work-grid">
-                <section class="work-card">
-                    <p class="work-index">Completed · Analytical foundation</p>
-                    <h3>Literature reconstruction</h3>
-                    <p>
-                        I organized papers provided by my advisor into technical
-                        sessions and presentations, reconstructing the main
-                        derivations rather than treating the models as black boxes.
-                    </p>
-                    <ul class="compact-list">
-                        <li>Reduction of a nonlinear MBS pricing equation to a semilinear heat equation.</li>
-                        <li>Lipschitz control of the nonlinear mapping.</li>
-                        <li>Fixed-point proof of existence and uniqueness of weak solutions.</li>
-                        <li>Derivation of a p-diffusion extension of the Black–Scholes operator.</li>
-                    </ul>
-                </section>
+            <p>Preparation included reading and presenting the MBS pricing literature and working through its analytical derivations.</p>
 
-                <section class="work-card">
-                    <p class="work-index">Completed · Empirical investigation</p>
-                    <h3>Market backtesting and numerical analysis</h3>
-                    <p>
-                        I built an initial market-backtesting workflow using real
-                        transaction data, conducted numerical experiments, and
-                        examined the financial interpretation of the model in
-                        selected parameter regimes and special cases.
-                    </p>
-                    <p>
-                        The central objective was to determine whether the stochastic
-                        and nonlinear extensions produced a measurable improvement
-                        over the original equation.
-                    </p>
-                </section>
-            </div>
+            <section class="work-card">
+                <h3>Market backtesting and numerical analysis</h3>
+                <p>I built an initial backtesting workflow using real transaction data, ran numerical experiments, and examined the financial interpretation of selected parameter regimes and special cases to assess whether the proposed extensions improve prediction.</p>
+            </section>
 
             <section class="finding-panel" aria-labelledby="initial-finding">
                 <p class="result-label">Initial empirical finding</p>
                 <h3 id="initial-finding">An informative inconclusive result</h3>
-                <p>
-                    The initial backtests did not yet yield a stable and economically
-                    interpretable improvement over the baseline model. Instead, they
-                    exposed important questions involving parameter identification,
-                    alignment between model outputs and transaction observations,
-                    and the separation of nonlinear-diffusion effects from other
-                    market mechanisms. These limitations now help define the next
-                    stage of the project.
-                </p>
+                <p>The initial backtests did not establish a stable, economically interpretable improvement. Parameter identification, alignment with transaction observations, and isolation of nonlinear-diffusion effects remain open issues for the next stage.</p>
             </section>
 
             <h3>Next stage: stochastic analysis</h3>
@@ -315,51 +272,12 @@
         <article class="research-project" id="random-matrix">
             <div class="project-heading">
                 <div>
-                    <p class="project-number">Research 03</p>
+                    <p class="project-number">Earlier project</p>
                     <h2>Random Matrix Theory and Quantum Expanders</h2>
                 </div>
-                <span class="status-badge">ISmART research</span>
+                <span class="status-badge">Past exploratory project</span>
             </div>
-
-            <p class="project-summary">
-                This project studies operator-theoretic questions arising from
-                Haar-distributed unitary matrices, with particular attention to
-                non-normal behavior, commutator lower bounds, and finite-dimensional
-                models related to quantum expanders.
-            </p>
-
-            <div class="work-grid">
-                <section class="work-card">
-                    <p class="work-index">Analytical focus</p>
-                    <h3>Haar unitaries and commutator bounds</h3>
-                    <p>
-                        I studied Haar-distributed unitary matrices, malnormal
-                        matrices, commutator lower bounds, and their relationship to
-                        quantum-expander constructions.
-                    </p>
-                </section>
-
-                <section class="work-card">
-                    <p class="work-index">Computational contribution</p>
-                    <h3>Non-normal spectra and pseudospectra</h3>
-                    <p>
-                        I developed numerical experiments to investigate non-normal
-                        spectral behavior and pseudospectra, and produced a final
-                        technical note connecting the computations with the
-                        operator-theoretic questions.
-                    </p>
-                </section>
-            </div>
-
-            <section class="project-meta random-matrix-meta">
-                <h3>Project details</h3>
-                <dl>
-                    <div><dt>Program</dt><dd>ISmART Research Project</dd></div>
-                    <div><dt>Mentor</dt><dd>Dr. Jananan Arulseelan</dd></div>
-                    <div><dt>Period</dt><dd>Spring 2026–Present</dd></div>
-                    <div><dt>Methods</dt><dd>Random matrix simulation, spectral analysis, pseudospectra</dd></div>
-                </dl>
-            </section>
+            <p class="project-summary">Exploratory ISmART study of Haar-distributed unitary matrices and quantum expanders with Dr. Jananan Arulseelan, Spring–Summer 2026.</p>
         </article>
 
         <section class="research-contact">
