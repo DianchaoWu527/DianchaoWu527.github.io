@@ -1,0 +1,294 @@
+/* Cream editorial presentation. Existing content, routes and assets are retained. */
+:root {
+  --bg: #f7f5ef;
+  --panel: #f7f5ef;
+  --ink: #24292f;
+  --muted: #606975;
+  --line: #deded8;
+  --nav: #294b67;
+  --nav-soft: #606975;
+  --accent: #294b67;
+  --accent-soft: transparent;
+  --shadow: none;
+  --editorial-serif: Georgia, "Times New Roman", "Songti SC", serif;
+  --editorial-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+html { scroll-behavior: smooth; }
+body, html:lang(zh-CN) body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--editorial-sans);
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-family: var(--editorial-serif); font-weight: 400; color: var(--ink); }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 5px; }
+a:hover { color: #101f2c; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+img { max-width: 100%; }
+.topbar { position: static; background: transparent; color: var(--ink); border: 0; box-shadow: none; backdrop-filter: none; }
+.nav-container {
+  width: min(1040px, calc(100% - 96px)); min-height: 102px; gap: 40px;
+  flex-direction: row; align-items: center; padding: 0;
+  border-bottom: 1px solid var(--line);
+}
+.site-title { font: 600 20px/1.3 var(--editorial-serif); }
+.site-title a { color: var(--ink); text-decoration: none; }
+.nav-container > .nav { margin-left: auto; }
+.nav { display: flex; gap: 30px; flex-wrap: nowrap; }
+.nav a { padding: 3px 0; border-radius: 0; font-size: 15px; line-height: 1.5; color: var(--muted); }
+.nav a:hover, .nav a:focus-visible, .nav a[aria-current="page"] { color: var(--ink); background: transparent; text-decoration: underline; }
+.nav a:focus-visible { outline: 2px solid var(--accent); }
+.language-switch { position: static; gap: 5px; font-size: 14px; }
+.language-switch a { padding: 3px 0; min-height: 0; border-radius: 0; color: var(--muted); }
+.language-switch span { color: var(--muted); padding: 0 3px; }
+.language-switch a[aria-current="true"], .language-switch a:hover { color: var(--ink); background: transparent; font-weight: 400; text-decoration: underline; }
+.language-switch a:focus-visible { outline-color: var(--accent); }
+.page, .research-page, .cv-page, .golf-page { width: min(1040px, calc(100% - 96px)); margin: 54px auto 60px; }
+.page { grid-template-columns: 155px minmax(0, 1fr); gap: 25px; }
+.sidebar, .content, .profile-card, .feature-card, .project-meta, .work-card,
+.cv-document, .cv-toc, .cv-study-card, .coursework-block, .manuscript-entry,
+.golf-hero, .golf-closing { background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+.sidebar { display: block; top: 28px; text-align: left; padding: 0; }
+.sidebar h1 { font-size: 23px; font-weight: 400; margin: 0 0 13px; }
+.sidebar .subtitle, .sidebar .institution { font-size: 14px; line-height: 1.65; color: var(--muted); margin: 6px 0; }
+.profile-img { border: 0; border-radius: 0; box-shadow: none; }
+.content { padding: 0; }
+.content h1 { color: var(--ink); font-size: 46px; line-height: 1.15; font-weight: 400; letter-spacing: -.035em; margin-bottom: 22px; }
+.content h2 { color: var(--ink); font-size: 30px; line-height: 1.25; font-weight: 400; }
+.content h3 { font-size: 22px; font-weight: 400; }
+.content p, .section-intro, .content li { font-size: 17px; line-height: 1.75; }
+.content a { color: var(--accent); }
+.eyebrow, .project-number, .result-label, .work-index, .cv-label {
+  color: var(--muted); font-family: var(--editorial-sans); font-size: 14px; font-weight: 400; letter-spacing: 0; text-transform: none;
+}
+.feature-card { margin: 0; padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.button-row a, .project-links a, .cv-download {
+  min-height: 0; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none;
+  color: var(--accent); font-size: 15px; font-weight: 400; text-decoration: underline;
+}
+.button-row a:hover, .project-links a:hover, .cv-download:hover { background: transparent; color: #101f2c; }
+.editorial-home { width: min(1040px, calc(100% - 96px)); margin: 0 auto; }
+.editorial-intro { display: grid; grid-template-columns: minmax(0, 1fr) 222px; gap: 90px; align-items: center; padding: 72px 0 64px; }
+.editorial-intro h1 { margin: 0; font-size: 58px; line-height: 1.1; letter-spacing: -.045em; }
+.editorial-affiliation { color: var(--muted); font-size: 15px; margin: 0 0 13px; }
+.editorial-fields { color: var(--accent); font-size: 15px; margin: 19px 0 0; }
+.editorial-bio { max-width: 580px; margin: 17px 0 0; line-height: 1.75; }
+.editorial-links { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 23px; font-size: 15px; }
+.editorial-portrait { margin: 0; }
+.editorial-portrait img { display: block; width: 222px; height: 244px; object-fit: cover; object-position: center 45%; }
+.editorial-section-title { margin: 0; font: 500 16px/1.7 var(--editorial-sans); padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.editorial-project-row { display: grid; grid-template-columns: 155px minmax(0, 1fr); gap: 25px; padding: 28px 0 31px; border-bottom: 1px solid var(--line); }
+.editorial-project-label { color: var(--muted); font-size: 14px; padding-top: 5px; }
+.editorial-project-label span { display: block; color: var(--accent); margin-bottom: 4px; }
+.editorial-project-row h3 { margin: 0; font-size: 26px; line-height: 1.28; letter-spacing: -.022em; }
+.editorial-project-row h3 a { text-decoration: none; color: var(--ink); }
+.editorial-project-row h3 a:hover { text-decoration: underline; }
+.editorial-project-row p { margin: 10px 0 0; color: var(--muted); font-size: 16px; }
+.editorial-row-link { display: inline-block; font-size: 14px; margin-top: 13px; }
+.editorial-beyond { display: grid; grid-template-columns: 155px minmax(0, 1fr) auto; gap: 25px; align-items: start; padding: 37px 0; }
+.editorial-beyond h2 { margin: 0; font: 500 15px/1.7 var(--editorial-sans); }
+.editorial-beyond h3 { margin: 0; font-size: 21px; line-height: 1.4; }
+.editorial-beyond p { color: var(--muted); font-size: 15px; margin: 7px 0 0; }
+.editorial-beyond>a { font-size: 15px; white-space: nowrap; }
+.site-footer { width: min(1040px, calc(100% - 96px)); margin: 0 auto; border-top: 1px solid var(--line); padding: 26px 0 36px; display: flex; gap: 24px; justify-content: space-between; align-items: center; font-size: 14px; color: var(--muted); }
+.site-footer nav { display: flex; gap: 24px; }
+.research-content { overflow: visible; }
+.research-sidebar h1, .research-sidebar>.subtitle, .research-sidebar>.institution { display: none; }
+.research-jump { margin: 0; padding: 5px 0 0; border: 0; gap: 18px; }
+.research-jump a { padding: 0; font-size: 14px; line-height: 1.65; border-radius: 0; grid-template-columns: 22px 1fr; gap: 6px; }
+.research-jump a:hover, .research-jump a:focus-visible { background: transparent; text-decoration: underline; }
+.research-jump span { font-size: 14px; font-weight: 400; }
+.research-hero { padding: 0 0 32px; background: transparent; color: var(--ink); }
+.research-hero>.eyebrow { display: none; }
+.research-hero h1 { font-size: 46px; color: var(--ink); margin: 0 0 16px; }
+.research-lead { color: var(--muted); font-size: 17px; line-height: 1.75; }
+.research-project { padding: 34px 0 42px; border-top: 1px solid var(--line); scroll-margin-top: 28px; }
+.research-project + .research-project { background: transparent; }
+.project-heading { display: block; }
+.project-heading h2 { margin: 8px 0 12px; font-size: 34px; line-height: 1.22; letter-spacing: -.03em; font-weight: 400; }
+.status-badge, .status-ongoing { display: inline-block; padding: 0; border: 0; border-radius: 0; background: transparent; color: var(--muted); font: 400 14px/1.7 var(--editorial-sans); white-space: normal; }
+.project-authorship { color: var(--muted); font-size: 14px!important; line-height: 1.75!important; margin-top: 16px!important; }
+.project-summary { font-size: 17px; color: var(--ink); }
+.project-funding, .cv-funding { padding: 0; background: transparent; border: 0; color: var(--muted); font-size: 14px!important; font-weight: 400; }
+.project-columns { display: block; margin-top: 25px; }
+.project-columns h3 { font: 600 17px/1.5 var(--editorial-sans); margin: 24px 0 12px; }
+.compact-list { max-width: none; }
+.project-columns>section>p { color: var(--muted); font-size: 14px; }
+.project-meta { margin-top: 25px; padding: 20px 0 0; border-top: 1px solid var(--line); }
+.project-meta h3 { display: none; }
+.project-meta dl { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px 26px; margin: 0; }
+.project-meta dl>div { padding: 0; border: 0; }
+.project-meta dt { color: var(--muted); font-size: 14px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.project-meta dd { color: var(--ink); font-size: 15px; margin: 4px 0 0; line-height: 1.65; }
+.result-panel, .finding-panel, .finance-note, .research-question { background: transparent; border-radius: 0; box-shadow: none; }
+.result-panel { margin-top: 30px; padding: 0 0 0 24px; border: 0; border-left: 2px solid var(--accent); }
+.result-panel h3 { font-size: 25px; }
+.display-equation { max-width: 100%; overflow-x: auto; padding: 18px 0; font-size: 22px; }
+.display-equation math { max-width: none; }
+.equation-equivalence { font-size: 15px!important; color: var(--muted); }
+.proof-details { margin-top: 26px; padding-top: 17px; border-top: 1px solid var(--line); }
+.proof-details summary { color: var(--accent); font-size: 15px; cursor: pointer; width: fit-content; }
+.method-steps { display: block; margin: 20px 0 0; padding: 0; }
+.method-steps li { display: grid; grid-template-columns: 24px minmax(0,1fr); gap: 13px; margin: 0 0 16px; padding: 0; background: transparent; border: 0; border-radius: 0; font-size: 16px; }
+.method-steps li>span { font-size: 14px; color: var(--muted); }
+.research-question { border: 0; border-left: 2px solid var(--line); padding: 0 0 0 22px; margin: 25px 0; }
+.research-question p { color: var(--ink); font-size: 18px; }
+.work-card { padding: 0; }
+.finding-panel { padding: 20px 0; border: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.finding-panel h3 { color: var(--ink); }
+.work-grid, .next-stage-grid { gap: 22px; }
+.next-stage-grid section { border: 0; border-radius: 0; background: transparent; padding: 0; box-shadow: none; }
+.next-stage-grid h4 { font: 600 16px/1.5 var(--editorial-sans); }
+.finance-note { padding: 0; border: 0; color: var(--muted); }
+.research-contact { padding: 30px 0 0; background: transparent; }
+.research-contact h2 { font-size: 28px; }
+.cv-header { padding: 0 0 30px; background: transparent; border-radius: 0; box-shadow: none; border-bottom: 1px solid var(--line); color: var(--ink); }
+.cv-header .eyebrow { display: none; }
+.cv-header h1 { font-size: 46px; color: var(--ink); font-weight: 400; letter-spacing: -.035em; }
+.cv-updated { font-size: 15px; color: var(--muted); }
+.cv-header a { color: var(--accent); font-weight: 400; }
+.cv-contact { font-size: 14px; }
+.cv-layout { grid-template-columns: 155px minmax(0,1fr); gap: 25px; margin-top: 36px; }
+.cv-rail { top: 28px; }
+.cv-toc { overflow: visible; grid-template-columns: 1fr; }
+.cv-toc a { padding: 0 0 14px; border: 0; color: var(--muted); font-size: 14px; line-height: 1.5; font-weight: 400; }
+.cv-toc a:hover, .cv-toc a:focus-visible { background: transparent; color: var(--ink); text-decoration: underline; }
+.cv-download { text-align: left; }
+.cv-document { padding: 0; }
+.cv-section { scroll-margin-top: 28px; }
+.cv-section h2 { font-size: 30px; font-weight: 400; color: var(--ink); margin-bottom: 22px; }
+.cv-section h3 { font-size: 22px; font-weight: 400; color: var(--ink); }
+.cv-section p, .cv-section li, .cv-section dd { font-size: 16px; line-height: 1.75; }
+.cv-item-head>p { font-size: 14px; color: var(--muted); font-weight: 400; }
+.cv-gpa { background: transparent; padding: 0; border: 0; margin: 16px 0 24px; }
+.cv-gpa span { color: var(--muted); }
+.cv-study-grid { display: block; }
+.cv-study-card { padding: 20px 0; border-bottom: 1px solid var(--line); }
+.cv-study-card:first-child { padding-top: 0; }
+.cv-study-card h3 { min-height: 0; margin-bottom: 8px; }
+.cv-study-card .cv-label { margin: 0 0 5px; }
+.manuscript-entry { padding: 0 0 20px; border-bottom: 1px solid var(--line); }
+.manuscript-status { color: var(--muted); font-size: 14px!important; font-weight: 400; text-transform: none; letter-spacing: 0; }
+.coursework-block { padding: 0; }
+.cv-label { color: var(--muted); font-size: 14px!important; font-weight: 400; text-transform: none; letter-spacing: 0; }
+.skills-list dt { color: var(--muted); }
+.golf-hero { min-height: 0; grid-template-columns: minmax(0,1fr) minmax(300px,.8fr); gap: 60px; overflow: visible; }
+.golf-hero-copy { padding: 20px 0; }
+.golf-hero h1 { font-size: clamp(42px,5vw,60px); line-height: 1.08; font-weight: 400; color: var(--ink); }
+.golf-hero-lead { font-size: 17px; color: var(--ink); }
+.golf-hero-figure { min-height: 540px; background: transparent; }
+.golf-hero-figure img { display: block; }
+.golf-hero-figure figcaption { right: 12px; bottom: 12px; left: 12px; border-radius: 0; background: rgba(24,35,43,.8); backdrop-filter: none; }
+.golf-roster-link { font-size: 15px; font-weight: 400; text-decoration: underline; }
+.golf-roster-link>span { display: none; }
+.golf-introduction, .golf-journey, .golf-results, .golf-mindset { padding: 54px 0; }
+.golf-introduction p, .golf-mindset p { font-size: 17px; color: var(--ink); }
+.golf-section-heading { grid-template-columns: 155px minmax(0,1fr); gap: 25px; margin-bottom: 30px; }
+.golf-section-heading h2, .golf-mindset h2, .golf-closing h2 { font-size: 36px; font-weight: 400; color: var(--ink); line-height: 1.2; }
+.timeline-year { font-size: 18px; font-weight: 400; }
+.timeline-dot { border-color: var(--bg); }
+.golf-photo-grid figure { border-radius: 0; box-shadow: none; }
+.golf-photo-grid img { display: block; }
+.golf-photo-grid figcaption { border-radius: 0; }
+.golf-results { background: transparent; color: var(--ink); border-radius: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.golf-results .eyebrow { color: var(--muted); }
+.golf-results .golf-section-heading h2, .golf-results h3, .golf-results-grid a strong { color: var(--ink); }
+.golf-results-grid section { background: transparent; border: 0; border-radius: 0; padding: 0; }
+.golf-results-grid a { color: var(--accent); border-color: var(--line); }
+.golf-results-grid a:hover { color: var(--ink); background: transparent; }
+.golf-results-grid a:focus-visible { color: var(--ink); outline: 2px solid var(--accent); outline-offset: 5px; }
+.golf-closing { border-top: 1px solid var(--line); padding-top: 44px; }
+.golf-closing > div { padding: 0 0 0 35px; }
+.golf-closing p { color: var(--muted); font-size: 17px; }
+html:lang(zh-CN) p, html:lang(zh-CN) li { line-height: 1.9; }
+@media(max-width:800px) {
+  .nav-container, .page, .research-page, .cv-page, .golf-page, .editorial-home, .site-footer { width: calc(100% - 48px); }
+  .nav-container { gap: 25px; min-height: 86px; }
+  .nav { gap: 20px; }
+  .editorial-intro { grid-template-columns: minmax(0,1fr) 185px; gap: 40px; padding-top: 55px; }
+  .editorial-portrait img { width: 185px; height: 220px; }
+  .editorial-intro h1 { font-size: 48px; }
+  .editorial-project-row, .editorial-beyond { grid-template-columns: 120px minmax(0,1fr); gap: 20px; }
+  .editorial-beyond>a { grid-column: 2; }
+  .page, .cv-layout { grid-template-columns: 120px minmax(0,1fr); gap: 20px; }
+  .research-page { display: block; }
+  .research-sidebar { display: block; position: static; margin: 0 0 25px; }
+  .research-sidebar .research-jump { display: flex; flex-wrap: wrap; gap: 15px 25px; margin: 0; padding: 0; }
+  .research-sidebar .research-jump a { display: block; padding: 0; font-size: 14px; }
+  .research-jump span { margin-right: 6px; }
+  .golf-hero { grid-template-columns: minmax(0,1fr) minmax(250px,.8fr); gap: 35px; }
+  .golf-hero-figure { min-height: 500px; }
+  .golf-introduction { gap: 28px; }
+  .golf-section-heading { grid-template-columns: 120px minmax(0,1fr); gap: 20px; }
+  .golf-photo-grid { grid-template-columns: 1fr; }
+  .golf-photo-grid figure { height: auto; }
+  .golf-photo-grid img { height: auto; object-fit: contain; }
+  .golf-photo-grid figure:nth-child(2) { grid-column: auto; grid-row: auto; }
+}
+@media(max-width:560px) {
+  body, html:lang(zh-CN) body { font-size: 16px; }
+  .nav-container, .page, .research-page, .cv-page, .golf-page, .editorial-home, .site-footer { width: calc(100% - 40px); }
+  .nav-container { min-height: 0; padding: 21px 0 18px; flex-wrap: wrap; column-gap: 20px; row-gap: 20px; }
+  .site-title, .nav-container>.site-title { max-width: none; font-size: 19px; }
+  .nav-container>.nav { order: 3; width: 100%; margin: 0; display: flex; justify-content: flex-start; gap: 29px; }
+  .language-switch { position: static; margin-left: auto; }
+  .editorial-intro { display: flex; flex-direction: column-reverse; align-items: flex-start; gap: 24px; padding: 33px 0 40px; }
+  .editorial-portrait img { width: 104px; height: 112px; }
+  .editorial-intro h1 { font-size: 44px; }
+  .editorial-affiliation, .editorial-fields { font-size: 14px; }
+  .editorial-fields { margin-top: 15px; }
+  .editorial-bio { margin-top: 14px; }
+  .editorial-links { gap: 23px; margin-top: 20px; }
+  .editorial-project-row { display: block; padding: 24px 0 27px; }
+  .editorial-project-label { padding: 0; margin-bottom: 13px; }
+  .editorial-project-label span { display: inline; margin-right: 12px; }
+  .editorial-project-label div { display: inline; }
+  .editorial-project-row h3 { font-size: 24px; }
+  .editorial-beyond { display: block; padding: 30px 0; }
+  .editorial-beyond h2 { color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+  .editorial-beyond h3 { font-size: 20px; }
+  .editorial-beyond>a { display: inline-block; margin-top: 14px; }
+  .page, .cv-layout { display: block; }
+  .page, .research-page, .cv-page, .golf-page { margin-top: 34px; }
+  .sidebar, .cv-rail { position: static; }
+  .sidebar { margin-bottom: 30px; }
+  .sidebar h1 { font-size: 22px; }
+  .content h1, .research-hero h1, .cv-header h1 { font-size: 40px; }
+  .content p, .content li, .section-intro { font-size: 16px; }
+  .project-heading h2 { font-size: 30px; }
+  .research-project { padding: 25px 0 32px; }
+  .project-meta dl, .work-grid, .next-stage-grid { grid-template-columns: 1fr; }
+  .result-panel { padding-left: 16px; }
+  .display-equation { font-size: 17px; }
+  .research-question { padding-left: 16px; }
+  .cv-header { display: block; }
+  .cv-contact { justify-items: start; margin-top: 20px; }
+  .cv-rail { margin-bottom: 30px; }
+  .cv-toc { display: flex; flex-wrap: wrap; gap: 12px 20px; }
+  .cv-toc a { padding: 0; }
+  .cv-item-head { display: block; }
+  .cv-item-head>p { text-align: left; margin-top: 7px; }
+  .coursework-grid, .course-chip-list { grid-template-columns: 1fr; gap: 20px; }
+  .cv-honor-list>div { display: block; }
+  .cv-honor-list span { display: block; margin-top: 4px; }
+  .skills-list>div { grid-template-columns: 1fr; gap: 4px; }
+  .golf-hero { display: flex; flex-direction: column; gap: 28px; }
+  .golf-hero-copy { padding: 0; }
+  .golf-hero h1 { font-size: 44px; }
+  .golf-hero-figure { width: 100%; min-height: 0; height: auto; }
+  .golf-hero-figure img { height: auto; max-height: none; }
+  .golf-introduction { display: block; padding: 36px 0; }
+  .golf-introduction p+p { margin-top: 22px; }
+  .golf-journey, .golf-results, .golf-mindset { padding: 36px 0; }
+  .golf-section-heading { display: block; }
+  .golf-section-heading h2, .golf-mindset h2, .golf-closing h2 { font-size: 30px; }
+  .golf-results-grid { grid-template-columns: 1fr; gap: 28px; }
+  .golf-mindset { display: block; }
+  .golf-closing { display: block; }
+  .golf-closing > div { padding: 26px 0 0; }
+  .site-footer { flex-direction: column; align-items: flex-start; gap: 14px; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } }
+@media print { .topbar, .site-footer, .research-sidebar, .cv-rail { display: none; } body { background: white; } .page, .cv-layout { display: block; } }

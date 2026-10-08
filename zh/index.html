@@ -6,6 +6,7 @@
     <title>Dianchao Wu</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../language-switch.css?v=20260927-1">
+    <link rel="stylesheet" href="../editorial.css?v=20261008-1">
     <script src="../language-switch.js" defer></script>
     <link rel="alternate" hreflang="en" href="../">
     <link rel="alternate" hreflang="zh-CN" href="./">
@@ -16,13 +17,11 @@
 
 <header class="topbar">
     <div class="nav-container">
-        <div class="site-title">Dianchao Wu</div>
-        <nav class="nav" aria-label="主导航">
-            <a href="index.html" aria-current="page">首页</a>
-            <a href="academic.html">学术</a>
+<div class="site-title"><a href="index.html">Dianchao Wu</a></div>
+        <nav class="nav" aria-label="主要导航">
             <a href="research.html">科研</a>
-            <a href="golf.html">高尔夫</a>
             <a href="cv/">简历</a>
+            <a href="golf.html">高尔夫</a>
         </nav>
         <nav class="language-switch" aria-label="语言切换">
             <a href="../" lang="en" hreflang="en">EN</a>
@@ -32,71 +31,55 @@
     </div>
 </header>
 
-<main class="home-page">
-    <section class="home-hero" aria-labelledby="home-title">
-        <div class="home-hero-copy">
-            <p class="home-affiliation">爱荷华州立大学 · 数学</p>
+<main class="editorial-home">
+        <section class="editorial-intro" aria-labelledby="home-title">
+          <div>
+            <p class="editorial-affiliation">爱荷华州立大学 · 数学</p>
             <h1 id="home-title">Dianchao Wu</h1>
-            <p class="home-fields">
-                概率论 <span aria-hidden="true">·</span>
-                随机分析 <span aria-hidden="true">·</span>
-                随机控制
-            </p>
-            <p class="home-introduction">
-                我是一名数学本科生，研究兴趣包括随机动力学、定量概率，以及金融与控制中的数学模型。
-            </p>
-            <nav class="home-actions" aria-label="主要页面">
-                <a href="research.html">科研</a>
-                <a href="cv/">简历</a>
-                <a href="academic.html">学术</a>
-            </nav>
-        </div>
-
-        <figure class="home-portrait">
-            <img
-                src="../profile.jpg"
-                alt="Dianchao Wu 肖像"
-                width="1290"
-                height="1354"
-                decoding="async"
-                fetchpriority="high"
-            >
-        </figure>
-    </section>
-
-    <section class="home-section home-research" aria-labelledby="current-research">
-        <div class="home-section-heading">
-            <p class="eyebrow">研究项目</p>
-            <h2 id="current-research">当前研究</h2>
-        </div>
-
-        <div class="home-research-list">
-            <a href="research.html#langevin">
-                <span>01</span>
-                <strong>Berry–Esseen Bounds for Periodic Langevin Dynamics</strong>
-                <span class="home-arrow" aria-hidden="true">↗</span>
-            </a>
-            <a href="research.html#mbs">
-                <span>02</span>
-                <strong>Prediction, Model Risk, and Stochastic Sensitivity in Nonlinear MBS Pricing Models</strong>
-                <span class="home-arrow" aria-hidden="true">↗</span>
-            </a>
-        </div>
-    </section>
-
-    <section class="home-section home-beyond" aria-labelledby="beyond-mathematics">
-        <h2 id="beyond-mathematics">数学之外</h2>
-        <div class="golf-banner">
-            <div>
-                <h3>NCAA 一级联盟高尔夫 · 爱荷华州立大学</h3>
-                <p>
-                    在本科学习期间，竞技高尔夫与数学学习、科研一道，构成了我大学生活的重要部分。
-                </p>
+            <p class="editorial-fields">概率论 · 随机分析 · 随机控制</p>
+            <p class="editorial-bio">我是一名数学本科生，研究兴趣包括随机动力学、定量概率，以及金融与控制中的数学模型。</p>
+            <div class="editorial-links">
+              <a href="research.html">科研</a>
+              <a href="../cv.pdf">下载简历</a>
+              <a href="mailto:dianchao@iastate.edu">邮件联系</a>
             </div>
-            <a href="golf.html">高尔夫 <span aria-hidden="true">→</span></a>
-        </div>
-    </section>
+          </div>
+          <figure class="editorial-portrait"><img src="../profile.jpg" width="222" height="244" alt="Dianchao Wu 肖像"></figure>
+        </section>
+        <section id="current-research" aria-labelledby="selected-research">
+          <h2 class="editorial-section-title" id="selected-research">研究项目</h2>
+          <article class="editorial-project-row">
+            <div class="editorial-project-label"><span>01 / Langevin 动力学</span><div>论文撰写中</div></div>
+            <div>
+              <h3><a href="research.html#langevin">Berry–Esseen Bounds for Periodic Langevin Dynamics</a></h3>
+              <p>研究周期扩散过程的有限时间高斯近似。我的贡献包括命题 11.1 中的一维低摩擦 Berry–Esseen 界。</p>
+              <a class="editorial-row-link" href="research.html#langevin">查看项目</a>
+            </div>
+          </article>
+          <article class="editorial-project-row">
+            <div class="editorial-project-label"><span>02 / 数学金融</span><div>研究进行中</div></div>
+            <div>
+              <h3><a href="research.html#mbs">Prediction, Model Risk, and Stochastic Sensitivity in Nonlinear MBS Pricing Models</a></h3>
+              <p>开展真实市场数据回测与数值分析，下一阶段研究随机敏感性。目前尚未确立稳定的预测改进。</p>
+              <a class="editorial-row-link" href="research.html#mbs">查看项目</a>
+            </div>
+          </article>
+        </section>
+        <section class="editorial-beyond" id="beyond-mathematics" aria-labelledby="beyond-title">
+          <h2 id="beyond-title">数学之外</h2>
+          <div><h3>NCAA Division I Golf · Iowa State University</h3><p>在本科阶段，竞技高尔夫与数学学习、科研一直是我生活中并行的重要部分。</p></div>
+          <a href="golf.html">高尔夫经历</a>
+        </section>
 </main>
+
+
+<footer class="site-footer">
+    <a href="mailto:dianchao@iastate.edu">dianchao@iastate.edu</a>
+    <nav aria-label="更多信息">
+        <a href="academic.html">学术背景</a>
+        <a href="cv/">简历</a>
+    </nav>
+</footer>
 
 </body>
 </html>

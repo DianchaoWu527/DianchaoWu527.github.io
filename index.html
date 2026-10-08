@@ -6,6 +6,7 @@
     <title>Dianchao Wu</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="language-switch.css?v=20260927-1">
+    <link rel="stylesheet" href="editorial.css?v=20261008-1">
     <script src="language-switch.js" defer></script>
     <link rel="alternate" hreflang="en" href="./">
     <link rel="alternate" hreflang="zh-CN" href="zh/">
@@ -16,13 +17,11 @@
 
 <header class="topbar">
     <div class="nav-container">
-        <div class="site-title">Dianchao Wu</div>
+<div class="site-title"><a href="index.html">Dianchao Wu</a></div>
         <nav class="nav" aria-label="Primary navigation">
-            <a href="index.html" aria-current="page">Home</a>
-            <a href="academic.html">Academic</a>
             <a href="research.html">Research</a>
-            <a href="golf.html">Golf</a>
             <a href="cv/">CV</a>
+            <a href="golf.html">Golf</a>
         </nav>
         <nav class="language-switch" aria-label="Language selection">
             <a href="./" lang="en" hreflang="en" aria-current="true">EN</a>
@@ -32,73 +31,55 @@
     </div>
 </header>
 
-<main class="home-page">
-    <section class="home-hero" aria-labelledby="home-title">
-        <div class="home-hero-copy">
-            <p class="home-affiliation">Mathematics @ Iowa State University</p>
+<main class="editorial-home">
+        <section class="editorial-intro" aria-labelledby="home-title">
+          <div>
+            <p class="editorial-affiliation">Mathematics · Iowa State University</p>
             <h1 id="home-title">Dianchao Wu</h1>
-            <p class="home-fields">
-                Probability <span aria-hidden="true">·</span>
-                Stochastic Analysis <span aria-hidden="true">·</span>
-                Stochastic Control
-            </p>
-            <p class="home-introduction">
-                Undergraduate researcher interested in stochastic dynamics,
-                quantitative probability, and mathematical models in finance and control.
-            </p>
-            <nav class="home-actions" aria-label="Featured pages">
-                <a href="research.html">Research</a>
-                <a href="cv/">CV</a>
-                <a href="academic.html">Academic</a>
-            </nav>
-        </div>
-
-        <figure class="home-portrait">
-            <img
-                src="profile.jpg"
-                alt="Portrait of Dianchao Wu"
-                width="1290"
-                height="1354"
-                decoding="async"
-                fetchpriority="high"
-            >
-        </figure>
-    </section>
-
-    <section class="home-section home-research" aria-labelledby="current-research">
-        <div class="home-section-heading">
-            <p class="eyebrow">Selected projects</p>
-            <h2 id="current-research">Current Research</h2>
-        </div>
-
-        <div class="home-research-list">
-            <a href="research.html#langevin">
-                <span>01</span>
-                <strong>Berry–Esseen Bounds for Periodic Langevin Dynamics</strong>
-                <span class="home-arrow" aria-hidden="true">↗</span>
-            </a>
-            <a href="research.html#mbs">
-                <span>02</span>
-                <strong>Prediction, Model Risk, and Stochastic Sensitivity in Nonlinear MBS Pricing Models</strong>
-                <span class="home-arrow" aria-hidden="true">↗</span>
-            </a>
-        </div>
-    </section>
-
-    <section class="home-section home-beyond" aria-labelledby="beyond-mathematics">
-        <h2 id="beyond-mathematics">Beyond Mathematics</h2>
-        <div class="golf-banner">
-            <div>
-                <h3>NCAA Division I Golf — Iowa State University</h3>
-                <p>
-                    Competitive golf has been a central part of my undergraduate
-                    career alongside mathematics and research.
-                </p>
+            <p class="editorial-fields">Probability · Stochastic Analysis · Stochastic Control</p>
+            <p class="editorial-bio">Undergraduate researcher interested in stochastic dynamics, quantitative probability, and mathematical models in finance and control.</p>
+            <div class="editorial-links">
+              <a href="research.html">Research</a>
+              <a href="cv.pdf">Download CV</a>
+              <a href="mailto:dianchao@iastate.edu">Email</a>
             </div>
-            <a href="golf.html">Golf <span aria-hidden="true">→</span></a>
-        </div>
-    </section>
+          </div>
+          <figure class="editorial-portrait"><img src="profile.jpg" width="222" height="244" alt="Portrait of Dianchao Wu"></figure>
+        </section>
+        <section id="current-research" aria-labelledby="selected-research">
+          <h2 class="editorial-section-title" id="selected-research">Selected Research</h2>
+          <article class="editorial-project-row">
+            <div class="editorial-project-label"><span>01 / Langevin dynamics</span><div>In preparation</div></div>
+            <div>
+              <h3><a href="research.html#langevin">Berry–Esseen Bounds for Periodic Langevin Dynamics</a></h3>
+              <p>Finite-time Gaussian approximation for periodic diffusions. My contributions include the one-dimensional low-friction bound in Proposition 11.1.</p>
+              <a class="editorial-row-link" href="research.html#langevin">Read project</a>
+            </div>
+          </article>
+          <article class="editorial-project-row">
+            <div class="editorial-project-label"><span>02 / Mathematical finance</span><div>Ongoing research</div></div>
+            <div>
+              <h3><a href="research.html#mbs">Prediction, Model Risk, and Stochastic Sensitivity in Nonlinear MBS Pricing Models</a></h3>
+              <p>Real-market backtesting and numerical analysis, with stochastic sensitivity as the next stage. A stable predictive improvement has not yet been established.</p>
+              <a class="editorial-row-link" href="research.html#mbs">Read project</a>
+            </div>
+          </article>
+        </section>
+        <section class="editorial-beyond" id="beyond-mathematics" aria-labelledby="beyond-title">
+          <h2 id="beyond-title">Beyond Mathematics</h2>
+          <div><h3>NCAA Division I Golf · Iowa State University</h3><p>Competitive golf has been a central part of my undergraduate career alongside mathematics and research.</p></div>
+          <a href="golf.html">Golf</a>
+        </section>
 </main>
+
+
+<footer class="site-footer">
+    <a href="mailto:dianchao@iastate.edu">dianchao@iastate.edu</a>
+    <nav aria-label="More information">
+        <a href="academic.html">Academic</a>
+        <a href="cv/">Curriculum vitae</a>
+    </nav>
+</footer>
 
 </body>
 </html>

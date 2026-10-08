@@ -10,6 +10,7 @@
     <title>Research | Dianchao Wu</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="language-switch.css?v=20260927-1">
+    <link rel="stylesheet" href="editorial.css?v=20261008-1">
     <script src="language-switch.js" defer></script>
     <link rel="alternate" hreflang="en" href="research.html">
     <link rel="alternate" hreflang="zh-CN" href="zh/research.html">
@@ -20,13 +21,11 @@
 
 <header class="topbar">
     <div class="nav-container">
-        <div class="site-title">Dianchao Wu</div>
+<div class="site-title"><a href="index.html">Dianchao Wu</a></div>
         <nav class="nav" aria-label="Primary navigation">
-            <a href="index.html">Home</a>
-            <a href="academic.html">Academic</a>
             <a href="research.html" aria-current="page">Research</a>
-            <a href="golf.html">Golf</a>
             <a href="cv/">CV</a>
+            <a href="golf.html">Golf</a>
         </nav>
         <nav class="language-switch" aria-label="Language selection">
             <a href="research.html" lang="en" hreflang="en" aria-current="true">EN</a>
@@ -141,8 +140,9 @@
                 </p>
             </section>
 
-            <h3>Proof architecture</h3>
-            <ol class="method-steps">
+            <details class="proof-details">
+                <summary>Proof architecture</summary>
+                <ol class="method-steps">
                 <li>
                     <span>01</span>
                     <div>
@@ -177,6 +177,7 @@
                     </div>
                 </li>
             </ol>
+            </details>
 
 
         </article>
@@ -295,6 +296,15 @@
     </section>
 
 </main>
+
+
+<footer class="site-footer">
+    <a href="mailto:dianchao@iastate.edu">dianchao@iastate.edu</a>
+    <nav aria-label="More information">
+        <a href="academic.html">Academic</a>
+        <a href="cv/">Curriculum vitae</a>
+    </nav>
+</footer>
 
 </body>
 </html>
