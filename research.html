@@ -68,11 +68,11 @@
             <p class="project-authorship">O. Smith, A. Valse, D. Wu (alphabetical). Manuscript in preparation. Mentor: Professor David P. Herzog.</p>
 
             <p class="project-summary">
-                How long must a periodic Langevin system be observed before its
-                unwrapped displacement is accurately approximated by a Gaussian
-                distribution? This project develops quantitative bounds for that
-                finite-time error, with particular attention to the singular
-                low-friction regime.
+                This project establishes Berry–Esseen bounds for the Gaussian
+                approximation of unwrapped displacement in periodic Langevin
+                dynamics. My starting question for Proposition 11.1 was how to
+                control the Berry–Esseen constant in the main theorem as the
+                friction parameter γ tends to zero.
             </p>
 
             <p class="project-funding">
@@ -86,7 +86,7 @@
                     <ul class="compact-list">
                         <li>Formulated the Berry–Esseen framework for the unwrapped displacement and proved the overdamped results.</li>
                         <li>Proved the main underdamped theorem and supporting propositions via a direct Markov-additive treatment of the displacement; verification of Assumption (A2) was carried out by O. Smith.</li>
-                        <li>Proved the one-dimensional low-friction estimate d<sub>K</sub> ≤ C/√(γT) in Proposition 11.1, identifying γT as the effective relaxation scale.</li>
+                        <li>Proved in Proposition 11.1 that, for one-dimensional periodic underdamped dynamics started from equilibrium and sufficiently small positive γ, the Berry–Esseen constant C<sub>γ</sub> can be chosen with C<sub>γ</sub> ≤ Cγ<sup>−1/2</sup>, where C is independent of γ.</li>
                         <li>Carried out the original numerical illustration and drafted Part I.</li>
                     </ul>
                     <p>Numerical study of the low-friction regime: A. Valse.</p>
@@ -104,7 +104,30 @@
 
             <section class="result-panel" aria-labelledby="langevin-result">
                 <p class="result-label">Core contribution · Proposition 11.1</p>
-                <h3 id="langevin-result">The relaxation scale is γT</h3>
+                <h3 id="langevin-result">Controlling the Berry–Esseen constant in the low-friction regime</h3>
+                <p>
+                    For the one-dimensional periodic underdamped system started
+                    from equilibrium, I proved that for sufficiently small
+                    positive γ the Berry–Esseen constant can be chosen so that
+                </p>
+                <div class="display-equation">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="C sub gamma is at most C gamma to the power negative one half">
+                        <mrow>
+                            <msub><mi>C</mi><mi>γ</mi></msub>
+                            <mo>≤</mo>
+                            <mi>C</mi>
+                            <msup><mi>γ</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup>
+                            <mo>.</mo>
+                        </mrow>
+                    </math>
+                </div>
+                <p>
+                    Here C is independent of γ. This controls an admissible
+                    Berry–Esseen constant; it does not identify the optimal constant.
+                </p>
+                <p class="equation-equivalence">
+                    Equivalently, for T ≥ 1 the Kolmogorov-distance estimate reads
+                </p>
                 <div class="display-equation">
                     <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="d sub K of script L of Y sub T superscript gamma, script N of zero comma sigma sub gamma squared, is at most C divided by the square root of gamma T">
                         <mrow>
@@ -120,23 +143,10 @@
                         </mrow>
                     </math>
                 </div>
-                <p class="equation-equivalence">
-                    Equivalently, the friction-dependent Berry–Esseen constant may be chosen so that
-                    <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="C sub gamma is at most C gamma to the power negative one half">
-                        <mrow>
-                            <msub><mi>C</mi><mi>γ</mi></msub>
-                            <mo>≤</mo>
-                            <mi>C</mi>
-                            <msup><mi>γ</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup>
-                            <mo>.</mo>
-                        </mrow>
-                    </math>
-                </p>
                 <p>
-                    In one dimension, I proved a Berry–Esseen estimate with a
-                    constant that explicitly tracks the friction parameter. The
-                    bound shows that the effective number of relaxation periods is
-                    γT, rather than the observation time T alone.
+                    The form C/√(γT) highlights γT as the combined parameter in
+                    the error bound; the main contribution is the quantified
+                    dependence of the Berry–Esseen constant on γ.
                 </p>
             </section>
 
