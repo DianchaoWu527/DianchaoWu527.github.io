@@ -53,7 +53,7 @@
         <header class="research-hero">
             <p class="eyebrow">Probability · Stochastic dynamics · Financial mathematics</p>
             <h1>Research</h1>
-            <p class="research-lead">My primary research concerns Berry–Esseen bounds for periodic Langevin dynamics. A second ongoing project studies prediction and stochastic sensitivity in nonlinear MBS pricing models.</p>
+            <p class="research-lead">My primary research concerns Berry–Esseen bounds for periodic Langevin dynamics. A second ongoing project studies random-coefficient PDEs, small-noise sensitivity, and model risk in nonlinear MBS pricing models.</p>
         </header>
 
         <article class="research-project" id="langevin">
@@ -196,85 +196,76 @@
             <div class="project-heading">
                 <div>
                     <p class="project-number">Research 02</p>
-                    <h2>Prediction, Model Risk, and Stochastic Sensitivity in Nonlinear MBS Pricing Models</h2>
+                    <h2>Stochastic Sensitivity and Model Risk in Nonlinear MBS Pricing Models</h2>
                 </div>
-                <span class="status-badge status-ongoing">Coming soon</span>
+                <span class="status-badge status-ongoing">In progress</span>
             </div>
 
             <p class="project-summary">
-                This project asks whether stochastic perturbations and nonlinear
-                p-Laplacian diffusion can improve the predictive performance of an
-                existing PDE model for mortgage-backed security prices.
+                I study how uncertainty in prepayment and model coefficients
+                propagates through nonlinear PDE models for mortgage-backed
+                securities. Current work develops pathwise estimates and
+                small-noise sensitivity analysis for a reduced MBS equation,
+                alongside ongoing extensions involving p-Laplacian diffusion.
             </p>
 
             <blockquote class="research-question">
-                <p>How much predictive improvement do the proposed changes deliver when the model is evaluated against real market data?</p>
+                <p>How do random prepayment environments change the pricing solution, its mean, and its variance?</p>
             </blockquote>
 
-            <h3>Research trajectory</h3>
-            <p>
-                I initially proposed introducing stochastic noise into the pricing
-                equation to study how market uncertainty affects model predictions.
-                Through discussions with my advisor, the project expanded to include
-                a p-Laplacian operator as a nonlinear diffusion mechanism. The
-                resulting research program connects analytical foundations,
-                empirical backtesting, and stochastic model-risk analysis.
-            </p>
+            <h3>Current stochastic analysis</h3>
+            <p>The current working analysis treats bounded C<sup>1</sup> random perturbations of the prepayment environment in the periodic reduced semilinear model, under a positive baseline forcing condition. Randomness enters through the coefficients; each realization is analyzed as a parabolic PDE.</p>
+            <ul class="compact-list">
+                <li>Developed pathwise well-posedness and uniform solution bounds, yielding finite-order price moment estimates.</li>
+                <li>Obtained mean-square stability estimates and derived an explicit linear equation for the first-order price sensitivity.</li>
+                <li>Developed a second-order remainder estimate and, for centered perturbations, expansions for the mean price and Hilbert-space variance.</li>
+                <li>Used Fourier spectral simulations to examine first- and second-order perturbation scaling.</li>
+            </ul>
 
-            <p>Preparation included reading and presenting the MBS pricing literature and working through its analytical derivations.</p>
-
-            <section class="work-card">
-                <h3>Market backtesting and numerical analysis</h3>
-                <p>I built an initial backtesting workflow using real transaction data, ran numerical experiments, and examined the financial interpretation of selected parameter regimes and special cases to assess whether the proposed extensions improve prediction.</p>
+            <section class="result-panel" aria-labelledby="mbs-sensitivity">
+                <p class="result-label">Working analysis · reduced semilinear model</p>
+                <h3 id="mbs-sensitivity">A first-order description of prepayment uncertainty</h3>
+                <div class="display-equation">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="u epsilon equals u zero plus epsilon U plus R epsilon">
+                        <mrow>
+                            <msup><mi>u</mi><mi>ε</mi></msup><mo>=</mo>
+                            <msup><mi>u</mi><mn>0</mn></msup><mo>+</mo>
+                            <mi>ε</mi><mi>U</mi><mo>+</mo>
+                            <msup><mi>R</mi><mi>ε</mi></msup><mo>.</mo>
+                        </mrow>
+                    </math>
+                </div>
+                <p>Here U solves the linearized sensitivity equation. Under the working assumptions, the remainder is O(ε<sup>2</sup>) in L<sup>2</sup>(Ω; C([0, T]; L<sup>2</sup>)). For centered perturbations, the mean-price bias is O(ε<sup>2</sup>) and the leading variance is ε<sup>2</sup>E||U||<sub>L²</sub><sup>2</sup>, with an O(|ε|<sup>3</sup>) remainder.</p>
             </section>
 
-            <section class="finding-panel" aria-labelledby="initial-finding">
-                <p class="result-label">Initial empirical finding</p>
-                <h3 id="initial-finding">An informative inconclusive result</h3>
-                <p>The initial backtests did not establish a stable, economically interpretable improvement. Parameter identification, alignment with transaction observations, and isolation of nonlinear-diffusion effects remain open issues for the next stage.</p>
-            </section>
-
-            <h3>Next stage: stochastic analysis</h3>
+            <h3>Ongoing extensions</h3>
             <div class="next-stage-grid">
                 <section>
                     <span class="stage-number">01</span>
-                    <h4>Mean-square sensitivity</h4>
-                    <p>
-                        Quantify how perturbations in model inputs and coefficients
-                        propagate through the pricing solution, using estimates of
-                        the form E||u<sup>ε</sup>(t) − u<sup>0</sup>(t)||<sup>2</sup>.
-                    </p>
+                    <h4>p-Laplacian sensitivity</h4>
+                    <p>Extend the stability and sensitivity framework to fixed-p nonlinear diffusion, where degeneracy or singularity near zero gradients makes differentiability a central question.</p>
                 </section>
                 <section>
                     <span class="stage-number">02</span>
-                    <h4>Noise-driven simulation</h4>
-                    <p>
-                        Compare theoretical sensitivity estimates with numerical
-                        behavior across noise levels, nonlinear-diffusion parameters,
-                        and financially meaningful regimes.
-                    </p>
+                    <h4>Multiple random inputs</h4>
+                    <p>Study joint prepayment and interest-rate uncertainty, including the role of covariance in model-risk decomposition.</p>
                 </section>
                 <section>
                     <span class="stage-number">03</span>
-                    <h4>Model risk and interpretation</h4>
-                    <p>
-                        Study whether nonlinear diffusion dampens or amplifies
-                        uncertainty, and identify which mechanisms are responsible
-                        for changes in predictive performance.
-                    </p>
+                    <h4>Future SPDE direction</h4>
+                    <p>A planned extension introduces stochastic forcing directly into the evolution equation and studies stochastic moment bounds and the zero-noise limit.</p>
                 </section>
             </div>
 
-            <p class="finance-note">
-                <strong>Financial perspective.</strong> The PDE analysis serves a
-                pricing and model-risk question: prediction under uncertainty,
-                sensitivity to assumptions, and economically interpretable behavior
-                under changing market conditions.
-            </p>
+            <details class="proof-details">
+                <summary>Model interpretation and market evidence</summary>
+                <p>The project began with stochastic perturbations and p-Laplacian modifications of an existing pricing PDE. Initial backtests using real MBS transaction data have not established a stable predictive improvement. Current analytical results concern uncertainty propagation under specified model assumptions; the financial interpretation and empirical validation of nonlinear diffusion remain ongoing questions.</p>
+            </details>
 
             <section class="project-meta">
                 <h3>Project details</h3>
                 <dl>
+                    <div><dt>Topics</dt><dd>Random PDEs, moment estimates, small-noise sensitivity, uncertainty quantification</dd></div>
                     <div><dt>Mentor</dt><dd>Professor Rana Parshad</dd></div>
                 </dl>
             </section>
