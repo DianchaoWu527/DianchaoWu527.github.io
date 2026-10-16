@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="../language-switch.css?v=20260927-1">
     <link rel="stylesheet" href="../editorial.css?v=20261008-1">
     <script src="../language-switch.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/katex.min.css" integrity="sha384-3rdsX6e5mueWyoweR9NIVmtEsUkokpBT/0ALqKKIBMr9j4qhHkaIkAcGgsE6uVlp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../research-math.css?v=20261015-1">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/katex.min.js" integrity="sha384-QFFtAGzvvj+bfgCGxXJlNZZR1nXEZgvG8tDLCCY1F19xl20WlfTYgguB4VcNdxYk" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
+    <script defer src="../research-math.js?v=20261015-1"></script>
     <link rel="alternate" hreflang="en" href="../research.html">
     <link rel="alternate" hreflang="zh-CN" href="research.html">
     <link rel="alternate" hreflang="x-default" href="../research.html">
@@ -68,7 +73,7 @@
             <p class="project-authorship">O. Smith、A. Valse、D. Wu（按姓氏字母顺序排列）。论文即将发布。指导教师：David P. Herzog 教授。</p>
 
             <p class="project-summary">
-                本项目为周期 Langevin 动力学的展开位移建立 Berry–Esseen 型定量高斯近似界。我研究命题 11.1 的出发点是：当摩擦参数 γ 趋于零时，如何控制主定理中 Berry–Esseen 常数对 γ 的依赖？
+                本项目为周期 Langevin 动力学的展开位移建立 Berry–Esseen 型定量高斯近似界。我研究命题 11.1 的出发点是：当摩擦参数 \(\gamma\) 趋于零时，如何控制主定理中 Berry–Esseen 常数对 \(\gamma\) 的依赖？
             </p>
 
             <p class="project-funding">
@@ -82,7 +87,7 @@
                     <ul class="compact-list">
                         <li>为展开位移建立 Berry–Esseen 分析框架，并证明过阻尼情形下的结果。</li>
                         <li>通过直接将位移作为 Markov 加性过程处理，证明欠阻尼情形下的主要定理及相关命题；其中假设 (A2) 的验证由 O. Smith 完成。</li>
-                        <li>在命题 11.1 中证明：对从平衡分布出发的一维周期欠阻尼动力学，当正摩擦参数 γ 足够小时，Berry–Esseen 常数可选为满足 C<sub>γ</sub> ≤ Cγ<sup>−1/2</sup>，其中 C 不依赖 γ。</li>
+                        <li>在命题 11.1 中证明：对从平衡分布出发的一维周期欠阻尼动力学，当正摩擦参数 \(\gamma\) 足够小时，Berry–Esseen 常数可选为满足 \(C_{\gamma} \le C\gamma^{-1/2}\)，其中 C 不依赖 \(\gamma\)。</li>
                         <li>完成最初的数值示例，并撰写第一部分初稿。</li>
                     </ul>
                     <p>低摩擦区间的数值研究由 A. Valse 完成。</p>
@@ -102,42 +107,22 @@
                 <p class="result-label">核心贡献 · 命题 11.1</p>
                 <h3 id="langevin-result">低摩擦情形下 Berry–Esseen 常数的控制</h3>
                 <p>
-                    对从平衡分布出发的一维周期欠阻尼系统，我证明：当正摩擦参数 γ 足够小时，Berry–Esseen 常数可选为满足
+                    对从平衡分布出发的一维周期欠阻尼系统，我证明：当正摩擦参数 \(\gamma\) 足够小时，Berry–Esseen 常数可选为满足
                 </p>
                 <div class="display-equation">
-                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="C 下标 γ 不超过 C 乘以 γ 的负二分之一次方">
-                        <mrow>
-                            <msub><mi>C</mi><mi>γ</mi></msub>
-                            <mo>≤</mo>
-                            <mi>C</mi>
-                            <msup><mi>γ</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup>
-                            <mo>.</mo>
-                        </mrow>
-                    </math>
+                    \[ C_{\gamma} \le C\gamma^{-1/2}. \]
                 </div>
                 <p>
-                    其中 C 不依赖 γ。这里控制的是一个可选的 Berry–Esseen 常数上界，并不声称确定了最优常数。
+                    其中 C 不依赖 \(\gamma\)。这里控制的是一个可选的 Berry–Esseen 常数上界，并不声称确定了最优常数。
                 </p>
                 <p class="equation-equivalence">
-                    等价地，对 T ≥ 1，Kolmogorov 距离满足
+                    等价地，对 \(T \ge 1\)，Kolmogorov 距离满足
                 </p>
                 <div class="display-equation">
-                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="Y 下标 T 上标 γ 的分布与均值为零、方差为 σ 下标 γ 平方的正态分布之间的 Kolmogorov 距离，不超过 C 除以 γT 的平方根">
-                        <mrow>
-                            <msub><mi>d</mi><mi>K</mi></msub>
-                            <mo>(</mo>
-                            <mi>ℒ</mi><mo>(</mo><msubsup><mi>Y</mi><mi>T</mi><mi>γ</mi></msubsup><mo>)</mo>
-                            <mo>,</mo>
-                            <mi>𝒩</mi><mo>(</mo><mn>0</mn><mo>,</mo><msubsup><mi>σ</mi><mi>γ</mi><mn>2</mn></msubsup><mo>)</mo>
-                            <mo>)</mo>
-                            <mo>≤</mo>
-                            <mfrac><mi>C</mi><msqrt><mrow><mi>γ</mi><mi>T</mi></mrow></msqrt></mfrac>
-                            <mo>.</mo>
-                        </mrow>
-                    </math>
+                    \[ d_K\!\left(\mathcal{L}(Y_T^{\gamma}),\,\mathcal{N}(0,\sigma_{\gamma}^{2})\right) \le \frac{C}{\sqrt{\gamma T}}. \]
                 </div>
                 <p>
-                    C/√(γT) 的形式说明 γT 是误差界中的组合参数；这一结果的重点是明确控制 Berry–Esseen 常数对 γ 的依赖。
+                    \(C/\sqrt{\gamma T}\) 的形式说明 \(\gamma T\) 是误差界中的组合参数；这一结果的重点是明确控制 Berry–Esseen 常数对 \(\gamma\) 的依赖。
                 </p>
             </section>
 
@@ -148,14 +133,14 @@
                     <span>01</span>
                     <div>
                         <strong>按弛豫尺度采样。</strong>
-                        将过程划分为长度与 γ<sup>-1</sup> 同阶的时间块，构造离散骨架链。
+                        将过程划分为长度与 \(\gamma^{-1}\) 同阶的时间块，构造离散骨架链。
                     </div>
                 </li>
                 <li>
                     <span>02</span>
                     <div>
                         <strong>建立一致混合估计。</strong>
-                        对连续时间半群估计进行尺度变换，使采样链的谱隙在小 γ 范围内具有一致下界。
+                        对连续时间半群估计进行尺度变换，使采样链的谱隙在小 \(\gamma\) 范围内具有一致下界。
                     </div>
                 </li>
                 <li>
@@ -169,7 +154,7 @@
                     <span>04</span>
                     <div>
                         <strong>应用一致 Berry–Esseen 定理。</strong>
-                        在 Markov 加性过程框架下，得到 Kolmogorov 距离的 C/√(γT) 误差界。
+                        在 Markov 加性过程框架下，得到 Kolmogorov 距离的 \(C/\sqrt{\gamma T}\) 误差界。
                     </div>
                 </li>
             </ol>
@@ -196,7 +181,7 @@
             </blockquote>
 
             <h3>当前的随机分析工作</h3>
-            <p>当前分析草稿研究周期区域上的约化半线性模型：在基准强迫项为正的条件下，对提前还款环境施加有界 C<sup>1</sup> 随机扰动。随机性通过系数进入方程，每个样本对应一个抛物型 PDE。</p>
+            <p>当前分析草稿研究周期区域上的约化半线性模型：在基准强迫项为正的条件下，对提前还款环境施加有界 \(C^1\) 随机扰动。随机性通过系数进入方程，每个样本对应一个抛物型 PDE。</p>
             <ul class="compact-list">
                 <li>开展逐路径适定性与一致解界的分析，得到价格的有限阶矩估计。</li>
                 <li>建立均方稳定性估计，并推导一阶价格敏感性满足的显式线性方程。</li>
@@ -208,16 +193,16 @@
                 <p class="result-label">分析草稿 · 约化半线性模型</p>
                 <h3 id="mbs-sensitivity">提前还款不确定性的一阶描述</h3>
                 <div class="display-equation">
-                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="u 的 ε 次扰动等于基准解 u 零，加 ε U，再加余项 R ε">
-                        <mrow>
-                            <msup><mi>u</mi><mi>ε</mi></msup><mo>=</mo>
-                            <msup><mi>u</mi><mn>0</mn></msup><mo>+</mo>
-                            <mi>ε</mi><mi>U</mi><mo>+</mo>
-                            <msup><mi>R</mi><mi>ε</mi></msup><mo>.</mo>
-                        </mrow>
-                    </math>
+                    \[ u^{\varepsilon}=u^0+\varepsilon U+R^{\varepsilon}. \]
                 </div>
-                <p>其中 U 满足线性化敏感性方程。在草稿的假设下，余项在 L<sup>2</sup>(Ω; C([0, T]; L<sup>2</sup>)) 中为 O(ε<sup>2</sup>)。对于中心化扰动，平均价格偏差为 O(ε<sup>2</sup>)，方差的首项为 ε<sup>2</sup>E||U||<sub>L²</sub><sup>2</sup>，余项为 O(|ε|<sup>3</sup>)。</p>
+                <p>其中 \(U\) 满足线性化敏感性方程。在草稿的假设下，余项在 \(X=L^2(\Omega;C([0,T];L^2))\) 中满足</p>
+                <div class="display-equation">
+                    \[ \lVert R^{\varepsilon}\rVert_X \le C\varepsilon^2. \]
+                </div>
+                <p>对于中心化扰动，平均价格偏差为 \(O(\varepsilon^2)\)，Hilbert 空间方差满足</p>
+                <div class="display-equation">
+                    \[ \operatorname{Var}_{L^2}(u^{\varepsilon})=\varepsilon^2\,\mathbb{E}\lVert U\rVert_{L^2}^{2}+O(|\varepsilon|^3). \]
+                </div>
             </section>
 
             <h3>正在推进的扩展</h3>

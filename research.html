@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="language-switch.css?v=20260927-1">
     <link rel="stylesheet" href="editorial.css?v=20261008-1">
     <script src="language-switch.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/katex.min.css" integrity="sha384-3rdsX6e5mueWyoweR9NIVmtEsUkokpBT/0ALqKKIBMr9j4qhHkaIkAcGgsE6uVlp" crossorigin="anonymous">
+    <link rel="stylesheet" href="research-math.css?v=20261015-1">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/katex.min.js" integrity="sha384-QFFtAGzvvj+bfgCGxXJlNZZR1nXEZgvG8tDLCCY1F19xl20WlfTYgguB4VcNdxYk" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
+    <script defer src="research-math.js?v=20261015-1"></script>
     <link rel="alternate" hreflang="en" href="research.html">
     <link rel="alternate" hreflang="zh-CN" href="zh/research.html">
     <link rel="alternate" hreflang="x-default" href="research.html">
@@ -72,7 +77,7 @@
                 approximation of unwrapped displacement in periodic Langevin
                 dynamics. My starting question for Proposition 11.1 was how to
                 control the Berry–Esseen constant in the main theorem as the
-                friction parameter γ tends to zero.
+                friction parameter \(\gamma\) tends to zero.
             </p>
 
             <p class="project-funding">
@@ -86,7 +91,7 @@
                     <ul class="compact-list">
                         <li>Formulated the Berry–Esseen framework for the unwrapped displacement and proved the overdamped results.</li>
                         <li>Proved the main underdamped theorem and supporting propositions via a direct Markov-additive treatment of the displacement; verification of Assumption (A2) was carried out by O. Smith.</li>
-                        <li>Proved in Proposition 11.1 that, for one-dimensional periodic underdamped dynamics started from equilibrium and sufficiently small positive γ, the Berry–Esseen constant C<sub>γ</sub> can be chosen with C<sub>γ</sub> ≤ Cγ<sup>−1/2</sup>, where C is independent of γ.</li>
+                        <li>Proved in Proposition 11.1 that, for one-dimensional periodic underdamped dynamics started from equilibrium and sufficiently small positive \(\gamma\), the Berry–Esseen constant C<sub>\(\gamma\)</sub> can be chosen with \(C_{\gamma} \le C\gamma^{-1/2}\), where C is independent of \(\gamma\).</li>
                         <li>Carried out the original numerical illustration and drafted Part I.</li>
                     </ul>
                     <p>Numerical study of the low-friction regime: A. Valse.</p>
@@ -108,45 +113,25 @@
                 <p>
                     For the one-dimensional periodic underdamped system started
                     from equilibrium, I proved that for sufficiently small
-                    positive γ the Berry–Esseen constant can be chosen so that
+                    positive \(\gamma\) the Berry–Esseen constant can be chosen so that
                 </p>
                 <div class="display-equation">
-                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="C sub gamma is at most C gamma to the power negative one half">
-                        <mrow>
-                            <msub><mi>C</mi><mi>γ</mi></msub>
-                            <mo>≤</mo>
-                            <mi>C</mi>
-                            <msup><mi>γ</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup>
-                            <mo>.</mo>
-                        </mrow>
-                    </math>
+                    \[ C_{\gamma} \le C\gamma^{-1/2}. \]
                 </div>
                 <p>
-                    Here C is independent of γ. This controls an admissible
+                    Here C is independent of \(\gamma\). This controls an admissible
                     Berry–Esseen constant; it does not identify the optimal constant.
                 </p>
                 <p class="equation-equivalence">
-                    Equivalently, for T ≥ 1 the Kolmogorov-distance estimate reads
+                    Equivalently, for \(T \ge 1\) the Kolmogorov-distance estimate reads
                 </p>
                 <div class="display-equation">
-                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="d sub K of script L of Y sub T superscript gamma, script N of zero comma sigma sub gamma squared, is at most C divided by the square root of gamma T">
-                        <mrow>
-                            <msub><mi>d</mi><mi>K</mi></msub>
-                            <mo>(</mo>
-                            <mi>ℒ</mi><mo>(</mo><msubsup><mi>Y</mi><mi>T</mi><mi>γ</mi></msubsup><mo>)</mo>
-                            <mo>,</mo>
-                            <mi>𝒩</mi><mo>(</mo><mn>0</mn><mo>,</mo><msubsup><mi>σ</mi><mi>γ</mi><mn>2</mn></msubsup><mo>)</mo>
-                            <mo>)</mo>
-                            <mo>≤</mo>
-                            <mfrac><mi>C</mi><msqrt><mrow><mi>γ</mi><mi>T</mi></mrow></msqrt></mfrac>
-                            <mo>.</mo>
-                        </mrow>
-                    </math>
+                    \[ d_K\!\left(\mathcal{L}(Y_T^{\gamma}),\,\mathcal{N}(0,\sigma_{\gamma}^{2})\right) \le \frac{C}{\sqrt{\gamma T}}. \]
                 </div>
                 <p>
-                    The form C/√(γT) highlights γT as the combined parameter in
+                    The form \(C/\sqrt{\gamma T}\) highlights \(\gamma T\) as the combined parameter in
                     the error bound; the main contribution is the quantified
-                    dependence of the Berry–Esseen constant on γ.
+                    dependence of the Berry–Esseen constant on \(\gamma\).
                 </p>
             </section>
 
@@ -158,7 +143,7 @@
                     <div>
                         <strong>Sample at the relaxation scale.</strong>
                         Partition the process into blocks of length comparable to
-                        γ<sup>-1</sup> and form a discrete skeleton chain.
+                        \(\gamma^{-1}\) and form a discrete skeleton chain.
                     </div>
                 </li>
                 <li>
@@ -166,7 +151,7 @@
                     <div>
                         <strong>Recover uniform mixing.</strong>
                         Rescale the continuous-time semigroup estimate so the
-                        sampled chain has a spectral gap uniform in small γ.
+                        sampled chain has a spectral gap uniform in small \(\gamma\).
                     </div>
                 </li>
                 <li>
@@ -183,7 +168,7 @@
                     <div>
                         <strong>Apply a uniform Berry–Esseen theorem.</strong>
                         The Markov-additive formulation then yields the
-                        C/√(γT) Kolmogorov-distance estimate.
+                        \(C/\sqrt{\gamma T}\) Kolmogorov-distance estimate.
                     </div>
                 </li>
             </ol>
@@ -214,7 +199,7 @@
             </blockquote>
 
             <h3>Current stochastic analysis</h3>
-            <p>The current working analysis treats bounded C<sup>1</sup> random perturbations of the prepayment environment in the periodic reduced semilinear model, under a positive baseline forcing condition. Randomness enters through the coefficients; each realization is analyzed as a parabolic PDE.</p>
+            <p>The current working analysis treats bounded \(C^1\) random perturbations of the prepayment environment in the periodic reduced semilinear model, under a positive baseline forcing condition. Randomness enters through the coefficients; each realization is analyzed as a parabolic PDE.</p>
             <ul class="compact-list">
                 <li>Developed pathwise well-posedness and uniform solution bounds, yielding finite-order price moment estimates.</li>
                 <li>Obtained mean-square stability estimates and derived an explicit linear equation for the first-order price sensitivity.</li>
@@ -226,16 +211,16 @@
                 <p class="result-label">Working analysis · reduced semilinear model</p>
                 <h3 id="mbs-sensitivity">A first-order description of prepayment uncertainty</h3>
                 <div class="display-equation">
-                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="u epsilon equals u zero plus epsilon U plus R epsilon">
-                        <mrow>
-                            <msup><mi>u</mi><mi>ε</mi></msup><mo>=</mo>
-                            <msup><mi>u</mi><mn>0</mn></msup><mo>+</mo>
-                            <mi>ε</mi><mi>U</mi><mo>+</mo>
-                            <msup><mi>R</mi><mi>ε</mi></msup><mo>.</mo>
-                        </mrow>
-                    </math>
+                    \[ u^{\varepsilon}=u^0+\varepsilon U+R^{\varepsilon}. \]
                 </div>
-                <p>Here U solves the linearized sensitivity equation. Under the working assumptions, the remainder is O(ε<sup>2</sup>) in L<sup>2</sup>(Ω; C([0, T]; L<sup>2</sup>)). For centered perturbations, the mean-price bias is O(ε<sup>2</sup>) and the leading variance is ε<sup>2</sup>E||U||<sub>L²</sub><sup>2</sup>, with an O(|ε|<sup>3</sup>) remainder.</p>
+                <p>Here \(U\) solves the linearized sensitivity equation. Under the working assumptions, the remainder in \(X=L^2(\Omega;C([0,T];L^2))\) satisfies</p>
+                <div class="display-equation">
+                    \[ \lVert R^{\varepsilon}\rVert_X \le C\varepsilon^2. \]
+                </div>
+                <p>For centered perturbations, the mean-price bias is \(O(\varepsilon^2)\) and the Hilbert-space variance satisfies</p>
+                <div class="display-equation">
+                    \[ \operatorname{Var}_{L^2}(u^{\varepsilon})=\varepsilon^2\,\mathbb{E}\lVert U\rVert_{L^2}^{2}+O(|\varepsilon|^3). \]
+                </div>
             </section>
 
             <h3>Ongoing extensions</h3>
