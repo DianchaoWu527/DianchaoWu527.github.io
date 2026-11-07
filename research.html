@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
         name="description"
-        content="Research by Dianchao Wu in periodic Langevin dynamics, quantitative limit theorems, nonlinear MBS pricing models, random matrix theory, and stochastic sensitivity."
+        content="Research by Dianchao Wu in periodic Langevin dynamics, random prepayment sensitivity, BSDE representations of nonlinear MBS pricing, and a planned additive-noise SPDE extension."
     >
     <title>Research | Dianchao Wu</title>
     <link rel="stylesheet" href="style.css">
@@ -58,7 +58,7 @@
         <header class="research-hero">
             <p class="eyebrow">Probability · Stochastic dynamics · Financial mathematics</p>
             <h1>Research</h1>
-            <p class="research-lead">My primary research concerns Berry–Esseen bounds for periodic Langevin dynamics. A second ongoing project studies random-coefficient PDEs, small-noise sensitivity, and model risk in nonlinear MBS pricing models.</p>
+            <p class="research-lead">My primary research concerns Berry–Esseen bounds for periodic Langevin dynamics. A second ongoing project uses BSDE representations to study random prepayment sensitivity in nonlinear MBS pricing, with an additive-noise SPDE extension planned for Spring 2027.</p>
         </header>
 
         <article class="research-project" id="langevin">
@@ -185,76 +185,87 @@
             <div class="project-heading">
                 <div>
                     <p class="project-number">Research 02</p>
-                    <h2>Stochastic Sensitivity and Model Risk in Nonlinear MBS Pricing Models</h2>
+                    <h2>Random Prepayment Sensitivity in Nonlinear MBS Pricing</h2>
                 </div>
-                <span class="status-badge status-ongoing">In progress</span>
+                <span class="status-badge status-ongoing">Working manuscript</span>
             </div>
 
             <p class="project-summary">
-                I study how uncertainty in prepayment and model coefficients
-                propagates through nonlinear PDE models for mortgage-backed
-                securities. Current work develops pathwise estimates and
-                small-noise sensitivity analysis for a reduced MBS equation,
-                alongside ongoing extensions involving p-Laplacian diffusion.
+                I study how small random changes in prepayment intensity affect
+                mortgage-backed security prices. The current manuscript focuses
+                on the Papi–Briani model at \(p=2\), using a probabilistic
+                representation to identify the linear price response, control
+                its approximation error, and quantify the resulting mean and variance.
             </p>
 
             <blockquote class="research-question">
                 <p>How do random prepayment environments change the pricing solution, its mean, and its variance?</p>
             </blockquote>
 
-            <h3>Current stochastic analysis</h3>
-            <p>The current working analysis treats bounded \(C^1\) random perturbations of the prepayment environment in the periodic reduced semilinear model, under a positive baseline forcing condition. Randomness enters through the coefficients; each realization is analyzed as a parabolic PDE.</p>
+            <h3>Current manuscript · random coefficients at \(p=2\)</h3>
+            <p>The model tracks a financial factor and cumulative prepayment on \(\mathbb{R}^2\). Prepayment intensity is perturbed as \(\eta^{\varepsilon}=\eta^0(1+\varepsilon\zeta)\), where \(\zeta\) has continuous paths and a deterministic uniform bound. Each coefficient scenario defines a degenerate nonlinear pricing PDE. The environmental noise selects the scenario; the Brownian motion in the BSDE is an auxiliary tool for representing its solution.</p>
             <ul class="compact-list">
-                <li>Developed pathwise well-posedness and uniform solution bounds, yielding finite-order price moment estimates.</li>
-                <li>Obtained mean-square stability estimates and derived an explicit linear equation for the first-order price sensitivity.</li>
-                <li>Developed a second-order remainder estimate and, for centered perturbations, expansions for the mean price and Hilbert-space variance.</li>
-                <li>Used Fourier spectral simulations to examine first- and second-order perturbation scaling.</li>
+                <li>Use Papi’s viscosity theory for well-posedness and price bounds, then remove the quadratic gradient term through a change of unknown to obtain a Lipschitz BSDE representation.</li>
+                <li>Establish a bounded linear response operator and a uniform second-order remainder, giving Fréchet differentiability in the supremum norm.</li>
+                <li>Derive mean-square sensitivity, mean-price bias, and Hilbert-space variance expansions; express the leading variance through the covariance of the input noise.</li>
+                <li>Work with continuous bounded perturbations, without requiring their time derivatives or classical spatial derivatives of the price.</li>
             </ul>
 
             <section class="result-panel" aria-labelledby="mbs-sensitivity">
-                <p class="result-label">Working analysis · reduced semilinear model</p>
-                <h3 id="mbs-sensitivity">A first-order description of prepayment uncertainty</h3>
+                <p class="result-label">Manuscript results · Theorem 1.1 and Corollary 1.2</p>
+                <h3 id="mbs-sensitivity">Linear price response with a quadratic remainder</h3>
                 <div class="display-equation">
-                    \[ u^{\varepsilon}=u^0+\varepsilon U+R^{\varepsilon}. \]
+                    \[ P^{\varepsilon}=P^0+\varepsilon Y+R^{\varepsilon},\qquad Y=L\zeta. \]
                 </div>
-                <p>Here \(U\) solves the linearized sensitivity equation. Under the working assumptions, the remainder in \(X=L^2(\Omega;C([0,T];L^2))\) satisfies</p>
+                <p>Here \(P^{\varepsilon}\) is the full security value and \(L\) is a deterministic bounded linear operator obtained from the forward–backward variational system. Under the manuscript’s assumptions, for sufficiently small \(\varepsilon\), almost surely,</p>
                 <div class="display-equation">
-                    \[ \lVert R^{\varepsilon}\rVert_X \le C\varepsilon^2. \]
+                    \[ \lVert R^{\varepsilon}\rVert_{\infty}\le C\varepsilon^2\lVert\zeta\rVert_{\infty}^2. \]
                 </div>
-                <p>For centered perturbations, the mean-price bias is \(O(\varepsilon^2)\) and the Hilbert-space variance satisfies</p>
+                <p>The bound is uniform in the state and time, and also gives an \(O(\varepsilon^2)\) remainder in \(L^2(\Omega;C([0,T];H))\), where \(H=L^2(\mathbb{R}^2,\nu)\) for a probability measure \(\nu\). For centered perturbations, the mean-price bias is \(O(\varepsilon^2)\), and uniformly in \(t\),</p>
                 <div class="display-equation">
-                    \[ \operatorname{Var}_{L^2}(u^{\varepsilon})=\varepsilon^2\,\mathbb{E}\lVert U\rVert_{L^2}^{2}+O(|\varepsilon|^3). \]
+                    \[ \operatorname{Var}_H(P^{\varepsilon}(t))=\varepsilon^2\mathbb{E}\lVert Y(t)\rVert_H^2+O(|\varepsilon|^3). \]
                 </div>
             </section>
 
-            <h3>Ongoing extensions</h3>
+            <details class="proof-details">
+                <summary>Proof approach · from the pricing PDE to its response</summary>
+                <p>Viscosity well-posedness supplies a bounded price range. A power transform cancels the quadratic gradient term, and the transformed solution is identified with the value function of a Lipschitz BSDE. Linearizing the forward prepayment dynamics and the backward equation, then controlling the Taylor remainders and undoing the transform, yields the uniform sensitivity estimate. A deterministic response kernel links the leading price variance to the covariance of the prepayment perturbation.</p>
+            </details>
+
+            <section class="result-panel" aria-labelledby="mbs-spring">
+                <p class="result-label">Planned next stage · Spring 2027</p>
+                <h3 id="mbs-spring">SPDE extension with additive noise</h3>
+                <p>In Spring 2027, I plan to introduce additive stochastic forcing directly into the MBS evolution equation. The proposed form is schematic:</p>
+                <div class="display-equation">
+                    \[ du_t^{\varepsilon}=\mathcal{F}(t,u_t^{\varepsilon})\,dt+\varepsilon G(t)\,dW_t. \]
+                </div>
+                <p>Here \(\mathcal{F}\) denotes the chosen MBS PDE operator, \(W\) is a Wiener process, and the noise coefficient \(G(t)\) is independent of the solution. This adds a stochastic integral to the evolution itself. The analytical setting and noise regularity will be specified as part of this planned work.</p>
+            </section>
+
             <div class="next-stage-grid">
                 <section>
                     <span class="stage-number">01</span>
-                    <h4>p-Laplacian sensitivity</h4>
-                    <p>Extend the stability and sensitivity framework to fixed-p nonlinear diffusion, where degeneracy or singularity near zero gradients makes differentiability a central question.</p>
+                    <h4>Well-posedness and bounds</h4>
+                    <p>Establish existence, uniqueness, and suitable stochastic moment estimates for the additive-noise formulation.</p>
                 </section>
                 <section>
                     <span class="stage-number">02</span>
-                    <h4>Multiple random inputs</h4>
-                    <p>Study joint prepayment and interest-rate uncertainty, including the role of covariance in model-risk decomposition.</p>
+                    <h4>Stability and the small-noise limit</h4>
+                    <p>Study sensitivity to the forcing and convergence to the deterministic baseline as the noise amplitude tends to zero.</p>
                 </section>
                 <section>
                     <span class="stage-number">03</span>
-                    <h4>Future SPDE direction</h4>
-                    <p>A planned extension introduces stochastic forcing directly into the evolution equation and studies stochastic moment bounds and the zero-noise limit.</p>
+                    <h4>Numerical exploration</h4>
+                    <p>Examine how direct stochastic forcing changes sample paths, mean prices, and variance, guided by the analytical estimates.</p>
                 </section>
             </div>
-
-            <details class="proof-details">
-                <summary>Model interpretation and market evidence</summary>
-                <p>The project began with stochastic perturbations and p-Laplacian modifications of an existing pricing PDE. Initial backtests using real MBS transaction data have not established a stable predictive improvement. Current analytical results concern uncertainty propagation under specified model assumptions; the financial interpretation and empirical validation of nonlinear diffusion remain ongoing questions.</p>
-            </details>
 
             <section class="project-meta">
                 <h3>Project details</h3>
                 <dl>
-                    <div><dt>Topics</dt><dd>Random PDEs, moment estimates, small-noise sensitivity, uncertainty quantification</dd></div>
+                    <div><dt>Topics</dt><dd>Random-coefficient PDEs, viscosity solutions, BSDEs, small-noise sensitivity</dd></div>
+                    <div><dt>Current scope</dt><dd>Prepayment perturbations at \(p=2\); part of a broader project on nonlinear MBS models and p-Laplacian diffusion</dd></div>
+                    <div><dt>Spring 2027</dt><dd>Planned SPDE analysis with additive noise</dd></div>
                     <div><dt>Mentor</dt><dd>Professor Rana Parshad</dd></div>
                 </dl>
             </section>

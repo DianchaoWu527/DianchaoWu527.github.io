@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
         name="description"
-        content="Dianchao Wu 的研究：周期 Langevin 动力学、定量极限定理、非线性 MBS 定价模型、随机矩阵理论与随机敏感性。"
+        content="Dianchao Wu 的研究：周期 Langevin 动力学、随机提前还款敏感性、非线性 MBS 定价的 BSDE 表示，以及计划中的加性噪声 SPDE 扩展。"
     >
     <title>科研 | Dianchao Wu</title>
     <link rel="stylesheet" href="../style.css">
@@ -58,7 +58,7 @@
         <header class="research-hero">
             <p class="eyebrow">概率论 · 随机动力学 · 金融数学</p>
             <h1>科研</h1>
-            <p class="research-lead">我的主要研究是周期 Langevin 动力学的 Berry–Esseen 界；另一项进行中的研究关注非线性 MBS 定价模型中的随机系数 PDE、小噪声敏感性与模型风险。</p>
+            <p class="research-lead">我的主要研究是周期 Langevin 动力学的 Berry–Esseen 界；另一项进行中的研究利用 BSDE 表示，分析非线性 MBS 定价中的随机提前还款敏感性，并计划于 2027 年春季推进含加性噪声的 SPDE 扩展。</p>
         </header>
 
         <article class="research-project" id="langevin">
@@ -172,72 +172,83 @@
             <div class="project-heading">
                 <div>
                     <p class="project-number">研究 02</p>
-                    <h2>Stochastic Sensitivity and Model Risk in Nonlinear MBS Pricing Models</h2>
+                    <h2>非线性 MBS 定价中的随机提前还款敏感性</h2>
                 </div>
-                <span class="status-badge status-ongoing">进行中</span>
+                <span class="status-badge status-ongoing">论文草稿</span>
             </div>
 
             <p class="project-summary">
-                我研究提前还款及模型系数的不确定性如何通过非线性偏微分方程传递到抵押贷款支持证券（MBS）的定价解。目前的工作围绕一个约化 MBS 方程，开展逐路径估计与小噪声敏感性分析，同时探索含 p-Laplacian 扩散的模型扩展。
+                我研究提前还款强度的小随机变化如何影响抵押贷款支持证券（MBS）的价格。当前手稿聚焦 \(p=2\) 的 Papi–Briani 模型，利用概率表示识别价格的一阶响应、控制近似误差，并量化由此产生的均值和方差变化。
             </p>
 
             <blockquote class="research-question">
                 <p>随机提前还款环境如何改变定价解，以及它的均值和方差？</p>
             </blockquote>
 
-            <h3>当前的随机分析工作</h3>
-            <p>当前分析草稿研究周期区域上的约化半线性模型：在基准强迫项为正的条件下，对提前还款环境施加有界 \(C^1\) 随机扰动。随机性通过系数进入方程，每个样本对应一个抛物型 PDE。</p>
+            <h3>当前手稿 · \(p=2\) 下的随机系数模型</h3>
+            <p>模型在 \(\mathbb{R}^2\) 上追踪金融因子与累计提前还款量，并将提前还款强度扰动为 \(\eta^{\varepsilon}=\eta^0(1+\varepsilon\zeta)\)，其中 \(\zeta\) 具有连续路径和确定性一致上界。每一种系数情景对应一个退化非线性定价 PDE。环境噪声用于选取系数情景，BSDE 中的布朗运动则是表示该情景下定价解的辅助工具。</p>
             <ul class="compact-list">
-                <li>开展逐路径适定性与一致解界的分析，得到价格的有限阶矩估计。</li>
-                <li>建立均方稳定性估计，并推导一阶价格敏感性满足的显式线性方程。</li>
-                <li>建立二阶余项估计，并在中心化扰动下推导平均价格与 Hilbert 空间方差的渐近展开。</li>
-                <li>利用 Fourier 谱方法数值实验，检验扰动误差的一阶与二阶尺度。</li>
+                <li>利用 Papi 的黏性解理论获得适定性与价格界，再通过未知量变换消去梯度二次项，建立 Lipschitz BSDE 表示。</li>
+                <li>建立有界线性响应算子与一致二阶余项，得到解映射在上确界范数下的 Fréchet 可微性。</li>
+                <li>推导均方敏感性、平均价格偏差及 Hilbert 空间方差展开，并用输入噪声的协方差表示价格方差的主导项。</li>
+                <li>允许连续有界扰动，无需扰动的时间导数，也无需价格的经典空间导数。</li>
             </ul>
 
             <section class="result-panel" aria-labelledby="mbs-sensitivity">
-                <p class="result-label">分析草稿 · 约化半线性模型</p>
-                <h3 id="mbs-sensitivity">提前还款不确定性的一阶描述</h3>
+                <p class="result-label">手稿结果 · 定理 1.1 与推论 1.2</p>
+                <h3 id="mbs-sensitivity">价格的一阶响应与二阶余项</h3>
                 <div class="display-equation">
-                    \[ u^{\varepsilon}=u^0+\varepsilon U+R^{\varepsilon}. \]
+                    \[ P^{\varepsilon}=P^0+\varepsilon Y+R^{\varepsilon},\qquad Y=L\zeta. \]
                 </div>
-                <p>其中 \(U\) 满足线性化敏感性方程。在草稿的假设下，余项在 \(X=L^2(\Omega;C([0,T];L^2))\) 中满足</p>
+                <p>这里 \(P^{\varepsilon}\) 是证券总价值，\(L\) 是由正倒向变分系统确定的有界线性算子。在手稿的假设下，当 \(\varepsilon\) 足够小时，几乎处处有</p>
                 <div class="display-equation">
-                    \[ \lVert R^{\varepsilon}\rVert_X \le C\varepsilon^2. \]
+                    \[ \lVert R^{\varepsilon}\rVert_{\infty}\le C\varepsilon^2\lVert\zeta\rVert_{\infty}^2. \]
                 </div>
-                <p>对于中心化扰动，平均价格偏差为 \(O(\varepsilon^2)\)，Hilbert 空间方差满足</p>
+                <p>该界对状态和时间一致成立，并给出 \(L^2(\Omega;C([0,T];H))\) 中的 \(O(\varepsilon^2)\) 余项，其中 \(H=L^2(\mathbb{R}^2,\nu)\)，\(\nu\) 为概率测度。对于中心化扰动，平均价格偏差为 \(O(\varepsilon^2)\)，且下式对 \(t\) 一致成立：</p>
                 <div class="display-equation">
-                    \[ \operatorname{Var}_{L^2}(u^{\varepsilon})=\varepsilon^2\,\mathbb{E}\lVert U\rVert_{L^2}^{2}+O(|\varepsilon|^3). \]
+                    \[ \operatorname{Var}_H(P^{\varepsilon}(t))=\varepsilon^2\mathbb{E}\lVert Y(t)\rVert_H^2+O(|\varepsilon|^3). \]
                 </div>
             </section>
 
-            <h3>正在推进的扩展</h3>
+            <details class="proof-details">
+                <summary>证明思路 · 从定价 PDE 到价格响应</summary>
+                <p>先由黏性解适定性获得有界的价格区间，再用幂变换消去梯度二次项，将变换后的解识别为 Lipschitz BSDE 的值函数。随后线性化正向提前还款动力学和倒向方程，控制 Taylor 余项，再通过逆变换得到一致敏感性估计。确定性响应核进一步将价格方差的主导项与提前还款扰动的协方差联系起来。</p>
+            </details>
+
+            <section class="result-panel" aria-labelledby="mbs-spring">
+                <p class="result-label">下一阶段计划 · 2027 年春季</p>
+                <h3 id="mbs-spring">加入加性噪声的 SPDE 扩展</h3>
+                <p>2027 年春季，我计划直接在 MBS 演化方程中加入加性随机驱动，推进 SPDE 研究。拟研究的形式示意为：</p>
+                <div class="display-equation">
+                    \[ du_t^{\varepsilon}=\mathcal{F}(t,u_t^{\varepsilon})\,dt+\varepsilon G(t)\,dW_t. \]
+                </div>
+                <p>其中 \(\mathcal{F}\) 表示选定的 MBS PDE 算子，\(W\) 为 Wiener 过程，噪声系数 \(G(t)\) 不依赖于解。随机积分将直接进入演化方程；具体的分析框架与噪声正则性将在后续工作中确定。</p>
+            </section>
+
             <div class="next-stage-grid">
                 <section>
                     <span class="stage-number">01</span>
-                    <h4>p-Laplacian 敏感性</h4>
-                    <p>将稳定性与敏感性框架推广到固定 p 的非线性扩散；零梯度附近的退化或奇异性，使解映射的可微性成为核心问题。</p>
+                    <h4>适定性与矩估计</h4>
+                    <p>为加性噪声模型建立存在性、唯一性及适当的随机矩估计。</p>
                 </section>
                 <section>
                     <span class="stage-number">02</span>
-                    <h4>多个随机输入</h4>
-                    <p>研究提前还款与利率的联合不确定性，以及协方差在模型风险分解中的作用。</p>
+                    <h4>稳定性与小噪声极限</h4>
+                    <p>研究解对随机驱动的敏感性，以及噪声幅度趋于零时向确定性基准模型的收敛。</p>
                 </section>
                 <section>
                     <span class="stage-number">03</span>
-                    <h4>后续 SPDE 方向</h4>
-                    <p>计划直接在演化方程中引入随机驱动，研究随机矩估计与零噪声极限。</p>
+                    <h4>数值探索</h4>
+                    <p>结合分析估计，考察直接随机驱动如何改变样本路径、平均价格及方差。</p>
                 </section>
             </div>
-
-            <details class="proof-details">
-                <summary>模型解释与市场证据</summary>
-                <p>项目起步于对现有定价 PDE 的随机扰动与 p-Laplacian 修改。基于真实 MBS 交易数据的初步回测，尚未建立稳定的预测改进。目前的分析结果讨论给定模型假设下的不确定性传递；非线性扩散的金融解释与实证验证仍在探索中。</p>
-            </details>
 
             <section class="project-meta">
                 <h3>项目概况</h3>
                 <dl>
-                    <div><dt>研究主题</dt><dd>随机 PDE、矩估计、小噪声敏感性、不确定性量化</dd></div>
+                    <div><dt>研究主题</dt><dd>随机系数 PDE、黏性解、BSDE、小噪声敏感性</dd></div>
+                    <div><dt>当前范围</dt><dd>\(p=2\) 下的提前还款扰动；属于非线性 MBS 模型与 p-Laplacian 扩散的整体研究项目</dd></div>
+                    <div><dt>2027 年春季</dt><dd>计划开展含加性噪声的 SPDE 分析</dd></div>
                     <div><dt>指导教师</dt><dd>Rana Parshad 教授</dd></div>
                 </dl>
             </section>
