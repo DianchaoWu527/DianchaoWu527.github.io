@@ -177,6 +177,8 @@
                 <span class="status-badge status-ongoing">论文草稿</span>
             </div>
 
+            <p class="project-authorship">Dianchao Wu、Rana Parshad · 2026 年 11 月工作手稿。</p>
+
             <p class="project-summary">
                 我研究提前还款强度的小随机变化如何影响抵押贷款支持证券（MBS）的价格。当前手稿聚焦 \(p=2\) 的 Papi–Briani 模型，利用概率表示识别价格的一阶响应、控制近似误差，并量化由此产生的均值和方差变化。
             </p>
@@ -195,7 +197,7 @@
             </ul>
 
             <section class="result-panel" aria-labelledby="mbs-sensitivity">
-                <p class="result-label">手稿结果 · 定理 1.1 与推论 1.2</p>
+                <p class="result-label">手稿结果 · 定理 3.11 与推论 3.12</p>
                 <h3 id="mbs-sensitivity">价格的一阶响应与二阶余项</h3>
                 <div class="display-equation">
                     \[ P^{\varepsilon}=P^0+\varepsilon Y+R^{\varepsilon},\qquad Y=L\zeta. \]
@@ -204,7 +206,11 @@
                 <div class="display-equation">
                     \[ \lVert R^{\varepsilon}\rVert_{\infty}\le C\varepsilon^2\lVert\zeta\rVert_{\infty}^2. \]
                 </div>
-                <p>该界对状态和时间一致成立，并给出 \(L^2(\Omega;C([0,T];H))\) 中的 \(O(\varepsilon^2)\) 余项，其中 \(H=L^2(\mathbb{R}^2,\nu)\)，\(\nu\) 为概率测度。对于中心化扰动，平均价格偏差为 \(O(\varepsilon^2)\)，且下式对 \(t\) 一致成立：</p>
+                <p>该界对状态和时间一致成立，并给出 \(L^2(\Omega;C([0,T];H))\) 中的 \(O(\varepsilon^2)\) 余项，其中 \(H=L^2(\mathbb{R}^2,\nu)\)，\(\nu\) 为概率测度。均方价格变化满足以下对 \(t\) 一致的展开：</p>
+                <div class="display-equation">
+                    \[ \mathbb{E}\lVert P^{\varepsilon}(t)-P^0(t)\rVert_H^2=\varepsilon^2\mathbb{E}\lVert Y(t)\rVert_H^2+O(|\varepsilon|^3). \]
+                </div>
+                <p>对于中心化扰动，平均价格偏差为 \(O(\varepsilon^2)\)，且</p>
                 <div class="display-equation">
                     \[ \operatorname{Var}_H(P^{\varepsilon}(t))=\varepsilon^2\mathbb{E}\lVert Y(t)\rVert_H^2+O(|\varepsilon|^3). \]
                 </div>
@@ -212,8 +218,16 @@
 
             <details class="proof-details">
                 <summary>证明思路 · 从定价 PDE 到价格响应</summary>
-                <p>先由黏性解适定性获得有界的价格区间，再用幂变换消去梯度二次项，将变换后的解识别为 Lipschitz BSDE 的值函数。随后线性化正向提前还款动力学和倒向方程，控制 Taylor 余项，再通过逆变换得到一致敏感性估计。确定性响应核进一步将价格方差的主导项与提前还款扰动的协方差联系起来。</p>
+                <p>先由黏性解适定性获得有界的价格区间，再用幂变换消去梯度二次项，将变换后的解识别为 Lipschitz BSDE 的值函数。随后线性化正向提前还款动力学和倒向方程，控制 Taylor 余项，再通过逆变换得到一致敏感性估计。由于响应算子是确定性的线性算子，价格方差的主导项仅依赖提前还款扰动的协方差。</p>
             </details>
+
+            <section class="work-card" aria-labelledby="mbs-numerics">
+                <p class="result-label">数值说明 · 第 3.4 节</p>
+                <h3 id="mbs-numerics">误差阶与噪声不对称性</h3>
+                <p>采用 IMEX Euler 有限差分格式，在金融因子方向隐式离散、累计提前还款方向使用迎风格式，在有界计算区域上展示理论估计。这里的数值响应 \(Y\) 是离散格式对 \(\varepsilon\) 的导数。</p>
+                <p>对于对称分布，在 \(0.025\le\varepsilon\le0.2\) 范围内，所取状态–时间窗口上价格变化与线性化余项的双对数斜率分别为 1.00 和 2.00。协方差相同的对称与偏斜中心化扰动具有相同的均方首项，而发行时点展开误差的观测斜率分别为 4.00 和 2.99。这些实验展示了噪声高阶矩对首项之外误差的影响。</p>
+                <p>手稿同时报告了网格加密与计算区域扩大的检查结果。</p>
+            </section>
 
             <section class="result-panel" aria-labelledby="mbs-spring">
                 <p class="result-label">下一阶段计划 · 2027 年春季</p>

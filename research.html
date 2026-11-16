@@ -190,6 +190,8 @@
                 <span class="status-badge status-ongoing">Working manuscript</span>
             </div>
 
+            <p class="project-authorship">Dianchao Wu and Rana Parshad · Working manuscript, November 2026.</p>
+
             <p class="project-summary">
                 I study how small random changes in prepayment intensity affect
                 mortgage-backed security prices. The current manuscript focuses
@@ -212,7 +214,7 @@
             </ul>
 
             <section class="result-panel" aria-labelledby="mbs-sensitivity">
-                <p class="result-label">Manuscript results · Theorem 1.1 and Corollary 1.2</p>
+                <p class="result-label">Manuscript results · Theorem 3.11 and Corollary 3.12</p>
                 <h3 id="mbs-sensitivity">Linear price response with a quadratic remainder</h3>
                 <div class="display-equation">
                     \[ P^{\varepsilon}=P^0+\varepsilon Y+R^{\varepsilon},\qquad Y=L\zeta. \]
@@ -221,7 +223,11 @@
                 <div class="display-equation">
                     \[ \lVert R^{\varepsilon}\rVert_{\infty}\le C\varepsilon^2\lVert\zeta\rVert_{\infty}^2. \]
                 </div>
-                <p>The bound is uniform in the state and time, and also gives an \(O(\varepsilon^2)\) remainder in \(L^2(\Omega;C([0,T];H))\), where \(H=L^2(\mathbb{R}^2,\nu)\) for a probability measure \(\nu\). For centered perturbations, the mean-price bias is \(O(\varepsilon^2)\), and uniformly in \(t\),</p>
+                <p>The bound is uniform in the state and time, and also gives an \(O(\varepsilon^2)\) remainder in \(L^2(\Omega;C([0,T];H))\), where \(H=L^2(\mathbb{R}^2,\nu)\) for a probability measure \(\nu\). Uniformly in \(t\), the mean-square price change satisfies</p>
+                <div class="display-equation">
+                    \[ \mathbb{E}\lVert P^{\varepsilon}(t)-P^0(t)\rVert_H^2=\varepsilon^2\mathbb{E}\lVert Y(t)\rVert_H^2+O(|\varepsilon|^3). \]
+                </div>
+                <p>For centered perturbations, the mean-price bias is \(O(\varepsilon^2)\), and</p>
                 <div class="display-equation">
                     \[ \operatorname{Var}_H(P^{\varepsilon}(t))=\varepsilon^2\mathbb{E}\lVert Y(t)\rVert_H^2+O(|\varepsilon|^3). \]
                 </div>
@@ -229,8 +235,16 @@
 
             <details class="proof-details">
                 <summary>Proof approach · from the pricing PDE to its response</summary>
-                <p>Viscosity well-posedness supplies a bounded price range. A power transform cancels the quadratic gradient term, and the transformed solution is identified with the value function of a Lipschitz BSDE. Linearizing the forward prepayment dynamics and the backward equation, then controlling the Taylor remainders and undoing the transform, yields the uniform sensitivity estimate. A deterministic response kernel links the leading price variance to the covariance of the prepayment perturbation.</p>
+                <p>Viscosity well-posedness supplies a bounded price range. A power transform cancels the quadratic gradient term, and the transformed solution is identified with the value function of a Lipschitz BSDE. Linearizing the forward prepayment dynamics and the backward equation, then controlling the Taylor remainders and undoing the transform, yields the uniform sensitivity estimate. Because the response operator is deterministic and linear, the leading price variance depends only on the covariance of the prepayment perturbation.</p>
             </details>
+
+            <section class="work-card" aria-labelledby="mbs-numerics">
+                <p class="result-label">Numerical illustration · Section 3.4</p>
+                <h3 id="mbs-numerics">Error orders and noise asymmetry</h3>
+                <p>An IMEX Euler finite-difference scheme, implicit in the financial factor and upwind in cumulative prepayment, illustrates the estimates on a bounded computational domain. Here the numerical response \(Y\) is the \(\varepsilon\)-derivative of the discrete scheme.</p>
+                <p>For the symmetric law, over \(0.025\le\varepsilon\le0.2\), the price change and linearization remainder have observed log–log slopes of 1.00 and 2.00 on the sampled state–time window. Symmetric and skewed centered perturbations with the same covariance share the leading mean-square term, while the expansion error at issuance has observed slopes of 4.00 and 2.99, respectively. These experiments illustrate how higher noise moments affect the error beyond the leading term.</p>
+                <p>Grid-refinement and domain-expansion checks accompany the numerical illustration in the manuscript.</p>
+            </section>
 
             <section class="result-panel" aria-labelledby="mbs-spring">
                 <p class="result-label">Planned next stage · Spring 2027</p>
