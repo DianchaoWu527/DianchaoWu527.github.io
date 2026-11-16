@@ -169,6 +169,13 @@ for entry in with_class(section, "manuscript-entry"):
     story.append(KeepTogether(group))
 
 story.append(PageBreak())
+# Keep the study list and supporting sections together on a readable second page.
+# New styles leave paragraphs already created for page one unchanged.
+STYLES["small"] = ParagraphStyle("small-page-two", parent=STYLES["small"], leading=11)
+STYLES["title"] = ParagraphStyle("title-page-two", parent=STYLES["title"], leading=12,
+                                 spaceAfter=1)
+STYLES["section"] = ParagraphStyle("section-page-two", parent=STYLES["section"],
+                                   spaceBefore=8, spaceAfter=5)
 section = sections["directed-studies"]
 heading(section)
 story.append(p(inline(with_class(section, "cv-section-intro")[0]), "small"))
