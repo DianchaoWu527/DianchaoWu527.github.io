@@ -10,7 +10,7 @@
     <title>Research | Dianchao Wu</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="language-switch.css?v=20260927-1">
-    <link rel="stylesheet" href="editorial.css?v=20261008-1">
+    <link rel="stylesheet" href="editorial.css?v=20261125-1">
     <script src="language-switch.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/katex.min.css" integrity="sha384-3rdsX6e5mueWyoweR9NIVmtEsUkokpBT/0ALqKKIBMr9j4qhHkaIkAcGgsE6uVlp" crossorigin="anonymous">
     <link rel="stylesheet" href="research-math.css?v=20261015-1">
@@ -96,7 +96,7 @@
                     <ul class="compact-list">
                         <li>Formulated the Berry–Esseen framework for the unwrapped displacement and proved the overdamped results.</li>
                         <li>Proved the main underdamped theorem and supporting propositions via a direct Markov-additive treatment of the displacement; verification of Assumption (A2) was carried out by O. Smith.</li>
-                        <li>Proved in Proposition 11.1 that, for one-dimensional periodic underdamped dynamics started from equilibrium and sufficiently small positive \(\gamma\), the Berry–Esseen constant C<sub>\(\gamma\)</sub> can be chosen with \(C_{\gamma} \le C\gamma^{-1/2}\), where C is independent of \(\gamma\).</li>
+                        <li>Proved in Proposition 11.1 that, for one-dimensional periodic underdamped dynamics started from equilibrium and sufficiently small positive \(\gamma\), the Berry–Esseen constant \(C_{\gamma}\) can be chosen with \(C_{\gamma} \le C\gamma^{-1/2}\), where \(C\) is independent of \(\gamma\).</li>
                         <li>Simulated overdamped and underdamped transport, measured the friction-dependent constants, and compared them with the averaged energy dynamics.</li>
                     </ul>
                     <p>The joint manuscript also includes additional numerical analysis by A. Valse.</p>
@@ -124,7 +124,7 @@
                     \[ C_{\gamma} \le C\gamma^{-1/2}. \]
                 </div>
                 <p>
-                    Here C is independent of \(\gamma\) and observation time.
+                    Here \(C\) is independent of \(\gamma\) and observation time.
                 </p>
                 <p class="equation-equivalence">
                     Equivalently, for \(T \ge 1\) the Kolmogorov-distance estimate reads
@@ -138,6 +138,14 @@
                     dependence of the Berry–Esseen constant on \(\gamma\).
                 </p>
             </section>
+
+            <figure class="research-plots">
+                <div class="research-plots-grid">
+                    <img src="figures/langevin-time-decay.svg" width="396" height="281" alt="Empirical Kolmogorov distance versus time for four frictions, with fitted upper envelopes" loading="lazy">
+                    <img src="figures/langevin-constant.svg" width="396" height="281" alt="Empirical scaled constant across eleven frictions, energy-process estimate and square-root fit" loading="lazy">
+                </div>
+                <figcaption>Simulation at \(V(q)=\cos q\), \(\beta=1\), with 80,000 equilibrium trajectories per friction. Left: empirical Kolmogorov distance against observation time for four frictions; each dashed envelope is \(\widehat C_{\gamma}T^{-1/2}\). Right: the scaled constant \(\widehat c(\gamma)=\sqrt{\gamma}\,\widehat C_{\gamma}\) rises from 0.283 to 0.364 as \(\gamma\) decreases from 1/4 to 1/256; the energy-process simulation gives a small-friction reference of 0.376. Setup and further diagnostics are on the <a href="/langevin/#numerics">research poster</a>.</figcaption>
+            </figure>
 
             <details class="proof-details">
                 <summary>Proof architecture</summary>
@@ -242,6 +250,10 @@
                 <h3 id="mbs-numerics">Error orders and noise asymmetry</h3>
                 <p>An IMEX Euler finite-difference scheme, implicit in the financial factor and upwind in cumulative prepayment, illustrates the estimates on a bounded computational domain. Here the numerical response \(Y\) is the \(\varepsilon\)-derivative of the discrete scheme.</p>
                 <p>For the symmetric law, over \(0.025\le\varepsilon\le0.2\), the price change and linearization remainder have observed log–log slopes of 1.00 and 2.00 on the sampled state–time window. Symmetric and skewed centered perturbations with the same covariance share the leading mean-square term, while the expansion error at issuance has observed slopes of 4.00 and 2.99, respectively. These experiments illustrate how higher noise moments affect the error beyond the leading term.</p>
+                <figure class="research-plots">
+                    <img src="figures/mbs-error-orders.svg" width="468" height="184" alt="Log–log plots of the price change, the linearization remainder and the mean-square expansion error against the perturbation size, with reference slopes" loading="lazy">
+                    <figcaption>Figure 1 of the preprint, recoloured in the site palette. (a) Price change and linearization remainder in the sup norm, for the symmetric law. (b) Error of the mean-square expansion at issuance, for symmetric and skewed perturbations with the same covariance. Dashed lines are reference slopes.</figcaption>
+                </figure>
                 <p>Grid-refinement and domain-expansion checks accompany the numerical illustration in the preprint.</p>
             </section>
 

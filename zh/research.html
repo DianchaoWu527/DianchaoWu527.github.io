@@ -10,7 +10,7 @@
     <title>科研 | Dianchao Wu</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../language-switch.css?v=20260927-1">
-    <link rel="stylesheet" href="../editorial.css?v=20261008-1">
+    <link rel="stylesheet" href="../editorial.css?v=20261125-1">
     <script src="../language-switch.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/katex.min.css" integrity="sha384-3rdsX6e5mueWyoweR9NIVmtEsUkokpBT/0ALqKKIBMr9j4qhHkaIkAcGgsE6uVlp" crossorigin="anonymous">
     <link rel="stylesheet" href="../research-math.css?v=20261015-1">
@@ -92,7 +92,7 @@
                     <ul class="compact-list">
                         <li>为展开位移建立 Berry–Esseen 分析框架，并证明过阻尼情形下的结果。</li>
                         <li>通过直接将位移作为 Markov 加性过程处理，证明欠阻尼情形下的主要定理及相关命题；其中假设 (A2) 的验证由 O. Smith 完成。</li>
-                        <li>在命题 11.1 中证明：对从平衡分布出发的一维周期欠阻尼动力学，当正摩擦参数 \(\gamma\) 足够小时，Berry–Esseen 常数可选为满足 \(C_{\gamma} \le C\gamma^{-1/2}\)，其中 C 不依赖 \(\gamma\)。</li>
+                        <li>在命题 11.1 中证明：对从平衡分布出发的一维周期欠阻尼动力学，当正摩擦参数 \(\gamma\) 足够小时，Berry–Esseen 常数可选为满足 \(C_{\gamma} \le C\gamma^{-1/2}\)，其中 \(C\) 不依赖 \(\gamma\)。</li>
                         <li>完成过阻尼与欠阻尼输运模拟，计算常数对摩擦的依赖，并与平均化能量动力学比较。</li>
                     </ul>
                     <p>合作稿件还包含 A. Valse 的其他数值研究。</p>
@@ -118,7 +118,7 @@
                     \[ C_{\gamma} \le C\gamma^{-1/2}. \]
                 </div>
                 <p>
-                    其中 C 不依赖 \(\gamma\) 和观察时间。
+                    其中 \(C\) 不依赖 \(\gamma\) 和观察时间。
                 </p>
                 <p class="equation-equivalence">
                     等价地，对 \(T \ge 1\)，Kolmogorov 距离满足
@@ -130,6 +130,14 @@
                     \(C/\sqrt{\gamma T}\) 的形式说明 \(\gamma T\) 是误差界中的组合参数；这一结果的重点是明确控制 Berry–Esseen 常数对 \(\gamma\) 的依赖。
                 </p>
             </section>
+
+            <figure class="research-plots">
+                <div class="research-plots-grid">
+                    <img src="../figures/langevin-time-decay.svg" width="396" height="281" alt="四个摩擦系数下经验 Kolmogorov 距离随时间的变化及拟合上包络" loading="lazy">
+                    <img src="../figures/langevin-constant.svg" width="396" height="281" alt="十一个摩擦系数下的经验重标定常数、能量过程估计与平方根拟合" loading="lazy">
+                </div>
+                <figcaption>模型取 \(V(q)=\cos q\)、\(\beta=1\)，每个摩擦系数模拟 80,000 条从平衡分布出发的路径。左：四个摩擦系数下经验 Kolmogorov 距离随观察时间的变化，虚线为 \(\widehat C_{\gamma}T^{-1/2}\)。右：当 \(\gamma\) 从 1/4 降至 1/256，重标定常数 \(\widehat c(\gamma)=\sqrt{\gamma}\,\widehat C_{\gamma}\) 从 0.283 增至 0.364；能量过程模拟给出小摩擦参考值 0.376。模拟设置与更多结果见<a href="/langevin/?lang=zh#numerics">研究海报</a>。</figcaption>
+            </figure>
 
             <details class="proof-details">
                 <summary>证明思路</summary>
@@ -226,6 +234,10 @@
                 <h3 id="mbs-numerics">误差阶与噪声不对称性</h3>
                 <p>采用 IMEX Euler 有限差分格式，在金融因子方向隐式离散、累计提前还款方向使用迎风格式，在有界计算区域上展示理论估计。这里的数值响应 \(Y\) 是离散格式对 \(\varepsilon\) 的导数。</p>
                 <p>对于对称分布，在 \(0.025\le\varepsilon\le0.2\) 范围内，所取状态–时间窗口上价格变化与线性化余项的双对数斜率分别为 1.00 和 2.00。协方差相同的对称与偏斜中心化扰动具有相同的均方首项，而发行时点展开误差的观测斜率分别为 4.00 和 2.99。这些实验展示了噪声高阶矩对首项之外误差的影响。</p>
+                <figure class="research-plots">
+                    <img src="../figures/mbs-error-orders.svg" width="468" height="184" alt="价格变化、线性化余项与均方展开误差关于扰动幅度的双对数图，附参考斜率" loading="lazy">
+                    <figcaption>预印本图 1，按网站配色重新着色。(a) 对称分布下价格变化与线性化余项的上确界范数。(b) 协方差相同的对称与偏斜扰动在发行时刻的均方展开误差。虚线为参考斜率。</figcaption>
+                </figure>
                 <p>论文也报告了网格加密与计算区域扩大的检查结果。</p>
             </section>
 
