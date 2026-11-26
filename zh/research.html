@@ -58,7 +58,7 @@
         <header class="research-hero">
             <p class="eyebrow">概率论 · 随机动力学 · 金融数学</p>
             <h1>科研</h1>
-            <p class="research-lead">我的主要研究是周期 Langevin 动力学的 Berry–Esseen 界；另一项进行中的研究利用 BSDE 表示，分析非线性 MBS 定价中的随机提前还款敏感性，并计划于 2027 年春季推进含加性噪声的 SPDE 扩展。</p>
+            <p class="research-lead">我的主要研究是周期 Langevin 动力学的 Berry–Esseen 界；在与 Rana D. Parshad 合作的预印本中，我们利用 BSDE 表示，分析非线性 MBS 定价中的随机提前还款敏感性。我计划于 2027 年春季研究加性噪声 SPDE 扩展。</p>
         </header>
 
         <article class="research-project" id="langevin">
@@ -172,22 +172,22 @@
             <div class="project-heading">
                 <div>
                     <p class="project-number">研究 02</p>
-                    <h2>非线性 MBS 定价中的随机提前还款敏感性</h2>
+                    <h2>Mortgage Backed Securities with p-Laplacian Diffusion and Random Prepayment</h2>
                 </div>
-                <span class="status-badge status-ongoing">论文草稿</span>
+                <span class="status-badge">arXiv 预印本</span>
             </div>
 
-            <p class="project-authorship">Dianchao Wu、Rana Parshad · 2026 年 11 月工作手稿。</p>
+            <p class="project-authorship">Dianchao Wu、Rana D. Parshad · 2026 年 11 月 24 日 · <a href="https://arxiv.org/abs/2611.33367">arXiv:2611.33367</a></p>
 
             <p class="project-summary">
-                我研究提前还款强度的小随机变化如何影响抵押贷款支持证券（MBS）的价格。当前手稿聚焦 \(p=2\) 的 Papi–Briani 模型，利用概率表示识别价格的一阶响应、控制近似误差，并量化由此产生的均值和方差变化。
+                我研究提前还款强度的小随机变化如何影响抵押贷款支持证券（MBS）的价格。论文分别讨论确定性 <i>p</i>-Laplacian 扩散和随机提前还款。以下介绍随机提前还款部分，采用 \(p=2\) 的 Papi–Briani 模型，利用概率表示识别价格的一阶响应、控制近似误差，并量化由此产生的均值和方差变化。
             </p>
 
             <blockquote class="research-question">
                 <p>随机提前还款环境如何改变定价解，以及它的均值和方差？</p>
             </blockquote>
 
-            <h3>当前手稿 · \(p=2\) 下的随机系数模型</h3>
+            <h3>随机提前还款 · \(p=2\) 下的随机系数模型</h3>
             <p>模型在 \(\mathbb{R}^2\) 上追踪金融因子与累计提前还款量，并将提前还款强度扰动为 \(\eta^{\varepsilon}=\eta^0(1+\varepsilon\zeta)\)，其中 \(\zeta\) 具有连续路径和确定性一致上界。每一种系数情景对应一个退化非线性定价 PDE。环境噪声用于选取系数情景，BSDE 中的布朗运动则是表示该情景下定价解的辅助工具。</p>
             <ul class="compact-list">
                 <li>利用 Papi 的黏性解理论获得适定性与价格界，再通过未知量变换消去梯度二次项，建立 Lipschitz BSDE 表示。</li>
@@ -197,12 +197,12 @@
             </ul>
 
             <section class="result-panel" aria-labelledby="mbs-sensitivity">
-                <p class="result-label">手稿结果 · 定理 3.11 与推论 3.12</p>
+                <p class="result-label">定理 4.1 与推论 4.2</p>
                 <h3 id="mbs-sensitivity">价格的一阶响应与二阶余项</h3>
                 <div class="display-equation">
                     \[ P^{\varepsilon}=P^0+\varepsilon Y+R^{\varepsilon},\qquad Y=L\zeta. \]
                 </div>
-                <p>这里 \(P^{\varepsilon}\) 是证券总价值，\(L\) 是由正倒向变分系统确定的有界线性算子。在手稿的假设下，当 \(\varepsilon\) 足够小时，几乎处处有</p>
+                <p>这里 \(P^{\varepsilon}\) 是证券总价值，\(L\) 是由正倒向变分系统确定的有界线性算子。在论文的假设下，当 \(\varepsilon\) 足够小时，几乎处处有</p>
                 <div class="display-equation">
                     \[ \lVert R^{\varepsilon}\rVert_{\infty}\le C\varepsilon^2\lVert\zeta\rVert_{\infty}^2. \]
                 </div>
@@ -222,11 +222,11 @@
             </details>
 
             <section class="work-card" aria-labelledby="mbs-numerics">
-                <p class="result-label">数值说明 · 第 3.4 节</p>
+                <p class="result-label">数值算例 · 第 4.1 节</p>
                 <h3 id="mbs-numerics">误差阶与噪声不对称性</h3>
                 <p>采用 IMEX Euler 有限差分格式，在金融因子方向隐式离散、累计提前还款方向使用迎风格式，在有界计算区域上展示理论估计。这里的数值响应 \(Y\) 是离散格式对 \(\varepsilon\) 的导数。</p>
                 <p>对于对称分布，在 \(0.025\le\varepsilon\le0.2\) 范围内，所取状态–时间窗口上价格变化与线性化余项的双对数斜率分别为 1.00 和 2.00。协方差相同的对称与偏斜中心化扰动具有相同的均方首项，而发行时点展开误差的观测斜率分别为 4.00 和 2.99。这些实验展示了噪声高阶矩对首项之外误差的影响。</p>
-                <p>手稿同时报告了网格加密与计算区域扩大的检查结果。</p>
+                <p>论文也报告了网格加密与计算区域扩大的检查结果。</p>
             </section>
 
             <section class="result-panel" aria-labelledby="mbs-spring">
@@ -283,7 +283,7 @@
             <p class="eyebrow">研究资料</p>
             <h2>论文草稿与技术笔记</h2>
             <p>
-                项目仍在进行中。如需论文草稿、推导笔记或汇报材料，欢迎联系我。
+                如需推导笔记或汇报材料，欢迎联系我。
             </p>
             <div class="button-row">
                 <a href="mailto:dianchao@iastate.edu">联系我</a>

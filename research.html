@@ -58,7 +58,7 @@
         <header class="research-hero">
             <p class="eyebrow">Probability · Stochastic dynamics · Financial mathematics</p>
             <h1>Research</h1>
-            <p class="research-lead">My primary research concerns Berry–Esseen bounds for periodic Langevin dynamics. A second ongoing project uses BSDE representations to study random prepayment sensitivity in nonlinear MBS pricing, with an additive-noise SPDE extension planned for Spring 2027.</p>
+            <p class="research-lead">My primary research concerns Berry–Esseen bounds for periodic Langevin dynamics. In a preprint with Rana D. Parshad, we use a BSDE representation to study how random prepayment affects MBS prices. I plan to study an additive-noise SPDE extension in Spring 2027.</p>
         </header>
 
         <article class="research-project" id="langevin">
@@ -185,17 +185,16 @@
             <div class="project-heading">
                 <div>
                     <p class="project-number">Research 02</p>
-                    <h2>Random Prepayment Sensitivity in Nonlinear MBS Pricing</h2>
+                    <h2>Mortgage Backed Securities with p-Laplacian Diffusion and Random Prepayment</h2>
                 </div>
-                <span class="status-badge status-ongoing">Working manuscript</span>
+                <span class="status-badge">arXiv preprint</span>
             </div>
 
-            <p class="project-authorship">Dianchao Wu and Rana Parshad · Working manuscript, November 2026.</p>
+            <p class="project-authorship">Dianchao Wu and Rana D. Parshad · November 24, 2026 · <a href="https://arxiv.org/abs/2611.33367">arXiv:2611.33367</a></p>
 
             <p class="project-summary">
                 I study how small random changes in prepayment intensity affect
-                mortgage-backed security prices. The current manuscript focuses
-                on the Papi–Briani model at \(p=2\), using a probabilistic
+                mortgage-backed security prices. The preprint treats both deterministic <i>p</i>-Laplacian diffusion and random prepayment. The results below concern random prepayment in the Papi–Briani model at \(p=2\), using a probabilistic
                 representation to identify the linear price response, control
                 its approximation error, and quantify the resulting mean and variance.
             </p>
@@ -204,7 +203,7 @@
                 <p>How do random prepayment environments change the pricing solution, its mean, and its variance?</p>
             </blockquote>
 
-            <h3>Current manuscript · random coefficients at \(p=2\)</h3>
+            <h3>Random prepayment · random coefficients at \(p=2\)</h3>
             <p>The model tracks a financial factor and cumulative prepayment on \(\mathbb{R}^2\). Prepayment intensity is perturbed as \(\eta^{\varepsilon}=\eta^0(1+\varepsilon\zeta)\), where \(\zeta\) has continuous paths and a deterministic uniform bound. Each coefficient scenario defines a degenerate nonlinear pricing PDE. The environmental noise selects the scenario; the Brownian motion in the BSDE is an auxiliary tool for representing its solution.</p>
             <ul class="compact-list">
                 <li>Use Papi’s viscosity theory for well-posedness and price bounds, then remove the quadratic gradient term through a change of unknown to obtain a Lipschitz BSDE representation.</li>
@@ -214,12 +213,12 @@
             </ul>
 
             <section class="result-panel" aria-labelledby="mbs-sensitivity">
-                <p class="result-label">Manuscript results · Theorem 3.11 and Corollary 3.12</p>
+                <p class="result-label">Theorem 4.1 and Corollary 4.2</p>
                 <h3 id="mbs-sensitivity">Linear price response with a quadratic remainder</h3>
                 <div class="display-equation">
                     \[ P^{\varepsilon}=P^0+\varepsilon Y+R^{\varepsilon},\qquad Y=L\zeta. \]
                 </div>
-                <p>Here \(P^{\varepsilon}\) is the full security value and \(L\) is a deterministic bounded linear operator obtained from the forward–backward variational system. Under the manuscript’s assumptions, for sufficiently small \(\varepsilon\), almost surely,</p>
+                <p>Here \(P^{\varepsilon}\) is the full security value and \(L\) is a deterministic bounded linear operator obtained from the forward–backward variational system. Under the assumptions of the preprint, for sufficiently small \(\varepsilon\), almost surely,</p>
                 <div class="display-equation">
                     \[ \lVert R^{\varepsilon}\rVert_{\infty}\le C\varepsilon^2\lVert\zeta\rVert_{\infty}^2. \]
                 </div>
@@ -239,11 +238,11 @@
             </details>
 
             <section class="work-card" aria-labelledby="mbs-numerics">
-                <p class="result-label">Numerical illustration · Section 3.4</p>
+                <p class="result-label">Numerical illustration · Section 4.1</p>
                 <h3 id="mbs-numerics">Error orders and noise asymmetry</h3>
                 <p>An IMEX Euler finite-difference scheme, implicit in the financial factor and upwind in cumulative prepayment, illustrates the estimates on a bounded computational domain. Here the numerical response \(Y\) is the \(\varepsilon\)-derivative of the discrete scheme.</p>
                 <p>For the symmetric law, over \(0.025\le\varepsilon\le0.2\), the price change and linearization remainder have observed log–log slopes of 1.00 and 2.00 on the sampled state–time window. Symmetric and skewed centered perturbations with the same covariance share the leading mean-square term, while the expansion error at issuance has observed slopes of 4.00 and 2.99, respectively. These experiments illustrate how higher noise moments affect the error beyond the leading term.</p>
-                <p>Grid-refinement and domain-expansion checks accompany the numerical illustration in the manuscript.</p>
+                <p>Grid-refinement and domain-expansion checks accompany the numerical illustration in the preprint.</p>
             </section>
 
             <section class="result-panel" aria-labelledby="mbs-spring">
@@ -300,8 +299,7 @@
             <p class="eyebrow">Research materials</p>
             <h2>Working papers and technical notes</h2>
             <p>
-                Manuscripts, derivation notes, and presentation materials are
-                available upon request while the projects remain in progress.
+                Please contact me for derivation notes or presentation materials.
             </p>
             <div class="button-row">
                 <a href="mailto:dianchao@iastate.edu">Contact me</a>
